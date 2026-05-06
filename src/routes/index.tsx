@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
-  BookHeart, Sparkles, ChevronDown, Heart, Brain, CloudRain, Waves,
+  Sparkles, ChevronDown, Heart, Brain, CloudRain, Waves,
   SearchX, MessageCircleOff, Moon, Compass, Sun, Wind, BookOpen,
   AlertCircle, Home, PenLine, Target, Milestone, Quote, ShieldCheck,
   Lock, Infinity as InfinityIcon, Smartphone, ChevronRight, ShoppingBag,
