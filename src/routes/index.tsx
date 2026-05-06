@@ -5,7 +5,7 @@ import {
   SearchX, MessageCircleOff, Moon, Compass, Sun, Wind, BookOpen,
   AlertCircle, Home, PenLine, Target, Milestone, Quote, ShieldCheck,
   Lock, Infinity as InfinityIcon, Smartphone, ChevronRight, ShoppingBag,
-  KeyRound, Feather, Check, HeartHandshake,
+  KeyRound, Feather, Check, HeartHandshake, Leaf,
 } from "lucide-react";
 import { Orbs } from "@/components/Orbs";
 import { useReveal } from "@/hooks/use-reveal";
@@ -103,7 +103,7 @@ function Index() {
       <nav className="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-6 md:px-10 py-4"
         style={{ background: 'rgba(245,240,250,0.7)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderBottom: '1px solid rgba(122,79,217,0.10)' }}>
         <div className="flex items-center gap-2.5">
-          <BookHeart size={20} style={{ color: VIOLET }} />
+          <Leaf size={20} style={{ color: VIOLET }} />
           <span className="font-display font-light text-[15px] md:text-[17px]" style={{ color: TEXT, letterSpacing: '2px' }}>
             The Healing Journal
           </span>
