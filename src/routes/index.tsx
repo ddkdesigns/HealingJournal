@@ -154,7 +154,7 @@ function Index() {
             </span>
           </div>
           <h2 className="reveal font-display font-normal" style={{ fontSize: 'clamp(28px, 4.5vw, 40px)', color: TEXT, lineHeight: 1.4, marginBottom: 24 }}>
-            You left. Or maybe you stayed.&nbsp;Either way, something in you<br />never fully came back.
+            You left. Or maybe you stayed.&nbsp;Either way, something in you <br />never fully came back.
           </h2>
           <p className="reveal font-italic mb-12" style={{ fontSize: 16, color: TEXT_SOFT, lineHeight: 2.0, maxWidth: 580 }}>
             You know the feeling. That low hum of anxiety that never fully goes away. The way certain words, silences, or expressions send your body into a panic it cannot explain. The exhaustion of being hypervigilant in every room you walk into.
