@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
-  Sparkles, ChevronDown, Heart, Brain, CloudRain, Waves,
+  BookHeart, Sparkles, ChevronDown, Heart, Brain, CloudRain, Waves,
   SearchX, MessageCircleOff, Moon, Compass, Sun, Wind, BookOpen,
   AlertCircle, Home, PenLine, Target, Milestone, Quote, ShieldCheck,
   Lock, Infinity as InfinityIcon, Smartphone, ChevronRight, ShoppingBag,
@@ -404,7 +404,7 @@ function Index() {
       {/* FOOTER */}
       <footer className="px-6 py-10 text-center" style={{ background: 'rgba(45,27,78,0.06)', borderTop: '1px solid rgba(45,27,78,0.10)' }}>
         <div className="flex items-center justify-center mb-4">
-          <Leaf size={18} style={{ color: VIOLET, marginRight: 8 }} />
+          <BookHeart size={18} style={{ color: VIOLET, marginRight: 8 }} />
           <span className="font-display font-light" style={{ fontSize: 15, color: 'rgba(45,27,78,0.65)', letterSpacing: '2px' }}>The Healing Journal</span>
         </div>
         <p className="font-body" style={{ fontSize: 11, color: 'rgba(45,27,78,0.40)' }}>
