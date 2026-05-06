@@ -109,7 +109,7 @@ function Index() {
           </span>
         </div>
         <a href="#purchase" className="cta-btn font-body font-medium text-[13px] px-6 py-2.5 inline-block">
-          Get Access — $27
+          Get Access — $15
         </a>
       </nav>
 
@@ -125,14 +125,14 @@ function Index() {
             </span>
           </div>
           <h1 className="reveal font-display font-normal leading-[1.25]" style={{ color: TEXT, fontSize: 'clamp(38px, 6vw, 62px)', maxWidth: 720, transitionDelay: '0.15s' }}>
-            You are not too much.<br />You were surrounded<br />by too little.
+            You are not too much. You were surrounded by too little.
           </h1>
           <p className="reveal font-italic mt-6" style={{ fontSize: 18, color: TEXT_SOFT, lineHeight: 1.9, maxWidth: 540, transitionDelay: '0.3s' }}>
             The Healing Journal is a private digital companion for women healing from CPTSD, narcissistic abuse, and nervous system dysregulation.
           </p>
           <a href="#purchase" className="reveal cta-btn inline-block mt-10 font-body font-medium text-[16px]"
             style={{ padding: '17px 52px', transitionDelay: '0.45s' }}>
-            Get Instant Access — $27
+            Get Instant Access — $15
           </a>
           <p className="reveal font-body mt-3.5 text-[11px]" style={{ color: TEXT_FAINT, transitionDelay: '0.55s' }}>
             One-time purchase · Lifetime access · Any device · No app store needed
@@ -154,7 +154,7 @@ function Index() {
             </span>
           </div>
           <h2 className="reveal font-display font-normal" style={{ fontSize: 'clamp(28px, 4.5vw, 40px)', color: TEXT, lineHeight: 1.4, marginBottom: 24 }}>
-            You left. Or maybe you stayed.<br />Either way, something in you<br />never fully came back.
+            You left. Or maybe you stayed.&nbsp;Either way, something in you<br />never fully came back.
           </h2>
           <p className="reveal font-italic mb-12" style={{ fontSize: 16, color: TEXT_SOFT, lineHeight: 2.0, maxWidth: 580 }}>
             You know the feeling. That low hum of anxiety that never fully goes away. The way certain words, silences, or expressions send your body into a panic it cannot explain. The exhaustion of being hypervigilant in every room you walk into.
@@ -247,7 +247,7 @@ function Index() {
         <Orbs />
         <div className="relative z-10 max-w-[1100px] mx-auto">
           <h2 className="reveal font-display font-normal text-center" style={{ fontSize: 'clamp(28px, 4.5vw, 40px)', color: TEXT, marginBottom: 14 }}>
-            Everything inside The Healing Journal
+            Everything inside...The Healing Journal
           </h2>
           <p className="reveal font-body font-light text-center" style={{ fontSize: 15, color: TEXT_SOFT, marginBottom: 56 }}>
             Six tabs. One private space. Everything you need for exactly where you are right now.
