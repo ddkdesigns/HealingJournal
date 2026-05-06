@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
-  BookHeart, Sparkles, ChevronDown, Heart, Brain, CloudRain, Waves,
+  Sparkles, ChevronDown, Heart, Brain, CloudRain, Waves,
   SearchX, MessageCircleOff, Moon, Compass, Sun, Wind, BookOpen,
   AlertCircle, Home, PenLine, Target, Milestone, Quote, ShieldCheck,
   Lock, Infinity as InfinityIcon, Smartphone, ChevronRight, ShoppingBag,
@@ -360,7 +360,7 @@ function Index() {
       <section className="relative py-[100px] px-6 overflow-hidden" style={{ background: BG_LIGHT }}>
         <Orbs />
         <div className="relative z-10">
-          <h2 className="reveal font-display font-normal text-center" style={{ fontSize: 'clamp(28px, 4vw, 38px)', color: TEXT, marginBottom: 48 }}>
+          <h2 className="reveal font-display font-normal text-center" style={{ fontSize: 'clamp(28px, 4.5vw, 40px)', color: TEXT, marginBottom: 48 }}>
             Questions you might have
           </h2>
           <Faq />
@@ -404,7 +404,7 @@ function Index() {
       {/* FOOTER */}
       <footer className="px-6 py-10 text-center" style={{ background: 'rgba(45,27,78,0.06)', borderTop: '1px solid rgba(45,27,78,0.10)' }}>
         <div className="flex items-center justify-center mb-4">
-          <BookHeart size={18} style={{ color: VIOLET, marginRight: 8 }} />
+          <Leaf size={18} style={{ color: VIOLET, marginRight: 8 }} />
           <span className="font-display font-light" style={{ fontSize: 15, color: 'rgba(45,27,78,0.65)', letterSpacing: '2px' }}>The Healing Journal</span>
         </div>
         <p className="font-body" style={{ fontSize: 11, color: 'rgba(45,27,78,0.40)' }}>
