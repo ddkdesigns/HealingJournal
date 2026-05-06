@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   Sparkles, ChevronDown, Heart, Brain, CloudRain, Waves,
@@ -408,7 +408,13 @@ function Index() {
           <span className="font-display font-light" style={{ fontSize: 15, color: 'rgba(45,27,78,0.65)', letterSpacing: '2px' }}>The Healing Journal</span>
         </div>
         <p className="font-body" style={{ fontSize: 11, color: 'rgba(45,27,78,0.40)' }}>
-          Disclaimer · Privacy Policy · Terms of Use · Contact
+          <Link to="/disclaimer" className="hover:underline" style={{ color: 'inherit' }}>Disclaimer</Link>
+          {' · '}
+          <Link to="/privacy" className="hover:underline" style={{ color: 'inherit' }}>Privacy Policy</Link>
+          {' · '}
+          <Link to="/terms" className="hover:underline" style={{ color: 'inherit' }}>Terms of Use</Link>
+          {' · '}
+          <a href="mailto:hello@thehealingjournal.app" className="hover:underline" style={{ color: 'inherit' }}>Contact</a>
         </p>
         <p className="font-body" style={{ marginTop: 12, fontSize: 10, color: 'rgba(45,27,78,0.30)' }}>
           The Healing Journal — Educational tool only — Not professional medical advice
