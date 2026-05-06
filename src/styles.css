@@ -59,13 +59,13 @@
   --ring: oklch(0.62 0.18 300);
 
   --bg-primary: #f5eef0;
-  --bg-secondary: #EFE7F7;
-  --text-primary: #2D1B4E;
-  --text-soft: #5A4A7A;
-  --accent-violet: #9B6FE8;
-  --accent-periwinkle: #6B85E0;
-  --accent-rose: #E08AB5;
-  --accent-gold: #D9A856;
+  --bg-secondary: #d4c5c7;
+  --text-primary: #1a1a2e;
+  --text-soft: #5e81ac;
+  --accent-violet: #a38284;
+  --accent-periwinkle: #5e81ac;
+  --accent-rose: #a38284;
+  --accent-gold: #5e81ac;
 }
 
 @layer base {
@@ -79,7 +79,7 @@
 
   body {
     background-color: #f5eef0;
-    color: #2D1B4E;
+    color: #1a1a2e;
     font-family: var(--font-body);
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
