@@ -360,7 +360,7 @@ function Index() {
       <section className="relative py-[100px] px-6 overflow-hidden" style={{ background: BG_LIGHT }}>
         <Orbs />
         <div className="relative z-10">
-          <h2 className="reveal font-display font-normal text-center" style={{ fontSize: 'clamp(28px, 4vw, 38px)', color: TEXT, marginBottom: 48 }}>
+          <h2 className="reveal font-display font-normal text-center" style={{ fontSize: 'clamp(28px, 4.5vw, 40px)', color: TEXT, marginBottom: 48 }}>
             Questions you might have
           </h2>
           <Faq />
