@@ -383,7 +383,7 @@ function Index() {
               You deserve that. Even now. Especially now.
             </p>
             <a href="#purchase" className="cta-btn inline-block font-body font-medium text-[17px]" style={{ padding: '18px 60px' }}>
-              Get Instant Access — $27
+              Get Instant Access— $15
             </a>
             <p className="font-body" style={{ marginTop: 16, fontSize: 11, color: TEXT_FAINT }}>
               One-time purchase · Lifetime access · Any device · No app store needed
