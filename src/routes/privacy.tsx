@@ -12,7 +12,7 @@ export const Route = createFileRoute("/privacy")({
 
 function PrivacyPage() {
   return (
-    <main className="min-h-screen px-6 py-20" style={{ background: '#F5F0FA', color: '#2D1B4E' }}>
+    <main className="min-h-screen px-6 py-20" style={{ background: '#f5eef0', color: '#2D1B4E' }}>
       <div className="mx-auto max-w-2xl">
         <Link to="/" className="font-body text-sm" style={{ color: '#7A5FB8' }}>← Back</Link>
         <h1 className="font-display mt-6 mb-6" style={{ fontSize: 36 }}>Privacy Policy</h1>

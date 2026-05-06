@@ -58,7 +58,7 @@
   --input: oklch(0.25 0.06 290 / 15%);
   --ring: oklch(0.62 0.18 300);
 
-  --bg-primary: #F5F0FA;
+  --bg-primary: #f5eef0;
   --bg-secondary: #EFE7F7;
   --text-primary: #2D1B4E;
   --text-soft: #5A4A7A;
@@ -78,7 +78,7 @@
   }
 
   body {
-    background-color: #F5F0FA;
+    background-color: #f5eef0;
     color: #2D1B4E;
     font-family: var(--font-body);
     font-weight: 300;
@@ -121,7 +121,7 @@
   .font-italic { font-family: var(--font-italic); font-style: italic; }
 
   .cta-btn {
-    background: linear-gradient(135deg, #9B4DCA, #6B4DE8);
+    background: linear-gradient(135deg, #a38284, #5e81ac);
     box-shadow: 0 8px 30px rgba(155, 77, 202, 0.40);
     color: #fff;
     border-radius: 50px;
