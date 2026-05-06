@@ -12,9 +12,9 @@ export const Route = createFileRoute("/disclaimer")({
 
 function DisclaimerPage() {
   return (
-    <main className="min-h-screen px-6 py-20" style={{ background: '#F5F0FA', color: '#2D1B4E' }}>
+    <main className="min-h-screen px-6 py-20" style={{ background: '#f5eef0', color: '#1a1a2e' }}>
       <div className="mx-auto max-w-2xl">
-        <Link to="/" className="font-body text-sm" style={{ color: '#7A5FB8' }}>← Back</Link>
+        <Link to="/" className="font-body text-sm" style={{ color: '#5e81ac' }}>← Back</Link>
         <h1 className="font-display mt-6 mb-6" style={{ fontSize: 36 }}>Disclaimer</h1>
         <p className="font-body" style={{ fontSize: 16, lineHeight: 1.7 }}>
           The Healing Journal is for educational and informational purposes only. It is not a
