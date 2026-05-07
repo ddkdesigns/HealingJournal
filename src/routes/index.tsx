@@ -108,7 +108,7 @@ function Index() {
             The Healing Journal
           </span>
         </div>
-        <a href="#purchase" className="cta-btn font-body font-medium text-[13px] px-6 py-2.5 inline-block">
+        <a href="https://shop.beacons.ai/silentlyshifting/c481e8d0-d034-4b61-bed2-b53e7cc68a10" target="_blank" rel="noopener noreferrer" className="cta-btn font-body font-medium text-[13px] px-6 py-2.5 inline-block">
           Get Access — $15
         </a>
       </nav>
@@ -130,7 +130,7 @@ function Index() {
           <p className="reveal font-italic mt-6" style={{ fontSize: 18, color: TEXT_SOFT, lineHeight: 1.9, maxWidth: 540, transitionDelay: '0.3s' }}>
             The Healing Journal is a private digital companion for women healing from CPTSD, narcissistic abuse, and nervous system dysregulation.
           </p>
-          <a href="#purchase" className="reveal cta-btn inline-block mt-10 font-body font-medium text-[16px]"
+          <a href="https://shop.beacons.ai/silentlyshifting/c481e8d0-d034-4b61-bed2-b53e7cc68a10" target="_blank" rel="noopener noreferrer" className="reveal cta-btn inline-block mt-10 font-body font-medium text-[16px]"
             style={{ padding: '17px 52px', transitionDelay: '0.45s' }}>
             Get Instant Access — $15
           </a>
@@ -382,7 +382,7 @@ function Index() {
               <br /><br />
               You deserve that. Even now. Especially now.
             </p>
-            <a href="#purchase" className="cta-btn inline-block font-body font-medium text-[17px]" style={{ padding: '18px 60px' }}>
+            <a href="https://shop.beacons.ai/silentlyshifting/c481e8d0-d034-4b61-bed2-b53e7cc68a10" target="_blank" rel="noopener noreferrer" className="cta-btn inline-block font-body font-medium text-[17px]" style={{ padding: '18px 60px' }}>
               Get Instant Access— $15
             </a>
             <p className="font-body" style={{ marginTop: 16, fontSize: 11, color: TEXT_FAINT }}>
