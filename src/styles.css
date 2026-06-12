@@ -79,8 +79,9 @@
   }
 
   body {
-    background-color: #f5eef0;
-    color: #1a1a2e;
+    background: linear-gradient(180deg, #2d2461 0%, #3d3175 50%, #2d2461 100%);
+    background-attachment: fixed;
+    color: #1a1a3e;
     font-family: var(--font-body);
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
