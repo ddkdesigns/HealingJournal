@@ -340,9 +340,12 @@ function Index() {
       <section className="relative py-[100px] px-6 overflow-hidden" style={{ background: BG_LIGHT }}>
         <Orbs />
         <div className="relative z-10 max-w-[1100px] mx-auto">
-          <h2 className="reveal font-display font-normal text-center" style={{ fontSize: 'clamp(28px, 4vw, 38px)', color: TEXT, marginBottom: 56 }}>
-            Getting started takes less than two minutes.
+          <h2 className="reveal font-display font-normal text-center" style={{ fontSize: 'clamp(28px, 4vw, 38px)', color: TEXT, marginBottom: 14 }}>
+            Start free. Upgrade when you're ready.
           </h2>
+          <p className="reveal font-body font-light text-center" style={{ fontSize: 15, color: TEXT_SOFT, marginBottom: 56, maxWidth: 560, marginLeft: 'auto', marginRight: 'auto' }}>
+            No card to begin, no pressure to upgrade. Feel the space first, decide later.
+          </p>
           <div className="flex flex-col md:flex-row items-stretch md:items-center justify-center gap-5">
             {steps.map((s, i) => {
               const Icon = s.icon;
