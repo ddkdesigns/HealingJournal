@@ -23,17 +23,17 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const TEXT = '#1a1a2e';
-const TEXT_SOFT = 'rgba(26,26,46,0.68)';
-const TEXT_FAINT = 'rgba(26,26,46,0.45)';
-const TEXT_GHOST = 'rgba(26,26,46,0.30)';
-const VIOLET = '#a38284';
-const PERIWINKLE = '#5e81ac';
-const ROSE = '#a38284';
-const GOLD = '#5e81ac';
+const TEXT = '#1a1a3e';
+const TEXT_SOFT = 'rgba(26,26,62,0.68)';
+const TEXT_FAINT = 'rgba(26,26,62,0.45)';
+const TEXT_GHOST = 'rgba(26,26,62,0.30)';
+const VIOLET = '#6b5fb5';
+const PERIWINKLE = '#8b7fc9';
+const ROSE = '#9b87d4';
+const GOLD = '#e8c547';
 
-const BG_LIGHT = '#f5eef0';
-const BG_LIGHTER = '#d4c5c7';
+const BG_LIGHT = '#f5f1e8';
+const BG_LIGHTER = '#ebe4f5';
 
 const mirrorRows = [
   { icon: Brain, text: "You overthink every interaction and do not know why." },
