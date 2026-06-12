@@ -98,10 +98,10 @@ function Index() {
   useReveal();
 
   return (
-    <div className="relative" style={{ background: BG_LIGHT }}>
+    <div className="relative mx-auto" style={{ background: BG_LIGHT, maxWidth: 1280, boxShadow: '0 0 80px rgba(0,0,0,0.35)' }}>
       {/* NAV */}
-      <nav className="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-6 md:px-10 py-4"
-        style={{ background: 'rgba(245,240,250,0.7)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderBottom: '1px solid rgba(163,130,132,0.10)' }}>
+      <nav className="sticky top-0 z-[100] flex items-center justify-between px-6 md:px-10 py-4"
+        style={{ background: 'rgba(245,241,232,0.85)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderBottom: '1px solid rgba(107,95,181,0.15)' }}>
         <div className="flex items-center gap-2.5">
           <Leaf size={20} style={{ color: VIOLET }} />
           <span className="font-display font-light text-[15px] md:text-[17px]" style={{ color: TEXT, letterSpacing: '2px' }}>
