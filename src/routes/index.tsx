@@ -414,39 +414,73 @@ function Index() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section id="purchase" className="relative px-6 overflow-hidden" style={{ background: 'linear-gradient(135deg, #ebe4f5 0%, #f5f1e8 60%, #d9cdf0 100%)', padding: '140px 24px' }}>
+      {/* PRICING */}
+      <section id="pricing" className="relative px-6 overflow-hidden" style={{ background: 'linear-gradient(135deg, #ebe4f5 0%, #f5f1e8 60%, #d9cdf0 100%)', padding: '120px 24px' }}>
         <Orbs />
-        <div className="relative z-10 max-w-[640px] mx-auto">
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" style={{ width: 400, height: 400, background: '#a38284', borderRadius: '50%', filter: 'blur(140px)', opacity: 0.25, pointerEvents: 'none' }} />
-          <div className="reveal glass relative text-center" style={{ padding: '70px 56px', borderColor: 'rgba(163,130,132,0.30)' }}>
-            <HeartHandshake size={40} style={{ color: ROSE, margin: '0 auto 24px' }} />
-            <h2 className="font-display font-normal italic" style={{ fontSize: 'clamp(28px, 5vw, 40px)', color: TEXT, lineHeight: 1.4, marginBottom: 24 }}>
-              You have been carrying this for long enough.
-            </h2>
-            <p className="font-body font-light" style={{ fontSize: 16, color: TEXT_SOFT, lineHeight: 1.95, maxWidth: 480, margin: '0 auto 44px' }}>
-              The Healing Journal is not a cure. It is not a promise. It is a place — private, safe, and entirely yours — to begin to understand what happened, to calm the body that is still responding to a threat that is no longer there, and to document the journey so that one day you can look back and see how far you came.
-              <br /><br />
-              You deserve that. Even now. Especially now.
-            </p>
-            <a href="https://shop.beacons.ai/silentlyshifting/c481e8d0-d034-4b61-bed2-b53e7cc68a10" target="_blank" rel="noopener noreferrer" className="cta-btn inline-block font-body font-medium text-[17px]" style={{ padding: '18px 60px' }}>
-              Get Instant Access— $15
-            </a>
-            <p className="font-body" style={{ marginTop: 16, fontSize: 11, color: TEXT_FAINT }}>
-              One-time purchase · Lifetime access · Any device · No app store needed
-            </p>
-            <p className="font-body" style={{ marginTop: 12, fontSize: 10, color: TEXT_GHOST, maxWidth: 480, margin: '12px auto 0' }}>
-              Educational tool only. Not a substitute for professional mental health care. For crisis support: call or text 988.
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-5 text-[12px] font-body" style={{ color: TEXT_FAINT }}>
-              <span className="flex items-center gap-2"><Lock size={13} style={{ color: VIOLET }} /> Encrypted & private</span>
-              <span className="flex items-center gap-2"><InfinityIcon size={13} style={{ color: PERIWINKLE }} /> Lifetime access</span>
-              <span className="flex items-center gap-2"><Smartphone size={13} style={{ color: ROSE }} /> Any device</span>
-              <span className="flex items-center gap-2"><ShieldCheck size={13} style={{ color: GOLD }} /> One-time purchase</span>
-            </div>
+        <div className="relative z-10 max-w-[980px] mx-auto">
+          <h2 className="reveal font-display font-normal text-center" style={{ fontSize: 'clamp(28px, 4.5vw, 40px)', color: TEXT, marginBottom: 14 }}>
+            A plan that grows with you
+          </h2>
+          <p className="reveal font-body font-light text-center" style={{ fontSize: 15, color: TEXT_SOFT, marginBottom: 56, maxWidth: 540, marginLeft: 'auto', marginRight: 'auto' }}>
+            Start free today. Upgrade once — never again — when the space feels like yours.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6 max-w-[760px] mx-auto">
+            {tiers.map((t, i) => (
+              <div key={i} className={`reveal relative ${t.featured ? '' : 'glass'}`}
+                style={{
+                  padding: 36,
+                  borderRadius: 28,
+                  transitionDelay: `${i * 0.1}s`,
+                  background: t.featured ? 'linear-gradient(160deg, #2d2461 0%, #4a3d8a 100%)' : undefined,
+                  color: t.featured ? '#fff' : undefined,
+                  boxShadow: t.featured ? '0 20px 60px rgba(45,36,97,0.40)' : undefined,
+                  border: t.featured ? '1px solid rgba(255,255,255,0.15)' : undefined,
+                  transform: t.featured ? 'translateY(-8px)' : undefined,
+                }}>
+                {t.featured && (
+                  <div className="absolute top-4 right-4 px-3 py-1 text-[10px] font-body uppercase" style={{ background: GOLD, color: '#1a1a3e', borderRadius: 50, letterSpacing: '2px' }}>
+                    Most chosen
+                  </div>
+                )}
+                <h3 className="font-display font-normal mb-1" style={{ fontSize: 20, color: t.featured ? '#fff' : TEXT }}>{t.name}</h3>
+                <div className="flex items-baseline gap-2 mb-2">
+                  <span className="font-display" style={{ fontSize: 44, color: t.featured ? '#fff' : TEXT }}>{t.price}</span>
+                </div>
+                <p className="font-body text-[12px] uppercase mb-6" style={{ color: t.featured ? 'rgba(255,255,255,0.7)' : TEXT_FAINT, letterSpacing: '2px' }}>{t.sub}</p>
+                <a href={t.href} target="_blank" rel="noopener noreferrer"
+                  className="block w-full text-center font-body font-medium text-[14px]"
+                  style={{
+                    padding: '14px 24px',
+                    borderRadius: 50,
+                    background: t.featured ? '#fff' : 'linear-gradient(135deg, #2d2461, #6b5fb5)',
+                    color: t.featured ? '#2d2461' : '#fff',
+                    marginBottom: 28,
+                  }}>
+                  {t.cta}
+                </a>
+                <ul className="flex flex-col gap-3">
+                  {t.features.map((f, j) => (
+                    <li key={j} className="flex items-start gap-2.5 font-body text-[13px]" style={{ color: t.featured ? 'rgba(255,255,255,0.92)' : TEXT_SOFT, lineHeight: 1.6 }}>
+                      <Check size={15} style={{ color: t.featured ? GOLD : VIOLET, flexShrink: 0, marginTop: 2 }} />
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
+          <div className="mt-12 flex flex-wrap justify-center gap-5 text-[12px] font-body" style={{ color: TEXT_FAINT }}>
+            <span className="flex items-center gap-2"><Lock size={13} style={{ color: VIOLET }} /> Encrypted & private</span>
+            <span className="flex items-center gap-2"><InfinityIcon size={13} style={{ color: PERIWINKLE }} /> Lifetime access</span>
+            <span className="flex items-center gap-2"><Smartphone size={13} style={{ color: ROSE }} /> Any device</span>
+            <span className="flex items-center gap-2"><ShieldCheck size={13} style={{ color: GOLD }} /> One-time purchase</span>
+          </div>
+          <p className="font-body text-center mt-6" style={{ fontSize: 10, color: TEXT_GHOST, maxWidth: 520, margin: '24px auto 0' }}>
+            Educational tool only. Not a substitute for professional mental health care. For crisis support: call or text 988.
+          </p>
         </div>
       </section>
+
 
       {/* FOOTER */}
       <footer className="px-6 py-10 text-center" style={{ background: 'rgba(26,26,46,0.06)', borderTop: '1px solid rgba(26,26,46,0.10)' }}>
