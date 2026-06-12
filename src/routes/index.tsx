@@ -141,9 +141,14 @@ function Index() {
             The Healing Journal
           </span>
         </div>
-        <a href="https://shop.beacons.ai/silentlyshifting/c481e8d0-d034-4b61-bed2-b53e7cc68a10" target="_blank" rel="noopener noreferrer" className="cta-btn font-body font-medium text-[13px] px-6 py-2.5 inline-block">
-          Get Access — $15
-        </a>
+        <div className="flex items-center gap-3">
+          <a href="#pricing" className="hidden sm:inline-block font-body text-[13px]" style={{ color: TEXT_SOFT }}>
+            Pricing
+          </a>
+          <a href="https://shop.beacons.ai/silentlyshifting/c481e8d0-d034-4b61-bed2-b53e7cc68a10" target="_blank" rel="noopener noreferrer" className="cta-btn font-body font-medium text-[13px] px-6 py-2.5 inline-block">
+            Get Access — $15
+          </a>
+        </div>
       </nav>
 
       {/* HERO */}
