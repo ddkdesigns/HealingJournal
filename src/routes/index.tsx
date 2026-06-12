@@ -23,17 +23,17 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const TEXT = '#1a1a2e';
-const TEXT_SOFT = 'rgba(26,26,46,0.68)';
-const TEXT_FAINT = 'rgba(26,26,46,0.45)';
-const TEXT_GHOST = 'rgba(26,26,46,0.30)';
-const VIOLET = '#a38284';
-const PERIWINKLE = '#5e81ac';
-const ROSE = '#a38284';
-const GOLD = '#5e81ac';
+const TEXT = '#1a1a3e';
+const TEXT_SOFT = 'rgba(26,26,62,0.68)';
+const TEXT_FAINT = 'rgba(26,26,62,0.45)';
+const TEXT_GHOST = 'rgba(26,26,62,0.30)';
+const VIOLET = '#6b5fb5';
+const PERIWINKLE = '#8b7fc9';
+const ROSE = '#9b87d4';
+const GOLD = '#e8c547';
 
-const BG_LIGHT = '#f5eef0';
-const BG_LIGHTER = '#d4c5c7';
+const BG_LIGHT = '#f5f1e8';
+const BG_LIGHTER = '#ebe4f5';
 
 const mirrorRows = [
   { icon: Brain, text: "You overthink every interaction and do not know why." },
@@ -98,10 +98,10 @@ function Index() {
   useReveal();
 
   return (
-    <div className="relative" style={{ background: BG_LIGHT }}>
+    <div className="relative mx-auto" style={{ background: BG_LIGHT, maxWidth: 1280, boxShadow: '0 0 80px rgba(0,0,0,0.35)' }}>
       {/* NAV */}
-      <nav className="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-6 md:px-10 py-4"
-        style={{ background: 'rgba(245,240,250,0.7)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderBottom: '1px solid rgba(163,130,132,0.10)' }}>
+      <nav className="sticky top-0 z-[100] flex items-center justify-between px-6 md:px-10 py-4"
+        style={{ background: 'rgba(245,241,232,0.85)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderBottom: '1px solid rgba(107,95,181,0.15)' }}>
         <div className="flex items-center gap-2.5">
           <Leaf size={20} style={{ color: VIOLET }} />
           <span className="font-display font-light text-[15px] md:text-[17px]" style={{ color: TEXT, letterSpacing: '2px' }}>
@@ -115,7 +115,7 @@ function Index() {
 
       {/* HERO */}
       <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden"
-        style={{ background: 'linear-gradient(135deg, #f5eef0 0%, #f5eef0 40%, #dde4ec 100%)' }}>
+        style={{ background: 'linear-gradient(135deg, #f5f1e8 0%, #ebe4f5 60%, #d9cdf0 100%)' }}>
         <Orbs />
         <div className="relative z-10 max-w-[800px] text-center flex flex-col items-center">
           <div className="reveal glass-pill inline-flex items-center gap-2 px-5 py-2 mb-7">
@@ -368,7 +368,7 @@ function Index() {
       </section>
 
       {/* FINAL CTA */}
-      <section id="purchase" className="relative px-6 overflow-hidden" style={{ background: 'linear-gradient(135deg, #e8d9dc 0%, #f5eef0 60%, #dde4ec 100%)', padding: '140px 24px' }}>
+      <section id="purchase" className="relative px-6 overflow-hidden" style={{ background: 'linear-gradient(135deg, #ebe4f5 0%, #f5f1e8 60%, #d9cdf0 100%)', padding: '140px 24px' }}>
         <Orbs />
         <div className="relative z-10 max-w-[640px] mx-auto">
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" style={{ width: 400, height: 400, background: '#a38284', borderRadius: '50%', filter: 'blur(140px)', opacity: 0.25, pointerEvents: 'none' }} />
