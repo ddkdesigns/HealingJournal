@@ -123,15 +123,15 @@
   .font-italic { font-family: var(--font-italic); font-style: italic; }
 
   .cta-btn {
-    background: linear-gradient(135deg, #a38284, #5e81ac);
-    box-shadow: 0 8px 30px rgba(155, 77, 202, 0.40);
+    background: linear-gradient(135deg, #2d2461, #6b5fb5);
+    box-shadow: 0 8px 30px rgba(45, 36, 97, 0.40);
     color: #fff;
     border-radius: 50px;
     transition: all 0.35s ease;
   }
   .cta-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 14px 44px rgba(155, 77, 202, 0.55);
+    box-shadow: 0 14px 44px rgba(45, 36, 97, 0.55);
   }
 
   .orb {
