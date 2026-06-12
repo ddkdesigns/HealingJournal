@@ -368,7 +368,7 @@ function Index() {
       </section>
 
       {/* FINAL CTA */}
-      <section id="purchase" className="relative px-6 overflow-hidden" style={{ background: 'linear-gradient(135deg, #e8d9dc 0%, #f5eef0 60%, #dde4ec 100%)', padding: '140px 24px' }}>
+      <section id="purchase" className="relative px-6 overflow-hidden" style={{ background: 'linear-gradient(135deg, #ebe4f5 0%, #f5f1e8 60%, #d9cdf0 100%)', padding: '140px 24px' }}>
         <Orbs />
         <div className="relative z-10 max-w-[640px] mx-auto">
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" style={{ width: 400, height: 400, background: '#a38284', borderRadius: '50%', filter: 'blur(140px)', opacity: 0.25, pointerEvents: 'none' }} />
