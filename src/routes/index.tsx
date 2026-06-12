@@ -168,12 +168,18 @@ function Index() {
           <p className="reveal font-italic mt-6" style={{ fontSize: 18, color: TEXT_SOFT, lineHeight: 1.9, maxWidth: 540, transitionDelay: '0.3s' }}>
             The Healing Journal is a private digital companion for women healing from CPTSD, narcissistic abuse, and nervous system dysregulation.
           </p>
-          <a href="https://shop.beacons.ai/silentlyshifting/c481e8d0-d034-4b61-bed2-b53e7cc68a10" target="_blank" rel="noopener noreferrer" className="reveal cta-btn inline-block mt-10 font-body font-medium text-[16px]"
-            style={{ padding: '17px 52px', transitionDelay: '0.45s' }}>
-            Get Instant Access — $15
-          </a>
+          <div className="reveal flex flex-col sm:flex-row items-center gap-3 mt-10" style={{ transitionDelay: '0.45s' }}>
+            <a href="https://shop.beacons.ai/silentlyshifting/c481e8d0-d034-4b61-bed2-b53e7cc68a10" target="_blank" rel="noopener noreferrer" className="cta-btn inline-block font-body font-medium text-[15px]"
+              style={{ padding: '15px 36px' }}>
+              Create free account
+            </a>
+            <a href="#pricing" className="inline-block font-body font-medium text-[15px]"
+              style={{ padding: '15px 36px', borderRadius: 50, border: `1px solid ${VIOLET}`, color: VIOLET, background: 'rgba(107,95,181,0.06)' }}>
+              See plans
+            </a>
+          </div>
           <p className="reveal font-body mt-3.5 text-[11px]" style={{ color: TEXT_FAINT, transitionDelay: '0.55s' }}>
-            One-time purchase · Lifetime access · Any device · No app store needed
+            Free to start · Upgrade once for $15 · Lifetime access · No subscription
           </p>
         </div>
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 scroll-bounce">
