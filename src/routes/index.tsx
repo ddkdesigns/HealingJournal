@@ -54,9 +54,42 @@ const features = [
 ];
 
 const steps = [
-  { num: "01", icon: ShoppingBag, color: GOLD, rgb: "94,129,172", title: "Purchase and receive your access code", body: "After purchase you receive a PDF with your unique personal access code. One code, one account. Yours alone and non-transferable." },
-  { num: "02", icon: KeyRound, color: VIOLET, rgb: "163,130,132", title: "Create your private account", body: "Go to the app, enter your access code, and create your account with an email and password. Your space is immediately private and protected." },
-  { num: "03", icon: Feather, color: ROSE, rgb: "163,130,132", title: "Begin wherever you are", body: "Open the home tab, read your affirmation, check in with your mood, and explore at your own pace. There is no right way to start. There is only starting." },
+  { num: "01", icon: KeyRound, color: VIOLET, rgb: "107,95,181", title: "Create your free account", body: "Sign up in under a minute with just your email. No card, no commitment. Your private space is created instantly." },
+  { num: "02", icon: Feather, color: ROSE, rgb: "155,135,212", title: "Explore the app for free", body: "Try the daily affirmation, take a mood check-in, and preview the Learn library and a guided breathing tool — so you can feel the space before you decide." },
+  { num: "03", icon: ShoppingBag, color: GOLD, rgb: "232,197,71", title: "Unlock everything for life", body: "When you're ready, upgrade once for $15 to unlock the full Learn library, all six regulation tools, the private journal, goals, and your healing journey timeline. One payment, lifetime access." },
+];
+
+const tiers = [
+  {
+    name: "Free preview",
+    price: "$0",
+    sub: "Always free · No card needed",
+    cta: "Create free account",
+    href: "https://shop.beacons.ai/silentlyshifting/c481e8d0-d034-4b61-bed2-b53e7cc68a10",
+    featured: false,
+    features: [
+      "Personal home with daily affirmation",
+      "Daily mood check-in",
+      "Preview of the Learn library",
+      "One guided breathing tool",
+    ],
+  },
+  {
+    name: "Lifetime access",
+    price: "$15",
+    sub: "One-time · Yours forever",
+    cta: "Get Instant Access — $15",
+    href: "https://shop.beacons.ai/silentlyshifting/c481e8d0-d034-4b61-bed2-b53e7cc68a10",
+    featured: true,
+    features: [
+      "Full Learn library — CPTSD, narcissistic abuse, more",
+      "All six nervous-system regulation tools",
+      "Private encrypted journal with 20 prompts",
+      "Goals, streaks & daily wins",
+      "Journey timeline & Letter to Future Me",
+      "Any device · No app store · No subscription",
+    ],
+  },
 ];
 
 const faqs = [
