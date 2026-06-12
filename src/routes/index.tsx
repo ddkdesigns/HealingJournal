@@ -115,7 +115,7 @@ function Index() {
 
       {/* HERO */}
       <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden"
-        style={{ background: 'linear-gradient(135deg, #f5eef0 0%, #f5eef0 40%, #dde4ec 100%)' }}>
+        style={{ background: 'linear-gradient(135deg, #f5f1e8 0%, #ebe4f5 60%, #d9cdf0 100%)' }}>
         <Orbs />
         <div className="relative z-10 max-w-[800px] text-center flex flex-col items-center">
           <div className="reveal glass-pill inline-flex items-center gap-2 px-5 py-2 mb-7">
