@@ -1,13 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
-  Sparkles, ChevronDown, Heart, Brain, CloudRain, Waves,
-  SearchX, MessageCircleOff, Moon, Compass, Sun, Wind, BookOpen,
-  AlertCircle, Home, PenLine, Target, Milestone, Quote, ShieldCheck,
-  Lock, Infinity as InfinityIcon, Smartphone, ChevronRight, ShoppingBag,
-  KeyRound, Feather, Check, HeartHandshake, Leaf,
+  Sparkles, ChevronDown, Brain, CloudRain, Waves,
+  SearchX, MessageCircleOff, Moon, Sun, Wind, BookOpen,
+  Home, PenLine, Target, Milestone, ShieldCheck,
+  Lock, Infinity as InfinityIcon, Smartphone,
+  KeyRound, Feather, Check, Leaf, ShoppingBag,
 } from "lucide-react";
-import { Orbs } from "@/components/Orbs";
 import { useReveal } from "@/hooks/use-reveal";
 
 export const Route = createFileRoute("/")({
@@ -23,50 +22,42 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const TEXT = '#39442B';
-const TEXT_SOFT = 'rgba(57,68,43,0.68)';
-const TEXT_FAINT = 'rgba(57,68,43,0.45)';
-const TEXT_GHOST = 'rgba(57,68,43,0.30)';
-const VIOLET = '#6F7F5C';
-const PERIWINKLE = '#A4AD94';
-const ROSE = '#6F7F5C';
-const GOLD = '#A4AD94';
+const BEACONS = "https://shop.beacons.ai/silentlyshifting/c481e8d0-d034-4b61-bed2-b53e7cc68a10";
 
-const BG_LIGHT = '#FDFDF1';
-const BG_LIGHTER = '#D9DCCF';
+const OLIVE  = "#39442B";
+const SAGE   = "#6F7F5C";
+const MOSS   = "#A4AD94";
+const PALE   = "#D9DCCF";
+const IVORY  = "#FDFDF1";
 
 const mirrorRows = [
-  { icon: Brain, text: "You overthink every interaction and do not know why." },
-  { icon: CloudRain, text: "You feel guilty for things that were never your fault." },
-  { icon: Waves, text: "You are either numb or overwhelmed — there is no in between." },
-  { icon: SearchX, text: "You have searched for answers more times than you would like to admit." },
-  { icon: MessageCircleOff, text: "You know something happened to you. You just do not always have the words for it." },
-  { icon: Moon, text: "You are tired of holding all of this alone." },
+  { icon: Brain,             text: "You overthink every interaction and do not know why." },
+  { icon: CloudRain,         text: "You feel guilty for things that were never your fault." },
+  { icon: Waves,             text: "You are either numb or overwhelmed — there is no in between." },
+  { icon: SearchX,           text: "You have searched for answers more times than you would like to admit." },
+  { icon: MessageCircleOff,  text: "You know something happened to you. You just do not always have the words for it." },
+  { icon: Moon,              text: "You are tired of holding all of this alone." },
 ];
 
 const features = [
-  { icon: Home, color: VIOLET, rgb: "164,173,148", title: "Home — Your Daily Anchor", body: "A personalised greeting using your first name, the time of day, and where you are in your journey. Rotating affirmations written for trauma survivors. Daily mood check-in, intention setting, and calm quick-access to every section." },
-  { icon: BookOpen, color: PERIWINKLE, rgb: "164,173,148", title: "Learn — Understand What Happened to You", body: "A full educational library covering CPTSD, narcissistic abuse, gaslighting, manipulation, trauma bonding, fawning, love bombing, intermittent reinforcement, and more — in plain everyday language with no clinical jargon and no judgment." },
-  { icon: Wind, color: ROSE, rgb: "164,173,148", title: "Regulate — When Your Body Will Not Calm Down", body: "Six guided nervous system tools: animated breathing, sensory grounding, trauma-informed body scan, cold water reset, trauma release shaking, and an SOS crisis tool — each with a plain explanation of what it is and how it works." },
-  { icon: PenLine, color: GOLD, rgb: "164,173,148", title: "Journal — Your Private Protected Space", body: "Twenty trauma-informed prompts rotating daily. Free writing always available. Mood tagging. Every entry encrypted and saved to your personal cloud account. No one else can read your words — ever." },
-  { icon: Target, color: VIOLET, rgb: "164,173,148", title: "Goals — The Small Victories That Actually Matter", body: "Personal healing goals entirely your own. Visual progress tracking with a slider. Ten daily win checkboxes that reset each morning. A streak counter for every day you show up for yourself." },
-  { icon: Milestone, color: PERIWINKLE, rgb: "164,173,148", title: "Journey — Watch Yourself Heal", body: "A visual timeline of every entry written. A mood trend chart. A Then vs Now comparison of your first and most recent entry. A Letter to Future Me that seals today and unlocks on a date you choose." },
+  { icon: Home,      title: "Home — Your Daily Anchor",                       body: "A personalised greeting using your first name, the time of day, and where you are in your journey. Rotating affirmations written for trauma survivors. Daily mood check-in, intention setting, and calm quick-access to every section." },
+  { icon: BookOpen,  title: "Learn — Understand What Happened to You",        body: "A full educational library covering CPTSD, narcissistic abuse, gaslighting, manipulation, trauma bonding, fawning, love bombing, intermittent reinforcement, and more — in plain everyday language with no clinical jargon and no judgment." },
+  { icon: Wind,      title: "Regulate — When Your Body Will Not Calm Down",   body: "Six guided nervous system tools: animated breathing, sensory grounding, trauma-informed body scan, cold water reset, trauma release shaking, and an SOS crisis tool — each with a plain explanation of what it is and how it works." },
+  { icon: PenLine,   title: "Journal — Your Private Protected Space",         body: "Twenty trauma-informed prompts rotating daily. Free writing always available. Mood tagging. Every entry encrypted and saved to your personal cloud account. No one else can read your words — ever." },
+  { icon: Target,    title: "Goals — The Small Victories That Actually Matter", body: "Personal healing goals entirely your own. Visual progress tracking with a slider. Ten daily win checkboxes that reset each morning. A streak counter for every day you show up for yourself." },
+  { icon: Milestone, title: "Journey — Watch Yourself Heal",                  body: "A visual timeline of every entry written. A mood trend chart. A Then vs Now comparison of your first and most recent entry. A Letter to Future Me that seals today and unlocks on a date you choose." },
 ];
 
 const steps = [
-  { num: "01", icon: KeyRound, color: VIOLET, rgb: "111,127,92", title: "Create your free account", body: "Sign up in under a minute with just your email. No card, no commitment. Your private space is created instantly." },
-  { num: "02", icon: Feather, color: ROSE, rgb: "111,127,92", title: "Explore the app for free", body: "Try the daily affirmation, take a mood check-in, and preview the Learn library and a guided breathing tool — so you can feel the space before you decide." },
-  { num: "03", icon: ShoppingBag, color: GOLD, rgb: "164,173,148", title: "Unlock everything for life", body: "When you're ready, upgrade once for $15 to unlock the full Learn library, all six regulation tools, the private journal, goals, and your healing journey timeline. One payment, lifetime access." },
+  { num: "01", icon: KeyRound,    title: "Create your free account",  body: "Sign up in under a minute with just your email. No card, no commitment. Your private space is created instantly." },
+  { num: "02", icon: Feather,     title: "Explore the app for free",  body: "Try the daily affirmation, take a mood check-in, and preview the Learn library and a guided breathing tool — so you can feel the space before you decide." },
+  { num: "03", icon: ShoppingBag, title: "Unlock everything for life", body: "When you're ready, upgrade once for $15 to unlock the full Learn library, all six regulation tools, the private journal, goals, and your healing journey timeline. One payment, lifetime access." },
 ];
 
 const tiers = [
   {
-    name: "Free preview",
-    price: "$0",
-    sub: "Always free · No card needed",
-    cta: "Create free account",
-    href: "https://shop.beacons.ai/silentlyshifting/c481e8d0-d034-4b61-bed2-b53e7cc68a10",
-    featured: false,
+    name: "Free preview", price: "$0", sub: "Always free · No card needed",
+    cta: "Create free account", href: BEACONS, featured: false,
     features: [
       "Personal home with daily affirmation",
       "Daily mood check-in",
@@ -75,12 +66,8 @@ const tiers = [
     ],
   },
   {
-    name: "Lifetime access",
-    price: "$15",
-    sub: "One-time · Yours forever",
-    cta: "Get Instant Access — $15",
-    href: "https://shop.beacons.ai/silentlyshifting/c481e8d0-d034-4b61-bed2-b53e7cc68a10",
-    featured: true,
+    name: "Lifetime access", price: "$15", sub: "One-time · Yours forever",
+    cta: "Get Instant Access — $15", href: BEACONS, featured: true,
     features: [
       "Full Learn library — CPTSD, narcissistic abuse, more",
       "All six nervous-system regulation tools",
@@ -93,30 +80,94 @@ const tiers = [
 ];
 
 const faqs = [
-  { q: "Is this the same as therapy?", a: "No. The Healing Journal is an educational self-guided wellness tool. It does not provide clinical treatment and does not create a therapist-client relationship of any kind. It is a private space to learn, reflect, and document — not a replacement for professional mental health support." },
-  { q: "What if I am not sure I have CPTSD?", a: "You do not need a diagnosis to use this app. Many women who find The Healing Journal most useful have never been formally diagnosed. They simply know that something happened, that they have not fully recovered, and that they want a private space to begin to understand it." },
-  { q: "Is my journal actually private?", a: "Yes. Your entries are encrypted and stored in your personal cloud account. No one else can access them — including the creator. You can also delete your entire account and all data permanently at any time from inside the app." },
-  { q: "What do I receive after purchasing?", a: "You receive an instant download PDF containing your unique personal access code and step-by-step setup instructions. The app works in any web browser on any device. No app store, no subscription, no expiry date." },
+  { q: "Is this the same as therapy?",            a: "No. The Healing Journal is an educational self-guided wellness tool. It does not provide clinical treatment and does not create a therapist-client relationship of any kind. It is a private space to learn, reflect, and document — not a replacement for professional mental health support." },
+  { q: "What if I am not sure I have CPTSD?",     a: "You do not need a diagnosis to use this app. Many women who find The Healing Journal most useful have never been formally diagnosed. They simply know that something happened, that they have not fully recovered, and that they want a private space to begin to understand it." },
+  { q: "Is my journal actually private?",         a: "Yes. Your entries are encrypted and stored in your personal cloud account. No one else can access them — including the creator. You can also delete your entire account and all data permanently at any time from inside the app." },
+  { q: "What do I receive after purchasing?",     a: "You receive an instant download PDF containing your unique personal access code and step-by-step setup instructions. The app works in any web browser on any device. No app store, no subscription, no expiry date." },
 ];
+
+function useScrollY() {
+  const [y, setY] = useState(0);
+  useEffect(() => {
+    const onScroll = () => setY(window.scrollY);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  return y;
+}
+
+function Nav() {
+  const y = useScrollY();
+  const condensed = y > 40;
+  return (
+    <nav
+      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12"
+      style={{
+        paddingTop: condensed ? 14 : 22,
+        paddingBottom: condensed ? 14 : 22,
+        background: condensed ? "rgba(253,253,241,0.82)" : "transparent",
+        backdropFilter: condensed ? "blur(18px)" : "none",
+        borderBottom: condensed ? "1px solid rgba(57,68,43,0.08)" : "1px solid transparent",
+        transition: "all 0.5s cubic-bezier(0.16,1,0.3,1)",
+      }}
+    >
+      <div className="flex items-center gap-2.5">
+        <Leaf size={18} style={{ color: OLIVE }} />
+        <span className="font-body" style={{ color: OLIVE, fontSize: 11, letterSpacing: "0.28em", textTransform: "uppercase", fontWeight: 500 }}>
+          The Healing Journal
+        </span>
+      </div>
+      <a
+        href={BEACONS}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-body"
+        style={{
+          padding: "10px 22px",
+          borderRadius: 999,
+          background: OLIVE,
+          color: IVORY,
+          fontSize: 11,
+          letterSpacing: "0.18em",
+          textTransform: "uppercase",
+          fontWeight: 500,
+          transition: "background 0.5s ease, transform 0.5s ease",
+        }}
+        onMouseEnter={(e) => { e.currentTarget.style.background = SAGE; }}
+        onMouseLeave={(e) => { e.currentTarget.style.background = OLIVE; }}
+      >
+        Get Access — $15
+      </a>
+    </nav>
+  );
+}
+
+function Eyebrow({ children, color = SAGE }: { children: React.ReactNode; color?: string }) {
+  return (
+    <span className="font-body reveal inline-block" style={{ color, fontSize: 10, letterSpacing: "0.35em", textTransform: "uppercase", fontWeight: 500 }}>
+      {children}
+    </span>
+  );
+}
 
 function Faq() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <div className="max-w-[700px] mx-auto flex flex-col gap-3">
+    <div className="max-w-[720px] mx-auto">
       {faqs.map((f, i) => {
         const isOpen = open === i;
         return (
-          <div key={i} className="reveal glass" style={{ borderRadius: 18, transitionDelay: `${i * 0.06}s` }}>
+          <div key={i} className="reveal" style={{ borderTop: i === 0 ? "1px solid rgba(57,68,43,0.12)" : undefined, borderBottom: "1px solid rgba(57,68,43,0.12)", transitionDelay: `${i * 0.06}s` }}>
             <button
               onClick={() => setOpen(isOpen ? null : i)}
               className="w-full flex items-center justify-between text-left"
-              style={{ padding: '22px 26px', cursor: 'pointer', background: 'transparent', border: 'none' }}
+              style={{ padding: "28px 4px", cursor: "pointer", background: "transparent", border: "none" }}
             >
-              <span className="font-body text-[15px]" style={{ color: TEXT }}>{f.q}</span>
-              <ChevronDown size={18} style={{ color: VIOLET, transition: 'transform 0.3s ease', transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }} />
+              <span className="font-display" style={{ color: OLIVE, fontSize: 22, lineHeight: 1.4, fontWeight: 400 }}>{f.q}</span>
+              <span style={{ color: SAGE, fontSize: 22, lineHeight: 1, transition: "transform 0.5s cubic-bezier(0.16,1,0.3,1)", transform: isOpen ? "rotate(45deg)" : "rotate(0deg)", marginLeft: 24, flexShrink: 0 }}>+</span>
             </button>
-            <div style={{ maxHeight: isOpen ? 400 : 0, overflow: 'hidden', transition: 'max-height 0.4s ease' }}>
-              <p className="font-body font-light" style={{ padding: '0 26px 22px', fontSize: 14, color: TEXT_SOFT, lineHeight: 1.9 }}>
+            <div style={{ maxHeight: isOpen ? 600 : 0, overflow: "hidden", transition: "max-height 0.6s cubic-bezier(0.16,1,0.3,1)" }}>
+              <p className="font-body font-light" style={{ padding: "0 4px 32px", maxWidth: 580, fontSize: 15, color: SAGE, lineHeight: 1.95 }}>
                 {f.a}
               </p>
             </div>
@@ -129,146 +180,228 @@ function Faq() {
 
 function Index() {
   useReveal();
+  const y = useScrollY();
 
   return (
-    <div className="relative mx-auto" style={{ background: BG_LIGHT, maxWidth: 1280, boxShadow: '0 0 80px rgba(0,0,0,0.35)' }}>
-      {/* NAV */}
-      <nav className="sticky top-0 z-[100] flex items-center justify-between px-6 md:px-10 py-4"
-        style={{ background: 'rgba(253,253,241,0.85)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderBottom: '1px solid rgba(111,127,92,0.15)' }}>
-        <div className="flex items-center gap-2.5">
-          <Leaf size={20} style={{ color: VIOLET }} />
-          <span className="font-display font-light text-[15px] md:text-[17px]" style={{ color: TEXT, letterSpacing: '2px' }}>
-            The Healing Journal
-          </span>
-        </div>
-        <div className="flex items-center gap-3">
-          <a href="#pricing" className="hidden sm:inline-block font-body text-[13px]" style={{ color: TEXT_SOFT }}>
-            Pricing
-          </a>
-          <a href="https://shop.beacons.ai/silentlyshifting/c481e8d0-d034-4b61-bed2-b53e7cc68a10" target="_blank" rel="noopener noreferrer" className="cta-btn font-body font-medium text-[13px] px-6 py-2.5 inline-block">
-            Get Access — $15
-          </a>
-        </div>
-      </nav>
+    <div className="relative w-full overflow-x-hidden" style={{ background: IVORY, color: OLIVE }}>
+      <Nav />
 
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden"
-        style={{ background: 'linear-gradient(135deg, #FDFDF1 0%, #D9DCCF 60%, #D9DCCF 100%)' }}>
-        <Orbs />
-        <div className="relative z-10 max-w-[800px] text-center flex flex-col items-center">
-          <div className="reveal glass-pill inline-flex items-center gap-2 px-5 py-2 mb-7">
-            <Sparkles size={14} style={{ color: ROSE }} />
-            <span className="font-body text-[12px] uppercase" style={{ color: ROSE, letterSpacing: '3px' }}>
-              A private space for your healing
-            </span>
-          </div>
-          <h1 className="reveal font-display font-normal leading-[1.25]" style={{ color: TEXT, fontSize: 'clamp(38px, 6vw, 62px)', maxWidth: 720, transitionDelay: '0.15s' }}>
-            You are not too much. You were surrounded by too little.
-          </h1>
-          <p className="reveal font-italic mt-6" style={{ fontSize: 18, color: TEXT_SOFT, lineHeight: 1.9, maxWidth: 540, transitionDelay: '0.3s' }}>
-            The Healing Journal is a private digital companion for women healing from CPTSD, narcissistic abuse, and nervous system dysregulation.
-          </p>
-          <div className="reveal flex flex-col sm:flex-row items-center gap-3 mt-10" style={{ transitionDelay: '0.45s' }}>
-            <a href="https://shop.beacons.ai/silentlyshifting/c481e8d0-d034-4b61-bed2-b53e7cc68a10" target="_blank" rel="noopener noreferrer" className="cta-btn inline-block font-body font-medium text-[15px]"
-              style={{ padding: '15px 36px' }}>
-              Create free account
-            </a>
-            <a href="#pricing" className="inline-block font-body font-medium text-[15px]"
-              style={{ padding: '15px 36px', borderRadius: 50, border: `1px solid ${VIOLET}`, color: VIOLET, background: 'rgba(111,127,92,0.06)' }}>
-              See plans
-            </a>
-          </div>
-          <p className="reveal font-body mt-3.5 text-[11px]" style={{ color: TEXT_FAINT, transitionDelay: '0.55s' }}>
-            Free to start · Upgrade once for $15 · Lifetime access · No subscription
-          </p>
+      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center" style={{ paddingTop: 120, paddingBottom: 80 }}>
+        {/* ambient drift */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div
+            style={{
+              position: "absolute", top: "12%", left: "18%", width: 520, height: 520, borderRadius: "50%",
+              background: SAGE, filter: "blur(140px)", opacity: 0.22,
+              transform: `translate3d(0, ${y * -0.15}px, 0)`,
+              transition: "transform 0.1s linear",
+            }}
+          />
+          <div
+            style={{
+              position: "absolute", bottom: "8%", right: "12%", width: 600, height: 600, borderRadius: "50%",
+              background: MOSS, filter: "blur(160px)", opacity: 0.28,
+              transform: `translate3d(0, ${y * -0.08}px, 0)`,
+              transition: "transform 0.1s linear",
+            }}
+          />
         </div>
+
+        <div className="reveal mb-10" style={{ transitionDelay: "0.05s" }}>
+          <span className="inline-flex items-center gap-2 font-body" style={{ padding: "8px 18px", borderRadius: 999, border: `1px solid ${PALE}`, color: SAGE, fontSize: 10, letterSpacing: "0.32em", textTransform: "uppercase", fontWeight: 500, background: "rgba(253,253,241,0.6)", backdropFilter: "blur(10px)" }}>
+            <Sparkles size={11} /> A private space for your healing
+          </span>
+        </div>
+
+        <h1
+          className="reveal font-display"
+          style={{
+            color: OLIVE,
+            fontSize: "clamp(44px, 8.5vw, 124px)",
+            lineHeight: 0.98,
+            letterSpacing: "-0.02em",
+            fontWeight: 400,
+            maxWidth: 1080,
+            transitionDelay: "0.15s",
+          }}
+        >
+          You are not too much.
+          <br />
+          You were surrounded by{" "}
+          <span className="font-italic" style={{ color: SAGE }}>too little.</span>
+        </h1>
+
+        <p
+          className="reveal font-italic mt-10"
+          style={{
+            fontSize: "clamp(17px, 1.4vw, 21px)",
+            color: SAGE,
+            lineHeight: 1.85,
+            maxWidth: 580,
+            transitionDelay: "0.32s",
+          }}
+        >
+          The Healing Journal is a private digital companion for women healing from CPTSD, narcissistic abuse, and nervous system dysregulation.
+        </p>
+
+        <div className="reveal flex flex-col sm:flex-row items-center gap-4 mt-14" style={{ transitionDelay: "0.5s" }}>
+          <a
+            href={BEACONS}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body"
+            style={{
+              padding: "18px 38px",
+              borderRadius: 999,
+              background: OLIVE,
+              color: IVORY,
+              fontSize: 12,
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              fontWeight: 500,
+              boxShadow: "0 14px 40px rgba(57,68,43,0.18)",
+              transition: "transform 0.5s cubic-bezier(0.16,1,0.3,1), box-shadow 0.5s cubic-bezier(0.16,1,0.3,1), background 0.5s ease",
+            }}
+            onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 22px 60px rgba(57,68,43,0.28)"; e.currentTarget.style.background = SAGE; }}
+            onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 14px 40px rgba(57,68,43,0.18)"; e.currentTarget.style.background = OLIVE; }}
+          >
+            Create free account
+          </a>
+          <a
+            href="#pricing"
+            className="font-body story-link"
+            style={{ color: OLIVE, fontSize: 12, letterSpacing: "0.22em", textTransform: "uppercase", fontWeight: 500, padding: "18px 12px" }}
+          >
+            See plans
+          </a>
+        </div>
+
+        <p className="reveal font-body mt-6" style={{ fontSize: 10, color: MOSS, letterSpacing: "0.2em", textTransform: "uppercase", transitionDelay: "0.65s" }}>
+          Free to start · Upgrade once for $15 · Lifetime access
+        </p>
+
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 scroll-bounce">
-          <ChevronDown size={20} style={{ color: TEXT_GHOST }} />
+          <ChevronDown size={18} style={{ color: MOSS }} />
         </div>
       </section>
 
-      {/* MIRROR */}
-      <section className="relative py-[100px] px-6 overflow-hidden" style={{ background: BG_LIGHT }}>
-        <Orbs />
-        <div className="relative z-10 max-w-[700px] mx-auto flex flex-col items-center text-center">
-          <div className="reveal glass-pill inline-flex items-center gap-2 px-5 py-2 mb-6">
-            <Heart size={13} style={{ color: ROSE }} />
-            <span className="font-body text-[10px] uppercase" style={{ color: ROSE, letterSpacing: '3px' }}>
-              does this sound familiar
-            </span>
+      {/* MIRROR — does this sound familiar */}
+      <section className="relative px-6" style={{ padding: "200px 24px 200px" }}>
+        <div className="max-w-[820px] mx-auto">
+          <div className="text-center mb-24">
+            <Eyebrow color={MOSS}>Does this sound familiar</Eyebrow>
+            <h2
+              className="reveal font-display mt-8"
+              style={{ color: OLIVE, fontSize: "clamp(34px, 5.2vw, 66px)", lineHeight: 1.08, letterSpacing: "-0.015em", fontWeight: 400, transitionDelay: "0.1s" }}
+            >
+              You left. Or maybe you stayed.
+              <br />
+              Either way, something in you{" "}
+              <span className="font-italic" style={{ color: SAGE }}>never fully came back.</span>
+            </h2>
+            <p className="reveal font-italic mt-10 mx-auto" style={{ fontSize: 18, color: SAGE, lineHeight: 1.95, maxWidth: 620, transitionDelay: "0.25s" }}>
+              That low hum of anxiety that never quite goes away. The way certain words, silences, or expressions send your body into a panic it cannot explain. The exhaustion of being hypervigilant in every room you walk into.
+            </p>
           </div>
-          <h2 className="reveal font-display font-normal" style={{ fontSize: 'clamp(28px, 4.5vw, 40px)', color: TEXT, lineHeight: 1.4, marginBottom: 24 }}>
-            You left. Or maybe you stayed.&nbsp;Either way, something in you <br />never fully came back.
-          </h2>
-          <p className="reveal font-italic mb-12" style={{ fontSize: 16, color: TEXT_SOFT, lineHeight: 2.0, maxWidth: 580 }}>
-            You know the feeling. That low hum of anxiety that never fully goes away. The way certain words, silences, or expressions send your body into a panic it cannot explain. The exhaustion of being hypervigilant in every room you walk into.
-          </p>
-          <div className="w-full flex flex-col items-center gap-2.5">
+
+          <div className="flex flex-col">
             {mirrorRows.map((r, i) => {
               const Icon = r.icon;
               return (
-                <div key={i} className="reveal glass glass-hover w-full max-w-[580px] flex items-center gap-3.5"
-                  style={{ borderRadius: 16, padding: '16px 22px', transitionDelay: `${i * 0.08}s` }}>
-                  <Icon size={16} style={{ color: VIOLET, flexShrink: 0 }} />
-                  <span className="font-body text-[14px] text-left" style={{ color: TEXT, lineHeight: 1.5 }}>{r.text}</span>
+                <div
+                  key={i}
+                  className="reveal flex items-baseline gap-8 md:gap-12"
+                  style={{
+                    padding: "32px 4px",
+                    borderTop: i === 0 ? "1px solid rgba(57,68,43,0.10)" : undefined,
+                    borderBottom: "1px solid rgba(57,68,43,0.10)",
+                    transitionDelay: `${i * 0.08}s`,
+                  }}
+                >
+                  <span className="font-body shrink-0" style={{ color: MOSS, fontSize: 11, letterSpacing: "0.28em", fontWeight: 500, width: 30 }}>
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <Icon size={18} style={{ color: SAGE, flexShrink: 0, transform: "translateY(4px)" }} />
+                  <p className="font-display" style={{ color: OLIVE, fontSize: "clamp(20px, 2.2vw, 28px)", lineHeight: 1.45, fontWeight: 400 }}>
+                    {r.text}
+                  </p>
                 </div>
               );
             })}
           </div>
-          <p className="reveal font-display italic mt-12" style={{ fontSize: 24, color: GOLD }}>
+
+          <p className="reveal font-display italic text-center mt-24" style={{ fontSize: "clamp(22px, 3vw, 34px)", color: SAGE, lineHeight: 1.5 }}>
             You found this for a reason.
           </p>
         </div>
       </section>
 
-      {/* WHAT THIS IS */}
-      <section className="relative py-[100px] px-6 overflow-hidden" style={{ background: BG_LIGHTER }}>
-        <Orbs />
-        <div className="relative z-10 max-w-[1100px] mx-auto grid md:grid-cols-2 gap-16 items-center">
-          <div>
-            <div className="reveal glass-pill inline-flex items-center gap-2 px-5 py-2 mb-6">
-              <Compass size={13} style={{ color: PERIWINKLE }} />
-              <span className="font-body text-[10px] uppercase" style={{ color: PERIWINKLE, letterSpacing: '3px' }}>introducing</span>
-            </div>
-            <h2 className="reveal font-display font-normal" style={{ fontSize: 'clamp(28px, 4vw, 38px)', color: TEXT, lineHeight: 1.35, marginBottom: 22 }}>
-              A private space that finally makes sense of what you have been through.
-            </h2>
-            <div className="reveal font-body font-light space-y-5" style={{ fontSize: 15, color: TEXT_SOFT, lineHeight: 1.95 }}>
-              <p>The Healing Journal is not therapy. It is not a course. It is not another self-help book telling you to journal your way to happiness.</p>
-              <p>It is a private, interactive digital companion built specifically for women navigating CPTSD, narcissistic abuse recovery, trauma bonding, and nervous system dysregulation.</p>
-              <p>It gives you a place to understand what happened to you, tools to calm your body when it spirals, and a private journal to document your healing so you can one day look back and see how far you came.</p>
-            </div>
+      {/* INTRODUCING — dark olive cinematic band */}
+      <section className="relative px-6" style={{ background: OLIVE, color: IVORY, padding: "200px 24px" }}>
+        <div className="max-w-[900px] mx-auto text-center">
+          <Eyebrow color={MOSS}>Introducing</Eyebrow>
+          <h2 className="reveal font-display mt-8" style={{ fontSize: "clamp(34px, 5.2vw, 68px)", lineHeight: 1.08, letterSpacing: "-0.015em", fontWeight: 400, color: IVORY, transitionDelay: "0.1s" }}>
+            A private space that finally
+            <br />
+            makes sense of{" "}
+            <span className="font-italic" style={{ color: MOSS }}>what you have been through.</span>
+          </h2>
+
+          <div className="reveal mt-16 grid md:grid-cols-3 gap-12 text-left" style={{ transitionDelay: "0.25s" }}>
+            <p className="font-body font-light" style={{ fontSize: 15, lineHeight: 2, color: "rgba(253,253,241,0.82)" }}>
+              The Healing Journal is not therapy. It is not a course. It is not another self-help book telling you to journal your way to happiness.
+            </p>
+            <p className="font-body font-light" style={{ fontSize: 15, lineHeight: 2, color: "rgba(253,253,241,0.82)" }}>
+              It is a private, interactive digital companion built specifically for women navigating CPTSD, narcissistic abuse recovery, trauma bonding, and nervous system dysregulation.
+            </p>
+            <p className="font-body font-light" style={{ fontSize: 15, lineHeight: 2, color: "rgba(253,253,241,0.82)" }}>
+              A place to understand what happened, to calm your body when it spirals, and to document your healing so you can one day look back and see how far you came.
+            </p>
           </div>
-          <div className="reveal relative flex items-center justify-center">
-            <div className="absolute" style={{ width: 260, height: 260, background: '#D9DCCF', borderRadius: '50%', filter: 'blur(80px)', opacity: 0.55 }} />
-            <div className="glass relative" style={{ width: 260, height: 480, borderRadius: 40, padding: 16 }}>
-              <div className="flex flex-col gap-3 h-full">
-                <div className="glass" style={{ borderRadius: 14, padding: 14 }}>
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <Sun size={14} style={{ color: GOLD }} />
-                    <span className="font-body text-[11px]" style={{ color: TEXT }}>Good evening</span>
-                  </div>
-                  <p className="font-italic text-[10px]" style={{ color: TEXT_SOFT }}>You came back. That matters.</p>
+
+          {/* phone mockup */}
+          <div className="reveal mt-24 mx-auto relative" style={{ width: 280, height: 540, transitionDelay: "0.4s" }}>
+            <div
+              style={{
+                position: "absolute", inset: -40, borderRadius: "50%",
+                background: SAGE, filter: "blur(80px)", opacity: 0.45,
+              }}
+            />
+            <div
+              className="relative h-full flex flex-col gap-3 p-4"
+              style={{
+                borderRadius: 40,
+                background: "rgba(253,253,241,0.08)",
+                border: "1px solid rgba(253,253,241,0.18)",
+                backdropFilter: "blur(20px)",
+              }}
+            >
+              <div style={{ borderRadius: 14, padding: 14, background: "rgba(253,253,241,0.10)", border: "1px solid rgba(253,253,241,0.12)" }}>
+                <div className="flex items-center gap-2 mb-1.5">
+                  <Sun size={13} style={{ color: MOSS }} />
+                  <span className="font-body" style={{ color: IVORY, fontSize: 11 }}>Good evening</span>
                 </div>
-                <div className="glass" style={{ borderRadius: 14, padding: 14 }}>
-                  <div className="flex items-center gap-2 mb-3">
-                    <Wind size={14} style={{ color: VIOLET }} />
-                    <span className="font-body text-[11px]" style={{ color: TEXT }}>4-7-8 Breathing</span>
-                  </div>
-                  <div className="flex justify-center py-3">
-                    <div className="breath-pulse" style={{ width: 36, height: 36, borderRadius: '50%', background: 'radial-gradient(circle, #A4AD94, #6F7F5C)' }} />
-                  </div>
+                <p className="font-italic" style={{ color: "rgba(253,253,241,0.7)", fontSize: 10 }}>You came back. That matters.</p>
+              </div>
+              <div style={{ borderRadius: 14, padding: 14, background: "rgba(253,253,241,0.10)", border: "1px solid rgba(253,253,241,0.12)" }}>
+                <div className="flex items-center gap-2 mb-3">
+                  <Wind size={13} style={{ color: MOSS }} />
+                  <span className="font-body" style={{ color: IVORY, fontSize: 11 }}>4-7-8 Breathing</span>
                 </div>
-                <div className="glass flex-1" style={{ borderRadius: 14, padding: 14 }}>
-                  <div className="flex items-center gap-2 mb-3">
-                    <BookOpen size={14} style={{ color: ROSE }} />
-                    <span className="font-body text-[11px]" style={{ color: TEXT }}>Today's Entry</span>
-                  </div>
-                  <div className="space-y-2">
-                    <div style={{ height: 6, borderRadius: 4, background: 'rgba(57,68,43,0.10)' }} />
-                    <div style={{ height: 6, borderRadius: 4, background: 'rgba(57,68,43,0.10)', width: '75%' }} />
-                    <div style={{ height: 6, borderRadius: 4, background: 'rgba(57,68,43,0.10)', width: '60%' }} />
-                  </div>
+                <div className="flex justify-center py-3">
+                  <div className="breath-pulse" style={{ width: 40, height: 40, borderRadius: "50%", background: `radial-gradient(circle, ${MOSS}, ${SAGE})` }} />
+                </div>
+              </div>
+              <div className="flex-1" style={{ borderRadius: 14, padding: 14, background: "rgba(253,253,241,0.10)", border: "1px solid rgba(253,253,241,0.12)" }}>
+                <div className="flex items-center gap-2 mb-3">
+                  <BookOpen size={13} style={{ color: MOSS }} />
+                  <span className="font-body" style={{ color: IVORY, fontSize: 11 }}>Today's Entry</span>
+                </div>
+                <div className="space-y-2">
+                  <div style={{ height: 5, borderRadius: 4, background: "rgba(253,253,241,0.18)" }} />
+                  <div style={{ height: 5, borderRadius: 4, background: "rgba(253,253,241,0.18)", width: "78%" }} />
+                  <div style={{ height: 5, borderRadius: 4, background: "rgba(253,253,241,0.18)", width: "60%" }} />
                 </div>
               </div>
             </div>
@@ -276,37 +409,44 @@ function Index() {
         </div>
       </section>
 
-      {/* DISCLAIMER */}
-      <section className="px-6 py-5" style={{ background: 'rgba(164,173,148,0.08)', borderTop: '1px solid rgba(164,173,148,0.20)', borderBottom: '1px solid rgba(164,173,148,0.20)' }}>
-        <div className="max-w-[700px] mx-auto flex items-start gap-3">
-          <AlertCircle size={14} style={{ color: GOLD, flexShrink: 0, marginTop: 4 }} />
-          <p className="font-body text-[12px] text-left" style={{ color: 'rgba(57,68,43,0.85)', lineHeight: 1.8 }}>
-            Disclaimer: The Healing Journal is for educational and informational purposes only. It is not a substitute for professional mental health care, therapy, or medical advice, and does not provide diagnosis or treatment of any kind. Always consult a qualified professional. Crisis support: call or text 988.
-          </p>
-        </div>
-      </section>
-
       {/* FEATURES */}
-      <section className="relative py-[100px] px-6 overflow-hidden" style={{ background: BG_LIGHT }}>
-        <Orbs />
-        <div className="relative z-10 max-w-[1100px] mx-auto">
-          <h2 className="reveal font-display font-normal text-center" style={{ fontSize: 'clamp(28px, 4.5vw, 40px)', color: TEXT, marginBottom: 14 }}>
-            Everything inside...The Healing Journal
-          </h2>
-          <p className="reveal font-body font-light text-center" style={{ fontSize: 15, color: TEXT_SOFT, marginBottom: 56 }}>
-            Six tabs. One private space. Everything you need for exactly where you are right now.
-          </p>
-          <div className="grid md:grid-cols-2 gap-5">
+      <section className="relative px-6" style={{ padding: "200px 24px" }}>
+        <div className="max-w-[1080px] mx-auto">
+          <div className="text-center mb-24 max-w-[700px] mx-auto">
+            <Eyebrow>Inside the journal</Eyebrow>
+            <h2 className="reveal font-display mt-8" style={{ color: OLIVE, fontSize: "clamp(34px, 5vw, 60px)", lineHeight: 1.1, letterSpacing: "-0.015em", fontWeight: 400, transitionDelay: "0.1s" }}>
+              Six rooms. <span className="font-italic" style={{ color: SAGE }}>One private home.</span>
+            </h2>
+            <p className="reveal font-body font-light mt-6" style={{ fontSize: 16, color: SAGE, lineHeight: 1.9, transitionDelay: "0.2s" }}>
+              Everything you need for exactly where you are right now.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-x-16 gap-y-2">
             {features.map((f, i) => {
               const Icon = f.icon;
               return (
-                <div key={i} className="reveal glass glass-hover" style={{ padding: 28, transitionDelay: `${i * 0.07}s` }}>
-                  <div className="flex items-center justify-center mb-[18px]"
-                    style={{ width: 48, height: 48, borderRadius: 14, background: `rgba(${f.rgb},0.15)`, border: `1px solid rgba(${f.rgb},0.30)` }}>
-                    <Icon size={22} style={{ color: f.color }} />
+                <div
+                  key={i}
+                  className="reveal group"
+                  style={{
+                    padding: "44px 4px",
+                    borderTop: "1px solid rgba(57,68,43,0.10)",
+                    transitionDelay: `${(i % 2) * 0.1 + Math.floor(i / 2) * 0.05}s`,
+                  }}
+                >
+                  <div className="flex items-center gap-4 mb-6">
+                    <Icon size={20} style={{ color: SAGE, transition: "transform 0.6s cubic-bezier(0.16,1,0.3,1)" }} />
+                    <span className="font-body" style={{ color: MOSS, fontSize: 10, letterSpacing: "0.3em", textTransform: "uppercase", fontWeight: 500 }}>
+                      {String(i + 1).padStart(2, "0")} / 06
+                    </span>
                   </div>
-                  <h3 className="font-display font-normal mb-2.5" style={{ fontSize: 19, color: TEXT }}>{f.title}</h3>
-                  <p className="font-body font-light" style={{ fontSize: 13, color: TEXT_SOFT, lineHeight: 1.9 }}>{f.body}</p>
+                  <h3 className="font-display mb-4" style={{ color: OLIVE, fontSize: "clamp(22px, 2.2vw, 30px)", lineHeight: 1.25, fontWeight: 400 }}>
+                    {f.title}
+                  </h3>
+                  <p className="font-body font-light" style={{ fontSize: 14, color: SAGE, lineHeight: 1.95, maxWidth: 460 }}>
+                    {f.body}
+                  </p>
                 </div>
               );
             })}
@@ -315,55 +455,63 @@ function Index() {
       </section>
 
       {/* PULL QUOTE */}
-      <section className="relative px-6 overflow-hidden" style={{ background: BG_LIGHTER, padding: '120px 24px' }}>
-        <Orbs />
-        <div className="absolute font-display select-none pointer-events-none" style={{ fontSize: 220, color: 'rgba(164,173,148,0.10)', top: 20, left: 40, lineHeight: 1 }}>"</div>
-        <div className="relative z-10 max-w-[680px] mx-auto">
-          <div className="reveal glass text-center" style={{ padding: 60, borderColor: 'rgba(164,173,148,0.25)' }}>
-            <Quote size={28} style={{ color: VIOLET, margin: '0 auto 28px' }} />
-            <p className="font-display italic font-normal" style={{ fontSize: 'clamp(20px, 3vw, 28px)', color: TEXT, lineHeight: 1.85 }}>
-              You did not imagine it.<br />
-              You were not too sensitive.<br />
-              You were not too much.<br />
-              You were in something real —<br />
-              and you survived it.<br />
-              Now you get to heal.
-            </p>
-            <div className="mt-8 font-body text-[11px] uppercase" style={{ color: TEXT_FAINT, letterSpacing: '2.5px' }}>
-              The Healing Journal
-            </div>
+      <section className="relative px-6" style={{ padding: "200px 24px", background: PALE }}>
+        <div className="max-w-[820px] mx-auto text-center">
+          <div className="font-display select-none" style={{ fontSize: 140, color: SAGE, opacity: 0.25, lineHeight: 0.6, height: 60, marginBottom: 20 }}>
+            "
+          </div>
+          <p className="reveal font-display italic" style={{ color: OLIVE, fontSize: "clamp(26px, 3.4vw, 42px)", lineHeight: 1.5, fontWeight: 400 }}>
+            You did not imagine it.<br />
+            You were not too sensitive.<br />
+            You were not too much.<br />
+            You were in something real —<br />
+            and you survived it. <span style={{ color: SAGE }}>Now you get to heal.</span>
+          </p>
+          <div className="reveal mt-16 font-body" style={{ color: MOSS, fontSize: 11, letterSpacing: "0.32em", textTransform: "uppercase", fontWeight: 500, transitionDelay: "0.2s" }}>
+            — The Healing Journal
           </div>
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
-      <section className="relative py-[100px] px-6 overflow-hidden" style={{ background: BG_LIGHT }}>
-        <Orbs />
-        <div className="relative z-10 max-w-[1100px] mx-auto">
-          <h2 className="reveal font-display font-normal text-center" style={{ fontSize: 'clamp(28px, 4vw, 38px)', color: TEXT, marginBottom: 14 }}>
-            Start free. Upgrade when you're ready.
-          </h2>
-          <p className="reveal font-body font-light text-center" style={{ fontSize: 15, color: TEXT_SOFT, marginBottom: 56, maxWidth: 560, marginLeft: 'auto', marginRight: 'auto' }}>
-            No card to begin, no pressure to upgrade. Feel the space first, decide later.
-          </p>
-          <div className="flex flex-col md:flex-row items-stretch md:items-center justify-center gap-5">
+      {/* HOW IT WORKS — 3 steps */}
+      <section className="relative px-6" style={{ padding: "200px 24px" }}>
+        <div className="max-w-[860px] mx-auto">
+          <div className="text-center mb-32 max-w-[640px] mx-auto">
+            <Eyebrow>How it works</Eyebrow>
+            <h2 className="reveal font-display mt-8" style={{ color: OLIVE, fontSize: "clamp(34px, 5vw, 60px)", lineHeight: 1.1, letterSpacing: "-0.015em", fontWeight: 400, transitionDelay: "0.1s" }}>
+              Start free. <span className="font-italic" style={{ color: SAGE }}>Upgrade when you're ready.</span>
+            </h2>
+            <p className="reveal font-body font-light mt-6" style={{ fontSize: 16, color: SAGE, lineHeight: 1.9, transitionDelay: "0.2s" }}>
+              No card to begin, no pressure to upgrade. Feel the space first, decide later.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-24">
             {steps.map((s, i) => {
               const Icon = s.icon;
               return (
-                <div key={i} className="flex flex-col md:flex-row items-center gap-5 md:gap-3 flex-1">
-                  <div className="reveal glass flex-1 w-full" style={{ padding: 32, borderRadius: 24, transitionDelay: `${i * 0.1}s` }}>
-                    <div className="font-body" style={{ fontSize: 11, fontWeight: 500, color: VIOLET, letterSpacing: '3px', textTransform: 'uppercase', marginBottom: 16 }}>
-                      {s.num}
-                    </div>
-                    <div className="glass flex items-center justify-center" style={{ width: 52, height: 52, borderRadius: '50%', background: `rgba(${s.rgb},0.15)`, border: `1px solid rgba(${s.rgb},0.30)`, marginBottom: 18 }}>
-                      <Icon size={22} style={{ color: s.color }} />
-                    </div>
-                    <h3 className="font-display font-normal" style={{ fontSize: 19, color: TEXT, marginBottom: 10 }}>{s.title}</h3>
-                    <p className="font-body font-light" style={{ fontSize: 13, color: TEXT_SOFT, lineHeight: 1.9 }}>{s.body}</p>
+                <div
+                  key={i}
+                  className="reveal grid grid-cols-1 md:grid-cols-[120px_1fr] gap-8 md:gap-16 items-start"
+                  style={{ transitionDelay: `${i * 0.12}s` }}
+                >
+                  <div className="font-display" style={{ color: PALE, fontSize: 96, lineHeight: 0.9, letterSpacing: "-0.04em" }}>
+                    {s.num}
                   </div>
-                  {i < steps.length - 1 && (
-                    <ChevronRight size={24} style={{ color: 'rgba(164,173,148,0.45)', flexShrink: 0 }} className="hidden md:block" />
-                  )}
+                  <div>
+                    <div className="flex items-center gap-3 mb-5">
+                      <Icon size={18} style={{ color: SAGE }} />
+                      <span className="font-body" style={{ color: MOSS, fontSize: 10, letterSpacing: "0.3em", textTransform: "uppercase", fontWeight: 500 }}>
+                        Step {s.num}
+                      </span>
+                    </div>
+                    <h3 className="font-display mb-5" style={{ color: OLIVE, fontSize: "clamp(26px, 3vw, 38px)", lineHeight: 1.2, fontWeight: 400 }}>
+                      {s.title}
+                    </h3>
+                    <p className="font-body font-light" style={{ fontSize: 16, color: SAGE, lineHeight: 1.95, maxWidth: 560 }}>
+                      {s.body}
+                    </p>
+                  </div>
                 </div>
               );
             })}
@@ -372,134 +520,188 @@ function Index() {
       </section>
 
       {/* PRIVACY PROMISE */}
-      <section className="relative py-[100px] px-6 overflow-hidden" style={{ background: BG_LIGHTER }}>
-        <Orbs />
-        <div className="relative z-10 max-w-[680px] mx-auto">
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" style={{ width: 300, height: 300, background: '#6F7F5C', borderRadius: '50%', filter: 'blur(100px)', opacity: 0.30, pointerEvents: 'none' }} />
-          <div className="reveal glass relative text-center" style={{ padding: 56, borderColor: 'rgba(164,173,148,0.30)' }}>
-            <ShieldCheck size={36} style={{ color: PERIWINKLE, margin: '0 auto 20px' }} />
-            <div className="glass-pill inline-flex items-center gap-2 px-4 py-1.5 mb-5" style={{ background: 'rgba(164,173,148,0.10)', border: '1px solid rgba(164,173,148,0.25)' }}>
-              <span className="font-body text-[10px] uppercase" style={{ color: PERIWINKLE, letterSpacing: '3px' }}>your privacy matters</span>
-            </div>
-            <h2 className="font-display font-normal" style={{ fontSize: 32, color: TEXT, lineHeight: 1.4, marginBottom: 22 }}>
-              What you write here belongs to no one but you.
-            </h2>
-            <p className="font-body font-light" style={{ fontSize: 15, color: TEXT_SOFT, lineHeight: 1.95, marginBottom: 36 }}>
-              Every journal entry you write is stored in your private encrypted cloud account. No one — including the creator of this app — can read your words. Your healing history is not a data point. It is not sold, shared, or seen. It is yours. Completely and always.
-            </p>
-            <div className="flex flex-col items-center gap-3">
-              {[
-                "Private encrypted cloud storage",
-                "Unique access code — one account, one person",
-                "Full data deletion available anytime from inside the app",
-              ].map((row, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <Check size={16} style={{ color: PERIWINKLE, flexShrink: 0 }} />
-                  <span className="font-body text-[14px]" style={{ color: TEXT }}>{row}</span>
-                </div>
-              ))}
-            </div>
+      <section className="relative px-6" style={{ padding: "180px 24px", background: OLIVE, color: IVORY }}>
+        <div className="max-w-[760px] mx-auto text-center">
+          <ShieldCheck size={28} style={{ color: MOSS, margin: "0 auto 24px" }} />
+          <Eyebrow color={MOSS}>Your privacy matters</Eyebrow>
+          <h2 className="reveal font-display mt-8" style={{ color: IVORY, fontSize: "clamp(30px, 4.4vw, 52px)", lineHeight: 1.15, letterSpacing: "-0.015em", fontWeight: 400, transitionDelay: "0.1s" }}>
+            What you write here belongs to <span className="font-italic" style={{ color: MOSS }}>no one but you.</span>
+          </h2>
+          <p className="reveal font-body font-light mt-8 mx-auto" style={{ fontSize: 16, color: "rgba(253,253,241,0.82)", lineHeight: 2, maxWidth: 620, transitionDelay: "0.2s" }}>
+            Every journal entry you write is stored in your private encrypted cloud account. No one — including the creator of this app — can read your words. Your healing history is not a data point. It is not sold, shared, or seen. It is yours. Completely and always.
+          </p>
+          <div className="reveal flex flex-col items-center gap-3 mt-12" style={{ transitionDelay: "0.3s" }}>
+            {[
+              "Private encrypted cloud storage",
+              "Unique access code — one account, one person",
+              "Full data deletion available anytime from inside the app",
+            ].map((row, i) => (
+              <div key={i} className="flex items-center gap-3">
+                <Check size={15} style={{ color: MOSS, flexShrink: 0 }} />
+                <span className="font-body" style={{ color: IVORY, fontSize: 14 }}>{row}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="relative py-[100px] px-6 overflow-hidden" style={{ background: BG_LIGHT }}>
-        <Orbs />
-        <div className="relative z-10">
-          <h2 className="reveal font-display font-normal text-center" style={{ fontSize: 'clamp(28px, 4.5vw, 40px)', color: TEXT, marginBottom: 48 }}>
-            Questions you might have
-          </h2>
+      <section className="relative px-6" style={{ padding: "200px 24px" }}>
+        <div className="max-w-[820px] mx-auto">
+          <div className="text-center mb-20">
+            <Eyebrow>Frequently asked</Eyebrow>
+            <h2 className="reveal font-display mt-8" style={{ color: OLIVE, fontSize: "clamp(34px, 5vw, 58px)", lineHeight: 1.1, letterSpacing: "-0.015em", fontWeight: 400, transitionDelay: "0.1s" }}>
+              Questions you <span className="font-italic" style={{ color: SAGE }}>might have.</span>
+            </h2>
+          </div>
           <Faq />
         </div>
       </section>
 
       {/* PRICING */}
-      <section id="pricing" className="relative px-6 overflow-hidden" style={{ background: 'linear-gradient(135deg, #D9DCCF 0%, #FDFDF1 60%, #D9DCCF 100%)', padding: '120px 24px' }}>
-        <Orbs />
-        <div className="relative z-10 max-w-[980px] mx-auto">
-          <h2 className="reveal font-display font-normal text-center" style={{ fontSize: 'clamp(28px, 4.5vw, 40px)', color: TEXT, marginBottom: 14 }}>
-            A plan that grows with you
-          </h2>
-          <p className="reveal font-body font-light text-center" style={{ fontSize: 15, color: TEXT_SOFT, marginBottom: 56, maxWidth: 540, marginLeft: 'auto', marginRight: 'auto' }}>
-            Start free today. Upgrade once — never again — when the space feels like yours.
-          </p>
-          <div className="grid md:grid-cols-2 gap-6 max-w-[760px] mx-auto">
+      <section id="pricing" className="relative px-6" style={{ padding: "180px 24px 200px", background: PALE }}>
+        <div className="max-w-[1080px] mx-auto">
+          <div className="text-center mb-20 max-w-[640px] mx-auto">
+            <Eyebrow>Pricing</Eyebrow>
+            <h2 className="reveal font-display mt-8" style={{ color: OLIVE, fontSize: "clamp(34px, 5vw, 60px)", lineHeight: 1.1, letterSpacing: "-0.015em", fontWeight: 400, transitionDelay: "0.1s" }}>
+              A plan that <span className="font-italic" style={{ color: SAGE }}>grows with you.</span>
+            </h2>
+            <p className="reveal font-body font-light mt-6" style={{ fontSize: 16, color: SAGE, lineHeight: 1.9, transitionDelay: "0.2s" }}>
+              Start free today. Upgrade once — never again — when the space feels like yours.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-[860px] mx-auto items-stretch">
             {tiers.map((t, i) => (
-              <div key={i} className={`reveal relative ${t.featured ? '' : 'glass'}`}
+              <div
+                key={i}
+                className="reveal relative flex flex-col"
                 style={{
-                  padding: 36,
-                  borderRadius: 28,
-                  transitionDelay: `${i * 0.1}s`,
-                  background: t.featured ? 'linear-gradient(160deg, #39442B 0%, #6F7F5C 100%)' : undefined,
-                  color: t.featured ? '#fff' : undefined,
-                  boxShadow: t.featured ? '0 20px 60px rgba(57,68,43,0.40)' : undefined,
-                  border: t.featured ? '1px solid rgba(255,255,255,0.15)' : undefined,
-                  transform: t.featured ? 'translateY(-8px)' : undefined,
-                }}>
+                  padding: "48px 38px",
+                  borderRadius: 32,
+                  background: t.featured ? OLIVE : IVORY,
+                  color: t.featured ? IVORY : OLIVE,
+                  border: t.featured ? "1px solid rgba(253,253,241,0.12)" : `1px solid ${PALE}`,
+                  boxShadow: t.featured ? "0 30px 80px rgba(57,68,43,0.30)" : "0 10px 30px rgba(57,68,43,0.06)",
+                  transitionDelay: `${i * 0.12}s`,
+                }}
+              >
                 {t.featured && (
-                  <div className="absolute top-4 right-4 px-3 py-1 text-[10px] font-body uppercase" style={{ background: GOLD, color: '#39442B', borderRadius: 50, letterSpacing: '2px' }}>
+                  <div
+                    className="absolute top-5 right-5 font-body"
+                    style={{ padding: "6px 12px", borderRadius: 999, background: MOSS, color: OLIVE, fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", fontWeight: 600 }}
+                  >
                     Most chosen
                   </div>
                 )}
-                <h3 className="font-display font-normal mb-1" style={{ fontSize: 20, color: t.featured ? '#fff' : TEXT }}>{t.name}</h3>
-                <div className="flex items-baseline gap-2 mb-2">
-                  <span className="font-display" style={{ fontSize: 44, color: t.featured ? '#fff' : TEXT }}>{t.price}</span>
+                <div className="font-body mb-5" style={{ color: t.featured ? MOSS : MOSS, fontSize: 10, letterSpacing: "0.3em", textTransform: "uppercase", fontWeight: 500 }}>
+                  {t.name}
                 </div>
-                <p className="font-body text-[12px] uppercase mb-6" style={{ color: t.featured ? 'rgba(255,255,255,0.7)' : TEXT_FAINT, letterSpacing: '2px' }}>{t.sub}</p>
-                <a href={t.href} target="_blank" rel="noopener noreferrer"
-                  className="block w-full text-center font-body font-medium text-[14px]"
-                  style={{
-                    padding: '14px 24px',
-                    borderRadius: 50,
-                    background: t.featured ? '#fff' : 'linear-gradient(135deg, #39442B, #6F7F5C)',
-                    color: t.featured ? '#39442B' : '#fff',
-                    marginBottom: 28,
-                  }}>
-                  {t.cta}
-                </a>
-                <ul className="flex flex-col gap-3">
+                <div className="flex items-baseline gap-2 mb-3">
+                  <span className="font-display" style={{ fontSize: 64, lineHeight: 1, letterSpacing: "-0.02em", color: t.featured ? IVORY : OLIVE }}>{t.price}</span>
+                </div>
+                <p className="font-body mb-10" style={{ color: t.featured ? "rgba(253,253,241,0.65)" : MOSS, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase" }}>
+                  {t.sub}
+                </p>
+
+                <ul className="flex flex-col gap-3.5 mb-10 flex-1">
                   {t.features.map((f, j) => (
-                    <li key={j} className="flex items-start gap-2.5 font-body text-[13px]" style={{ color: t.featured ? 'rgba(255,255,255,0.92)' : TEXT_SOFT, lineHeight: 1.6 }}>
-                      <Check size={15} style={{ color: t.featured ? GOLD : VIOLET, flexShrink: 0, marginTop: 2 }} />
+                    <li key={j} className="flex items-start gap-3 font-body font-light" style={{ color: t.featured ? "rgba(253,253,241,0.88)" : SAGE, fontSize: 14, lineHeight: 1.55 }}>
+                      <Check size={14} style={{ color: t.featured ? MOSS : SAGE, flexShrink: 0, marginTop: 4 }} />
                       <span>{f}</span>
                     </li>
                   ))}
                 </ul>
+
+                <a
+                  href={t.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center font-body"
+                  style={{
+                    padding: "16px 24px",
+                    borderRadius: 999,
+                    background: t.featured ? IVORY : OLIVE,
+                    color: t.featured ? OLIVE : IVORY,
+                    fontSize: 11,
+                    letterSpacing: "0.22em",
+                    textTransform: "uppercase",
+                    fontWeight: 500,
+                    transition: "transform 0.5s cubic-bezier(0.16,1,0.3,1), opacity 0.5s ease",
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.opacity = "0.9"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.opacity = "1"; }}
+                >
+                  {t.cta}
+                </a>
               </div>
             ))}
           </div>
-          <div className="mt-12 flex flex-wrap justify-center gap-5 text-[12px] font-body" style={{ color: TEXT_FAINT }}>
-            <span className="flex items-center gap-2"><Lock size={13} style={{ color: VIOLET }} /> Encrypted & private</span>
-            <span className="flex items-center gap-2"><InfinityIcon size={13} style={{ color: PERIWINKLE }} /> Lifetime access</span>
-            <span className="flex items-center gap-2"><Smartphone size={13} style={{ color: ROSE }} /> Any device</span>
-            <span className="flex items-center gap-2"><ShieldCheck size={13} style={{ color: GOLD }} /> One-time purchase</span>
+
+          <div className="mt-16 flex flex-wrap justify-center gap-x-8 gap-y-3 font-body" style={{ color: SAGE, fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase" }}>
+            <span className="flex items-center gap-2"><Lock size={12} /> Encrypted & private</span>
+            <span className="flex items-center gap-2"><InfinityIcon size={12} /> Lifetime access</span>
+            <span className="flex items-center gap-2"><Smartphone size={12} /> Any device</span>
+            <span className="flex items-center gap-2"><ShieldCheck size={12} /> One-time purchase</span>
           </div>
-          <p className="font-body text-center mt-6" style={{ fontSize: 10, color: TEXT_GHOST, maxWidth: 520, margin: '24px auto 0' }}>
-            Educational tool only. Not a substitute for professional mental health care. For crisis support: call or text 988.
-          </p>
         </div>
       </section>
 
+      {/* FINAL CTA */}
+      <section className="relative px-6" style={{ padding: "180px 24px", background: IVORY }}>
+        <div className="max-w-[820px] mx-auto text-center">
+          <h2 className="reveal font-display" style={{ color: OLIVE, fontSize: "clamp(40px, 6.5vw, 84px)", lineHeight: 1.05, letterSpacing: "-0.02em", fontWeight: 400 }}>
+            Begin where <span className="font-italic" style={{ color: SAGE }}>you are.</span>
+          </h2>
+          <p className="reveal font-italic mt-8 mx-auto" style={{ fontSize: 18, color: SAGE, lineHeight: 1.9, maxWidth: 520, transitionDelay: "0.15s" }}>
+            One small, private decision. The space will be here when you're ready.
+          </p>
+          <div className="reveal mt-12" style={{ transitionDelay: "0.3s" }}>
+            <a
+              href={BEACONS}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-body inline-block"
+              style={{
+                padding: "20px 44px",
+                borderRadius: 999,
+                background: OLIVE,
+                color: IVORY,
+                fontSize: 12,
+                letterSpacing: "0.22em",
+                textTransform: "uppercase",
+                fontWeight: 500,
+                boxShadow: "0 14px 40px rgba(57,68,43,0.18)",
+                transition: "transform 0.5s cubic-bezier(0.16,1,0.3,1), box-shadow 0.5s cubic-bezier(0.16,1,0.3,1), background 0.5s ease",
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 22px 60px rgba(57,68,43,0.28)"; e.currentTarget.style.background = SAGE; }}
+              onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 14px 40px rgba(57,68,43,0.18)"; e.currentTarget.style.background = OLIVE; }}
+            >
+              Get Instant Access — $15
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* FOOTER */}
-      <footer className="px-6 py-10 text-center" style={{ background: 'rgba(57,68,43,0.06)', borderTop: '1px solid rgba(57,68,43,0.10)' }}>
-        <div className="flex items-center justify-center mb-4">
-          <Leaf size={18} style={{ color: VIOLET, marginRight: 8 }} />
-          <span className="font-display font-light" style={{ fontSize: 15, color: 'rgba(57,68,43,0.65)', letterSpacing: '2px' }}>The Healing Journal</span>
+      <footer className="px-6 py-16" style={{ borderTop: "1px solid rgba(57,68,43,0.10)", background: IVORY }}>
+        <div className="max-w-[1080px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="flex items-center gap-2.5">
+            <Leaf size={16} style={{ color: OLIVE }} />
+            <span className="font-body" style={{ color: OLIVE, fontSize: 10, letterSpacing: "0.32em", textTransform: "uppercase", fontWeight: 500 }}>
+              The Healing Journal
+            </span>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 font-body" style={{ color: SAGE, fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", fontWeight: 500 }}>
+            <Link to="/disclaimer" className="story-link" style={{ color: SAGE }}>Disclaimer</Link>
+            <Link to="/privacy" className="story-link" style={{ color: SAGE }}>Privacy</Link>
+            <Link to="/terms" className="story-link" style={{ color: SAGE }}>Terms</Link>
+            <a href="mailto:hello@thehealingjournal.app" className="story-link" style={{ color: SAGE }}>Contact</a>
+          </div>
+          <div className="font-body" style={{ color: MOSS, fontSize: 9, letterSpacing: "0.22em", textTransform: "uppercase" }}>
+            © {new Date().getFullYear()} · Educational tool only
+          </div>
         </div>
-        <p className="font-body" style={{ fontSize: 11, color: 'rgba(57,68,43,0.40)' }}>
-          <Link to="/disclaimer" className="hover:underline" style={{ color: 'inherit' }}>Disclaimer</Link>
-          {' · '}
-          <Link to="/privacy" className="hover:underline" style={{ color: 'inherit' }}>Privacy Policy</Link>
-          {' · '}
-          <Link to="/terms" className="hover:underline" style={{ color: 'inherit' }}>Terms of Use</Link>
-          {' · '}
-          <a href="mailto:hello@thehealingjournal.app" className="hover:underline" style={{ color: 'inherit' }}>Contact</a>
-        </p>
-        <p className="font-body" style={{ marginTop: 12, fontSize: 10, color: 'rgba(57,68,43,0.30)' }}>
-          The Healing Journal — Educational tool only — Not professional medical advice
-        </p>
       </footer>
     </div>
   );
