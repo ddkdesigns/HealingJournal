@@ -23,17 +23,17 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const TEXT = '#1a1a3e';
-const TEXT_SOFT = 'rgba(26,26,62,0.68)';
-const TEXT_FAINT = 'rgba(26,26,62,0.45)';
-const TEXT_GHOST = 'rgba(26,26,62,0.30)';
-const VIOLET = '#6b5fb5';
-const PERIWINKLE = '#8b7fc9';
-const ROSE = '#9b87d4';
-const GOLD = '#e8c547';
+const TEXT = '#39442B';
+const TEXT_SOFT = 'rgba(57,68,43,0.68)';
+const TEXT_FAINT = 'rgba(57,68,43,0.45)';
+const TEXT_GHOST = 'rgba(57,68,43,0.30)';
+const VIOLET = '#6F7F5C';
+const PERIWINKLE = '#A4AD94';
+const ROSE = '#6F7F5C';
+const GOLD = '#A4AD94';
 
-const BG_LIGHT = '#f5f1e8';
-const BG_LIGHTER = '#ebe4f5';
+const BG_LIGHT = '#FDFDF1';
+const BG_LIGHTER = '#D9DCCF';
 
 const mirrorRows = [
   { icon: Brain, text: "You overthink every interaction and do not know why." },
@@ -45,18 +45,18 @@ const mirrorRows = [
 ];
 
 const features = [
-  { icon: Home, color: VIOLET, rgb: "163,130,132", title: "Home — Your Daily Anchor", body: "A personalised greeting using your first name, the time of day, and where you are in your journey. Rotating affirmations written for trauma survivors. Daily mood check-in, intention setting, and calm quick-access to every section." },
-  { icon: BookOpen, color: PERIWINKLE, rgb: "94,129,172", title: "Learn — Understand What Happened to You", body: "A full educational library covering CPTSD, narcissistic abuse, gaslighting, manipulation, trauma bonding, fawning, love bombing, intermittent reinforcement, and more — in plain everyday language with no clinical jargon and no judgment." },
-  { icon: Wind, color: ROSE, rgb: "163,130,132", title: "Regulate — When Your Body Will Not Calm Down", body: "Six guided nervous system tools: animated breathing, sensory grounding, trauma-informed body scan, cold water reset, trauma release shaking, and an SOS crisis tool — each with a plain explanation of what it is and how it works." },
-  { icon: PenLine, color: GOLD, rgb: "94,129,172", title: "Journal — Your Private Protected Space", body: "Twenty trauma-informed prompts rotating daily. Free writing always available. Mood tagging. Every entry encrypted and saved to your personal cloud account. No one else can read your words — ever." },
-  { icon: Target, color: VIOLET, rgb: "163,130,132", title: "Goals — The Small Victories That Actually Matter", body: "Personal healing goals entirely your own. Visual progress tracking with a slider. Ten daily win checkboxes that reset each morning. A streak counter for every day you show up for yourself." },
-  { icon: Milestone, color: PERIWINKLE, rgb: "94,129,172", title: "Journey — Watch Yourself Heal", body: "A visual timeline of every entry written. A mood trend chart. A Then vs Now comparison of your first and most recent entry. A Letter to Future Me that seals today and unlocks on a date you choose." },
+  { icon: Home, color: VIOLET, rgb: "164,173,148", title: "Home — Your Daily Anchor", body: "A personalised greeting using your first name, the time of day, and where you are in your journey. Rotating affirmations written for trauma survivors. Daily mood check-in, intention setting, and calm quick-access to every section." },
+  { icon: BookOpen, color: PERIWINKLE, rgb: "164,173,148", title: "Learn — Understand What Happened to You", body: "A full educational library covering CPTSD, narcissistic abuse, gaslighting, manipulation, trauma bonding, fawning, love bombing, intermittent reinforcement, and more — in plain everyday language with no clinical jargon and no judgment." },
+  { icon: Wind, color: ROSE, rgb: "164,173,148", title: "Regulate — When Your Body Will Not Calm Down", body: "Six guided nervous system tools: animated breathing, sensory grounding, trauma-informed body scan, cold water reset, trauma release shaking, and an SOS crisis tool — each with a plain explanation of what it is and how it works." },
+  { icon: PenLine, color: GOLD, rgb: "164,173,148", title: "Journal — Your Private Protected Space", body: "Twenty trauma-informed prompts rotating daily. Free writing always available. Mood tagging. Every entry encrypted and saved to your personal cloud account. No one else can read your words — ever." },
+  { icon: Target, color: VIOLET, rgb: "164,173,148", title: "Goals — The Small Victories That Actually Matter", body: "Personal healing goals entirely your own. Visual progress tracking with a slider. Ten daily win checkboxes that reset each morning. A streak counter for every day you show up for yourself." },
+  { icon: Milestone, color: PERIWINKLE, rgb: "164,173,148", title: "Journey — Watch Yourself Heal", body: "A visual timeline of every entry written. A mood trend chart. A Then vs Now comparison of your first and most recent entry. A Letter to Future Me that seals today and unlocks on a date you choose." },
 ];
 
 const steps = [
-  { num: "01", icon: KeyRound, color: VIOLET, rgb: "107,95,181", title: "Create your free account", body: "Sign up in under a minute with just your email. No card, no commitment. Your private space is created instantly." },
-  { num: "02", icon: Feather, color: ROSE, rgb: "155,135,212", title: "Explore the app for free", body: "Try the daily affirmation, take a mood check-in, and preview the Learn library and a guided breathing tool — so you can feel the space before you decide." },
-  { num: "03", icon: ShoppingBag, color: GOLD, rgb: "232,197,71", title: "Unlock everything for life", body: "When you're ready, upgrade once for $15 to unlock the full Learn library, all six regulation tools, the private journal, goals, and your healing journey timeline. One payment, lifetime access." },
+  { num: "01", icon: KeyRound, color: VIOLET, rgb: "111,127,92", title: "Create your free account", body: "Sign up in under a minute with just your email. No card, no commitment. Your private space is created instantly." },
+  { num: "02", icon: Feather, color: ROSE, rgb: "111,127,92", title: "Explore the app for free", body: "Try the daily affirmation, take a mood check-in, and preview the Learn library and a guided breathing tool — so you can feel the space before you decide." },
+  { num: "03", icon: ShoppingBag, color: GOLD, rgb: "164,173,148", title: "Unlock everything for life", body: "When you're ready, upgrade once for $15 to unlock the full Learn library, all six regulation tools, the private journal, goals, and your healing journey timeline. One payment, lifetime access." },
 ];
 
 const tiers = [
@@ -134,7 +134,7 @@ function Index() {
     <div className="relative mx-auto" style={{ background: BG_LIGHT, maxWidth: 1280, boxShadow: '0 0 80px rgba(0,0,0,0.35)' }}>
       {/* NAV */}
       <nav className="sticky top-0 z-[100] flex items-center justify-between px-6 md:px-10 py-4"
-        style={{ background: 'rgba(245,241,232,0.85)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderBottom: '1px solid rgba(107,95,181,0.15)' }}>
+        style={{ background: 'rgba(253,253,241,0.85)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderBottom: '1px solid rgba(111,127,92,0.15)' }}>
         <div className="flex items-center gap-2.5">
           <Leaf size={20} style={{ color: VIOLET }} />
           <span className="font-display font-light text-[15px] md:text-[17px]" style={{ color: TEXT, letterSpacing: '2px' }}>
@@ -153,7 +153,7 @@ function Index() {
 
       {/* HERO */}
       <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden"
-        style={{ background: 'linear-gradient(135deg, #f5f1e8 0%, #ebe4f5 60%, #d9cdf0 100%)' }}>
+        style={{ background: 'linear-gradient(135deg, #FDFDF1 0%, #D9DCCF 60%, #D9DCCF 100%)' }}>
         <Orbs />
         <div className="relative z-10 max-w-[800px] text-center flex flex-col items-center">
           <div className="reveal glass-pill inline-flex items-center gap-2 px-5 py-2 mb-7">
@@ -174,7 +174,7 @@ function Index() {
               Create free account
             </a>
             <a href="#pricing" className="inline-block font-body font-medium text-[15px]"
-              style={{ padding: '15px 36px', borderRadius: 50, border: `1px solid ${VIOLET}`, color: VIOLET, background: 'rgba(107,95,181,0.06)' }}>
+              style={{ padding: '15px 36px', borderRadius: 50, border: `1px solid ${VIOLET}`, color: VIOLET, background: 'rgba(111,127,92,0.06)' }}>
               See plans
             </a>
           </div>
@@ -240,7 +240,7 @@ function Index() {
             </div>
           </div>
           <div className="reveal relative flex items-center justify-center">
-            <div className="absolute" style={{ width: 260, height: 260, background: '#d4c5c7', borderRadius: '50%', filter: 'blur(80px)', opacity: 0.55 }} />
+            <div className="absolute" style={{ width: 260, height: 260, background: '#D9DCCF', borderRadius: '50%', filter: 'blur(80px)', opacity: 0.55 }} />
             <div className="glass relative" style={{ width: 260, height: 480, borderRadius: 40, padding: 16 }}>
               <div className="flex flex-col gap-3 h-full">
                 <div className="glass" style={{ borderRadius: 14, padding: 14 }}>
@@ -256,7 +256,7 @@ function Index() {
                     <span className="font-body text-[11px]" style={{ color: TEXT }}>4-7-8 Breathing</span>
                   </div>
                   <div className="flex justify-center py-3">
-                    <div className="breath-pulse" style={{ width: 36, height: 36, borderRadius: '50%', background: 'radial-gradient(circle, #a38284, #5e81ac)' }} />
+                    <div className="breath-pulse" style={{ width: 36, height: 36, borderRadius: '50%', background: 'radial-gradient(circle, #A4AD94, #6F7F5C)' }} />
                   </div>
                 </div>
                 <div className="glass flex-1" style={{ borderRadius: 14, padding: 14 }}>
@@ -265,9 +265,9 @@ function Index() {
                     <span className="font-body text-[11px]" style={{ color: TEXT }}>Today's Entry</span>
                   </div>
                   <div className="space-y-2">
-                    <div style={{ height: 6, borderRadius: 4, background: 'rgba(26,26,46,0.10)' }} />
-                    <div style={{ height: 6, borderRadius: 4, background: 'rgba(26,26,46,0.10)', width: '75%' }} />
-                    <div style={{ height: 6, borderRadius: 4, background: 'rgba(26,26,46,0.10)', width: '60%' }} />
+                    <div style={{ height: 6, borderRadius: 4, background: 'rgba(57,68,43,0.10)' }} />
+                    <div style={{ height: 6, borderRadius: 4, background: 'rgba(57,68,43,0.10)', width: '75%' }} />
+                    <div style={{ height: 6, borderRadius: 4, background: 'rgba(57,68,43,0.10)', width: '60%' }} />
                   </div>
                 </div>
               </div>
@@ -277,10 +277,10 @@ function Index() {
       </section>
 
       {/* DISCLAIMER */}
-      <section className="px-6 py-5" style={{ background: 'rgba(94,129,172,0.08)', borderTop: '1px solid rgba(94,129,172,0.20)', borderBottom: '1px solid rgba(94,129,172,0.20)' }}>
+      <section className="px-6 py-5" style={{ background: 'rgba(164,173,148,0.08)', borderTop: '1px solid rgba(164,173,148,0.20)', borderBottom: '1px solid rgba(164,173,148,0.20)' }}>
         <div className="max-w-[700px] mx-auto flex items-start gap-3">
           <AlertCircle size={14} style={{ color: GOLD, flexShrink: 0, marginTop: 4 }} />
-          <p className="font-body text-[12px] text-left" style={{ color: 'rgba(120,85,20,0.95)', lineHeight: 1.8 }}>
+          <p className="font-body text-[12px] text-left" style={{ color: 'rgba(57,68,43,0.85)', lineHeight: 1.8 }}>
             Disclaimer: The Healing Journal is for educational and informational purposes only. It is not a substitute for professional mental health care, therapy, or medical advice, and does not provide diagnosis or treatment of any kind. Always consult a qualified professional. Crisis support: call or text 988.
           </p>
         </div>
@@ -317,9 +317,9 @@ function Index() {
       {/* PULL QUOTE */}
       <section className="relative px-6 overflow-hidden" style={{ background: BG_LIGHTER, padding: '120px 24px' }}>
         <Orbs />
-        <div className="absolute font-display select-none pointer-events-none" style={{ fontSize: 220, color: 'rgba(163,130,132,0.10)', top: 20, left: 40, lineHeight: 1 }}>"</div>
+        <div className="absolute font-display select-none pointer-events-none" style={{ fontSize: 220, color: 'rgba(164,173,148,0.10)', top: 20, left: 40, lineHeight: 1 }}>"</div>
         <div className="relative z-10 max-w-[680px] mx-auto">
-          <div className="reveal glass text-center" style={{ padding: 60, borderColor: 'rgba(163,130,132,0.25)' }}>
+          <div className="reveal glass text-center" style={{ padding: 60, borderColor: 'rgba(164,173,148,0.25)' }}>
             <Quote size={28} style={{ color: VIOLET, margin: '0 auto 28px' }} />
             <p className="font-display italic font-normal" style={{ fontSize: 'clamp(20px, 3vw, 28px)', color: TEXT, lineHeight: 1.85 }}>
               You did not imagine it.<br />
@@ -362,7 +362,7 @@ function Index() {
                     <p className="font-body font-light" style={{ fontSize: 13, color: TEXT_SOFT, lineHeight: 1.9 }}>{s.body}</p>
                   </div>
                   {i < steps.length - 1 && (
-                    <ChevronRight size={24} style={{ color: 'rgba(163,130,132,0.45)', flexShrink: 0 }} className="hidden md:block" />
+                    <ChevronRight size={24} style={{ color: 'rgba(164,173,148,0.45)', flexShrink: 0 }} className="hidden md:block" />
                   )}
                 </div>
               );
@@ -375,10 +375,10 @@ function Index() {
       <section className="relative py-[100px] px-6 overflow-hidden" style={{ background: BG_LIGHTER }}>
         <Orbs />
         <div className="relative z-10 max-w-[680px] mx-auto">
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" style={{ width: 300, height: 300, background: '#5e81ac', borderRadius: '50%', filter: 'blur(100px)', opacity: 0.30, pointerEvents: 'none' }} />
-          <div className="reveal glass relative text-center" style={{ padding: 56, borderColor: 'rgba(94,129,172,0.30)' }}>
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" style={{ width: 300, height: 300, background: '#6F7F5C', borderRadius: '50%', filter: 'blur(100px)', opacity: 0.30, pointerEvents: 'none' }} />
+          <div className="reveal glass relative text-center" style={{ padding: 56, borderColor: 'rgba(164,173,148,0.30)' }}>
             <ShieldCheck size={36} style={{ color: PERIWINKLE, margin: '0 auto 20px' }} />
-            <div className="glass-pill inline-flex items-center gap-2 px-4 py-1.5 mb-5" style={{ background: 'rgba(94,129,172,0.10)', border: '1px solid rgba(94,129,172,0.25)' }}>
+            <div className="glass-pill inline-flex items-center gap-2 px-4 py-1.5 mb-5" style={{ background: 'rgba(164,173,148,0.10)', border: '1px solid rgba(164,173,148,0.25)' }}>
               <span className="font-body text-[10px] uppercase" style={{ color: PERIWINKLE, letterSpacing: '3px' }}>your privacy matters</span>
             </div>
             <h2 className="font-display font-normal" style={{ fontSize: 32, color: TEXT, lineHeight: 1.4, marginBottom: 22 }}>
@@ -415,7 +415,7 @@ function Index() {
       </section>
 
       {/* PRICING */}
-      <section id="pricing" className="relative px-6 overflow-hidden" style={{ background: 'linear-gradient(135deg, #ebe4f5 0%, #f5f1e8 60%, #d9cdf0 100%)', padding: '120px 24px' }}>
+      <section id="pricing" className="relative px-6 overflow-hidden" style={{ background: 'linear-gradient(135deg, #D9DCCF 0%, #FDFDF1 60%, #D9DCCF 100%)', padding: '120px 24px' }}>
         <Orbs />
         <div className="relative z-10 max-w-[980px] mx-auto">
           <h2 className="reveal font-display font-normal text-center" style={{ fontSize: 'clamp(28px, 4.5vw, 40px)', color: TEXT, marginBottom: 14 }}>
@@ -431,14 +431,14 @@ function Index() {
                   padding: 36,
                   borderRadius: 28,
                   transitionDelay: `${i * 0.1}s`,
-                  background: t.featured ? 'linear-gradient(160deg, #2d2461 0%, #4a3d8a 100%)' : undefined,
+                  background: t.featured ? 'linear-gradient(160deg, #39442B 0%, #6F7F5C 100%)' : undefined,
                   color: t.featured ? '#fff' : undefined,
-                  boxShadow: t.featured ? '0 20px 60px rgba(45,36,97,0.40)' : undefined,
+                  boxShadow: t.featured ? '0 20px 60px rgba(57,68,43,0.40)' : undefined,
                   border: t.featured ? '1px solid rgba(255,255,255,0.15)' : undefined,
                   transform: t.featured ? 'translateY(-8px)' : undefined,
                 }}>
                 {t.featured && (
-                  <div className="absolute top-4 right-4 px-3 py-1 text-[10px] font-body uppercase" style={{ background: GOLD, color: '#1a1a3e', borderRadius: 50, letterSpacing: '2px' }}>
+                  <div className="absolute top-4 right-4 px-3 py-1 text-[10px] font-body uppercase" style={{ background: GOLD, color: '#39442B', borderRadius: 50, letterSpacing: '2px' }}>
                     Most chosen
                   </div>
                 )}
@@ -452,8 +452,8 @@ function Index() {
                   style={{
                     padding: '14px 24px',
                     borderRadius: 50,
-                    background: t.featured ? '#fff' : 'linear-gradient(135deg, #2d2461, #6b5fb5)',
-                    color: t.featured ? '#2d2461' : '#fff',
+                    background: t.featured ? '#fff' : 'linear-gradient(135deg, #39442B, #6F7F5C)',
+                    color: t.featured ? '#39442B' : '#fff',
                     marginBottom: 28,
                   }}>
                   {t.cta}
@@ -483,12 +483,12 @@ function Index() {
 
 
       {/* FOOTER */}
-      <footer className="px-6 py-10 text-center" style={{ background: 'rgba(26,26,46,0.06)', borderTop: '1px solid rgba(26,26,46,0.10)' }}>
+      <footer className="px-6 py-10 text-center" style={{ background: 'rgba(57,68,43,0.06)', borderTop: '1px solid rgba(57,68,43,0.10)' }}>
         <div className="flex items-center justify-center mb-4">
           <Leaf size={18} style={{ color: VIOLET, marginRight: 8 }} />
-          <span className="font-display font-light" style={{ fontSize: 15, color: 'rgba(26,26,46,0.65)', letterSpacing: '2px' }}>The Healing Journal</span>
+          <span className="font-display font-light" style={{ fontSize: 15, color: 'rgba(57,68,43,0.65)', letterSpacing: '2px' }}>The Healing Journal</span>
         </div>
-        <p className="font-body" style={{ fontSize: 11, color: 'rgba(26,26,46,0.40)' }}>
+        <p className="font-body" style={{ fontSize: 11, color: 'rgba(57,68,43,0.40)' }}>
           <Link to="/disclaimer" className="hover:underline" style={{ color: 'inherit' }}>Disclaimer</Link>
           {' · '}
           <Link to="/privacy" className="hover:underline" style={{ color: 'inherit' }}>Privacy Policy</Link>
@@ -497,7 +497,7 @@ function Index() {
           {' · '}
           <a href="mailto:hello@thehealingjournal.app" className="hover:underline" style={{ color: 'inherit' }}>Contact</a>
         </p>
-        <p className="font-body" style={{ marginTop: 12, fontSize: 10, color: 'rgba(26,26,46,0.30)' }}>
+        <p className="font-body" style={{ marginTop: 12, fontSize: 10, color: 'rgba(57,68,43,0.30)' }}>
           The Healing Journal — Educational tool only — Not professional medical advice
         </p>
       </footer>

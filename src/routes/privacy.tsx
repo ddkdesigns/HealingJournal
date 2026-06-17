@@ -12,9 +12,9 @@ export const Route = createFileRoute("/privacy")({
 
 function PrivacyPage() {
   return (
-    <main className="min-h-screen px-6 py-20" style={{ background: '#f5eef0', color: '#1a1a2e' }}>
+    <main className="min-h-screen px-6 py-20" style={{ background: '#FDFDF1', color: '#39442B' }}>
       <div className="mx-auto max-w-2xl">
-        <Link to="/" className="font-body text-sm" style={{ color: '#5e81ac' }}>← Back</Link>
+        <Link to="/" className="font-body text-sm" style={{ color: '#6F7F5C' }}>← Back</Link>
         <h1 className="font-display mt-6 mb-6" style={{ fontSize: 36 }}>Privacy Policy</h1>
         <p className="font-body" style={{ fontSize: 16, lineHeight: 1.7 }}>
           Your journal entries are encrypted and stored locally on your device. We do not sell,
