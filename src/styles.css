@@ -79,8 +79,7 @@
   }
 
   body {
-    background: linear-gradient(180deg, #39442B 0%, #2E3722 50%, #39442B 100%);
-    background-attachment: fixed;
+    background: #FDFDF1;
     color: #39442B;
     font-family: var(--font-body);
     font-weight: 300;
