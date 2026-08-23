@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const BEACONS = "https://shop.beacons.ai/silentlyshifting/c481e8d0-d034-4b61-bed2-b53e7cc68a10";
+const BEACONS = "https://thehealingjournal.lovable.app/";
 
 const OLIVE  = "#39442B";
 const SAGE   = "#6F7F5C";
@@ -269,7 +269,9 @@ function Index() {
             Create free account
           </a>
           <a
-            href="#pricing"
+            href={BEACONS}
+            target="_blank"
+            rel="noopener noreferrer"
             className="font-body story-link"
             style={{ color: OLIVE, fontSize: 12, letterSpacing: "0.22em", textTransform: "uppercase", fontWeight: 500, padding: "18px 12px" }}
           >
