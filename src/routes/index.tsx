@@ -269,7 +269,9 @@ function Index() {
             Create free account
           </a>
           <a
-            href="#pricing"
+            href={BEACONS}
+            target="_blank"
+            rel="noopener noreferrer"
             className="font-body story-link"
             style={{ color: OLIVE, fontSize: 12, letterSpacing: "0.22em", textTransform: "uppercase", fontWeight: 500, padding: "18px 12px" }}
           >
