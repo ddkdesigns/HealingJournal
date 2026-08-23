@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const BEACONS = "https://shop.beacons.ai/silentlyshifting/c481e8d0-d034-4b61-bed2-b53e7cc68a10";
+const BEACONS = "https://thehealingjournal.lovable.app/";
 
 const OLIVE  = "#39442B";
 const SAGE   = "#6F7F5C";
