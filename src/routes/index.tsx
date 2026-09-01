@@ -31,59 +31,62 @@ const PALE   = "#DDE5DC";
 const IVORY  = "#F7F3EE";
 
 const mirrorRows = [
-  { icon: Brain,             text: "You overthink every interaction and do not know why." },
-  { icon: CloudRain,         text: "You feel guilty for things that were never your fault." },
-  { icon: Waves,             text: "You are either numb or overwhelmed — there is no in between." },
-  { icon: SearchX,           text: "You have searched for answers more times than you would like to admit." },
-  { icon: MessageCircleOff,  text: "You know something happened to you. You just do not always have the words for it." },
-  { icon: Moon,              text: "You are tired of holding all of this alone." },
+  { icon: Brain,             text: "You replay conversations long after they happened." },
+  { icon: CloudRain,         text: "You question whether you were the problem." },
+  { icon: Waves,             text: "You feel guilty for setting boundaries." },
+  { icon: SearchX,           text: "You can be completely fine one moment, and suddenly overwhelmed the next." },
+  { icon: MessageCircleOff,  text: "You understand what happened, but your body still reacts like it is happening now." },
+  { icon: Moon,              text: "You have read the books and saved the posts, and some days you still do not know what you are feeling." },
 ];
 
 const features = [
-  { icon: Home,      title: "Home — Your Daily Anchor",                       body: "A personalised greeting using your first name, the time of day, and where you are in your journey. Rotating affirmations written for trauma survivors. Daily mood check-in, intention setting, and calm quick-access to every section." },
-  { icon: BookOpen,  title: "Learn — Understand What Happened to You",        body: "A full educational library covering CPTSD, narcissistic abuse, gaslighting, manipulation, trauma bonding, fawning, love bombing, intermittent reinforcement, and more — in plain everyday language with no clinical jargon and no judgment." },
-  { icon: Wind,      title: "Regulate — When Your Body Will Not Calm Down",   body: "Six guided nervous system tools: animated breathing, sensory grounding, trauma-informed body scan, cold water reset, trauma release shaking, and an SOS crisis tool — each with a plain explanation of what it is and how it works." },
-  { icon: PenLine,   title: "Journal — Your Private Protected Space",         body: "Twenty trauma-informed prompts rotating daily. Free writing always available. Mood tagging. Every entry encrypted and saved to your personal cloud account. No one else can read your words — ever." },
-  { icon: Target,    title: "Goals — The Small Victories That Actually Matter", body: "Personal healing goals entirely your own. Visual progress tracking with a slider. Ten daily win checkboxes that reset each morning. A streak counter for every day you show up for yourself." },
-  { icon: Milestone, title: "Journey — Watch Yourself Heal",                  body: "A visual timeline of every entry written. A mood trend chart. A Then vs Now comparison of your first and most recent entry. A Letter to Future Me that seals today and unlocks on a date you choose." },
+  { icon: Home,      label: "Home",     title: "A place to begin your day.",                                  body: "Check in with yourself, set an intention, see a daily affirmation, and quickly access the tools you need." },
+  { icon: BookOpen,  label: "Learn",    title: "Put words to what you've experienced.",                        body: "Explore plain-language education around CPTSD, narcissistic abuse, gaslighting, trauma bonding, fawning, manipulation, and more. No complicated clinical language. No judgment." },
+  { icon: Wind,      label: "Regulate", title: "For the moments when your body needs help slowing down.",      body: "Explore guided breathing, sensory grounding, body scans, cold-water resets, trauma-release movement, and an SOS tool." },
+  { icon: PenLine,   label: "Journal",  title: "Your words. Your space. Your story.",                          body: "Use guided prompts or simply write what's on your mind. Capture your thoughts, moods, realizations, and the things you aren't ready to say out loud." },
+  { icon: Target,    label: "Goals",    title: "Healing doesn't have to mean huge milestones.",                body: "Set personal goals, track the small wins, and notice the days you showed up for yourself, even when showing up felt hard." },
+  { icon: Milestone, label: "Journey",  title: "See the progress you couldn't see while you were living it.",  body: "Look back at your entries, notice changes in your mood, compare where you started to where you are now, and write a letter to the future version of you." },
 ];
 
 const steps = [
-  { num: "01", icon: KeyRound,    title: "Create your free account",  body: "Sign up in under a minute with just your email. No card, no commitment. Your private space is created instantly." },
-  { num: "02", icon: Feather,     title: "Explore the app for free",  body: "Try the daily affirmation, take a mood check-in, and preview the Learn library and a guided breathing tool — so you can feel the space before you decide." },
-  { num: "03", icon: ShoppingBag, title: "Unlock everything for life", body: "When you're ready, upgrade once for $15 to unlock the full Learn library, all six regulation tools, the private journal, goals, and your healing journey timeline. One payment, lifetime access." },
+  { num: "01", icon: KeyRound,    title: "Create your free account", body: "Sign up in under a minute. No credit card. No commitment." },
+  { num: "02", icon: Feather,     title: "Explore the journal",      body: "Take a mood check-in, explore the Learn section, try a regulation tool, and get a feel for the space." },
+  { num: "03", icon: ShoppingBag, title: "Make it yours",            body: "When you're ready, unlock the full experience for one payment of $15. No monthly subscription. No recurring charges. Lifetime access." },
 ];
 
 const tiers = [
   {
-    name: "Free preview", price: "$0", sub: "Always free · No card needed",
-    cta: "Create free account", href: BEACONS, featured: false,
+    name: "Free preview", price: "$0", sub: "Start without a commitment",
+    cta: "Start Free", href: BEACONS, featured: false,
     features: [
       "Personal home with daily affirmation",
       "Daily mood check-in",
-      "Preview of the Learn library",
+      "A look inside the Learn section",
       "One guided breathing tool",
     ],
   },
   {
-    name: "Lifetime access", price: "$15", sub: "One-time · Yours forever",
-    cta: "Get Instant Access — $15", href: BEACONS, featured: true,
+    name: "Lifetime access", price: "$15", sub: "One payment · Yours forever",
+    cta: "Get Lifetime Access — $15", href: BEACONS, featured: true,
     features: [
-      "Full Learn library — CPTSD, narcissistic abuse, more",
-      "All six nervous-system regulation tools",
-      "Private encrypted journal with 20 prompts",
-      "Goals, streaks & daily wins",
-      "Journey timeline & Letter to Future Me",
-      "Any device · No app store · No subscription",
+      "Full educational library",
+      "Six regulation tools",
+      "Private journal + guided prompts",
+      "Personal goals + daily wins",
+      "Healing journey timeline",
+      "Letter to Future Me",
+      "Any device",
+      "No subscription",
+      "Lifetime access",
     ],
   },
 ];
 
 const faqs = [
-  { q: "Is this the same as therapy?",            a: "No. The Healing Journal is an educational self-guided wellness tool. It does not provide clinical treatment and does not create a therapist-client relationship of any kind. It is a private space to learn, reflect, and document — not a replacement for professional mental health support." },
-  { q: "What if I am not sure I have CPTSD?",     a: "You do not need a diagnosis to use this app. Many women who find The Healing Journal most useful have never been formally diagnosed. They simply know that something happened, that they have not fully recovered, and that they want a private space to begin to understand it." },
-  { q: "Is my journal actually private?",         a: "Yes. Your entries are encrypted and stored in your personal cloud account. No one else can access them — including the creator. You can also delete your entire account and all data permanently at any time from inside the app." },
-  { q: "What do I receive after purchasing?",     a: "You receive an instant download PDF containing your unique personal access code and step-by-step setup instructions. The app works in any web browser on any device. No app store, no subscription, no expiry date." },
+  { q: "Is this the same as therapy?",        a: "No. The Healing Journal is an educational, self-guided wellness tool for reflection, learning, and personal awareness. It isn't a replacement for professional mental health care or clinical treatment." },
+  { q: "Do I need a diagnosis to use it?",    a: "No. You don't need a diagnosis, the right words, or a clear explanation of what happened. If you simply want a quiet place to understand yourself better, you are welcome here." },
+  { q: "Is my journal actually private?",     a: "Yes. Your journal is stored in your private encrypted account. Your words aren't content to be shared or sold. You can permanently delete your account and your data whenever you choose." },
+  { q: "What happens when I upgrade?",        a: "One payment of $15 unlocks the full experience for life. No monthly subscription and no recurring charges. It works in any web browser, on any device." },
 ];
 
 function useScrollY() {
@@ -136,7 +139,7 @@ function Nav() {
         onMouseEnter={(e) => { e.currentTarget.style.background = SAGE; }}
         onMouseLeave={(e) => { e.currentTarget.style.background = OLIVE; }}
       >
-        Get Access — $15
+        Get Lifetime Access — $15
       </a>
     </nav>
   );
@@ -210,7 +213,7 @@ function Index() {
 
         <div className="reveal mb-10" style={{ transitionDelay: "0.05s" }}>
           <span className="inline-flex items-center gap-2 font-body" style={{ padding: "8px 18px", borderRadius: 999, border: `1px solid ${PALE}`, color: SAGE, fontSize: 10, letterSpacing: "0.32em", textTransform: "uppercase", fontWeight: 500, background: "rgba(252,250,247,0.6)", backdropFilter: "blur(10px)" }}>
-            <Sparkles size={11} /> A private space for your healing
+            <Sparkles size={11} /> The Healing Journal
           </span>
         </div>
 
@@ -226,10 +229,8 @@ function Index() {
             transitionDelay: "0.15s",
           }}
         >
-          You are not too much.
-          <br />
-          You were surrounded by{" "}
-          <span className="font-italic" style={{ color: SAGE }}>too little.</span>
+          A private place to come back{" "}
+          <span className="font-italic" style={{ color: SAGE }}>to yourself.</span>
         </h1>
 
         <p
@@ -242,8 +243,16 @@ function Index() {
             transitionDelay: "0.32s",
           }}
         >
-          The Healing Journal is a private digital companion for women healing from CPTSD, narcissistic abuse, and nervous system dysregulation.
+          You don't have to have all the answers. You just need a place to start.
         </p>
+
+        <div className="reveal font-body font-light mt-10 mx-auto flex flex-col gap-4" style={{ fontSize: 16, color: SAGE, lineHeight: 1.95, maxWidth: 620, transitionDelay: "0.4s" }}>
+          <p>Maybe you've spent years trying to understand what happened.</p>
+          <p>Maybe you've questioned your own memory, your reactions, your feelings, or whether what you experienced was really "that bad."</p>
+          <p>Maybe you're simply tired of carrying everything in your head.</p>
+          <p style={{ color: OLIVE }}>You're not alone. And you don't have to figure it all out at once.</p>
+          <p>The Healing Journal is a private, interactive space created for women who are ready to slow down, understand their experiences, reconnect with themselves, and make space for what comes next.</p>
+        </div>
 
         <div className="reveal flex flex-col sm:flex-row items-center gap-4 mt-14" style={{ transitionDelay: "0.5s" }}>
           <a
@@ -266,19 +275,19 @@ function Index() {
             onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 22px 60px rgba(53,51,55,0.28)"; e.currentTarget.style.background = SAGE; }}
             onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 14px 40px rgba(53,51,55,0.18)"; e.currentTarget.style.background = OLIVE; }}
           >
-            Create free account
+            Create Your Free Account
           </a>
           <a
             href="#pricing"
             className="font-body story-link"
             style={{ color: OLIVE, fontSize: 12, letterSpacing: "0.22em", textTransform: "uppercase", fontWeight: 500, padding: "18px 12px" }}
           >
-            See plans
+            See How It Works
           </a>
         </div>
 
         <p className="reveal font-body mt-6" style={{ fontSize: 10, color: MOSS, letterSpacing: "0.2em", textTransform: "uppercase", transitionDelay: "0.65s" }}>
-          Free to start · Upgrade once for $15 · Lifetime access
+          Free to start · No card required · Upgrade once for $15 · Lifetime access
         </p>
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 scroll-bounce">
@@ -290,18 +299,16 @@ function Index() {
       <section className="relative px-6" style={{ padding: "200px 24px 200px" }}>
         <div className="max-w-[820px] mx-auto">
           <div className="text-center mb-24">
-            <Eyebrow color={MOSS}>Does this sound familiar</Eyebrow>
+            <Eyebrow color={MOSS}>You&apos;ve been holding a lot</Eyebrow>
             <h2
               className="reveal font-display mt-8"
               style={{ color: OLIVE, fontSize: "clamp(34px, 5.2vw, 66px)", lineHeight: 1.08, letterSpacing: "-0.015em", fontWeight: 400, transitionDelay: "0.1s" }}
             >
-              You left. Or maybe you stayed.
-              <br />
-              Either way, something in you{" "}
-              <span className="font-italic" style={{ color: SAGE }}>never fully came back.</span>
+              You don't have to carry it all{" "}
+              <span className="font-italic" style={{ color: SAGE }}>in your head anymore.</span>
             </h2>
             <p className="reveal font-italic mt-10 mx-auto" style={{ fontSize: 18, color: SAGE, lineHeight: 1.95, maxWidth: 620, transitionDelay: "0.25s" }}>
-              That low hum of anxiety that never quite goes away. The way certain words, silences, or expressions send your body into a panic it cannot explain. The exhaustion of being hypervigilant in every room you walk into.
+              Maybe you recognize yourself here.
             </p>
           </div>
 
@@ -332,7 +339,10 @@ function Index() {
           </div>
 
           <p className="reveal font-display italic text-center mt-24" style={{ fontSize: "clamp(22px, 3vw, 34px)", color: SAGE, lineHeight: 1.5 }}>
-            You found this for a reason.
+            There's nothing wrong with you for still being affected by what you experienced.
+          </p>
+          <p className="reveal font-body font-light text-center mt-8 mx-auto" style={{ fontSize: 16, color: SAGE, lineHeight: 1.95, maxWidth: 560 }}>
+            You don't have to rush yourself through it. You deserve a private place to understand it.
           </p>
         </div>
       </section>
@@ -340,23 +350,23 @@ function Index() {
       {/* INTRODUCING — dark olive cinematic band */}
       <section className="relative px-6" style={{ background: OLIVE, color: IVORY, padding: "200px 24px" }}>
         <div className="max-w-[900px] mx-auto text-center">
-          <Eyebrow color={MOSS}>Introducing</Eyebrow>
+          <Eyebrow color={MOSS}>Welcome to your space</Eyebrow>
           <h2 className="reveal font-display mt-8" style={{ fontSize: "clamp(34px, 5.2vw, 68px)", lineHeight: 1.08, letterSpacing: "-0.015em", fontWeight: 400, color: IVORY, transitionDelay: "0.1s" }}>
-            A private space that finally
+            A journal that does more than
             <br />
-            makes sense of{" "}
-            <span className="font-italic" style={{ color: MOSS }}>what you have been through.</span>
+            give you{" "}
+            <span className="font-italic" style={{ color: MOSS }}>a blank page.</span>
           </h2>
 
           <div className="reveal mt-16 grid md:grid-cols-3 gap-12 text-left" style={{ transitionDelay: "0.25s" }}>
             <p className="font-body font-light" style={{ fontSize: 15, lineHeight: 2, color: "rgba(252,250,247,0.82)" }}>
-              The Healing Journal is not therapy. It is not a course. It is not another self-help book telling you to journal your way to happiness.
+              The Healing Journal brings reflection, education, regulation tools, and progress tracking together in one private digital space.
             </p>
             <p className="font-body font-light" style={{ fontSize: 15, lineHeight: 2, color: "rgba(252,250,247,0.82)" }}>
-              It is a private, interactive digital companion built specifically for women navigating CPTSD, narcissistic abuse recovery, trauma bonding, and nervous system dysregulation.
+              No pressure to perform your healing. No pretending you're okay when you're not.
             </p>
             <p className="font-body font-light" style={{ fontSize: 15, lineHeight: 2, color: "rgba(252,250,247,0.82)" }}>
-              A place to understand what happened, to calm your body when it spirals, and to document your healing so you can one day look back and see how far you came.
+              No perfectly curated version of yourself required. Just you. Exactly where you are.
             </p>
           </div>
 
@@ -415,10 +425,10 @@ function Index() {
           <div className="text-center mb-24 max-w-[700px] mx-auto">
             <Eyebrow>Inside the journal</Eyebrow>
             <h2 className="reveal font-display mt-8" style={{ color: OLIVE, fontSize: "clamp(34px, 5vw, 60px)", lineHeight: 1.1, letterSpacing: "-0.015em", fontWeight: 400, transitionDelay: "0.1s" }}>
-              Six rooms. <span className="font-italic" style={{ color: SAGE }}>One private home.</span>
+              Everything you need, <span className="font-italic" style={{ color: SAGE }}>in one private space.</span>
             </h2>
             <p className="reveal font-body font-light mt-6" style={{ fontSize: 16, color: SAGE, lineHeight: 1.9, transitionDelay: "0.2s" }}>
-              Everything you need for exactly where you are right now.
+              Six spaces, made to meet you exactly where you are right now.
             </p>
           </div>
 
@@ -438,7 +448,7 @@ function Index() {
                   <div className="flex items-center gap-4 mb-6">
                     <Icon size={20} style={{ color: SAGE, transition: "transform 0.6s cubic-bezier(0.16,1,0.3,1)" }} />
                     <span className="font-body" style={{ color: MOSS, fontSize: 10, letterSpacing: "0.3em", textTransform: "uppercase", fontWeight: 500 }}>
-                      {String(i + 1).padStart(2, "0")} / 06
+                      {f.label}
                     </span>
                   </div>
                   <h3 className="font-display mb-4" style={{ color: OLIVE, fontSize: "clamp(22px, 2.2vw, 30px)", lineHeight: 1.25, fontWeight: 400 }}>
@@ -461,12 +471,15 @@ function Index() {
             "
           </div>
           <p className="reveal font-display italic" style={{ color: OLIVE, fontSize: "clamp(26px, 3.4vw, 42px)", lineHeight: 1.5, fontWeight: 400 }}>
-            You did not imagine it.<br />
-            You were not too sensitive.<br />
-            You were not too much.<br />
-            You were in something real —<br />
-            and you survived it. <span style={{ color: SAGE }}>Now you get to heal.</span>
+            You don't have to become someone new.<br />
+            <span style={{ color: SAGE }}>You get to come back to yourself.</span>
           </p>
+          <div className="reveal font-body font-light mt-12 mx-auto flex flex-col gap-3" style={{ fontSize: 16, color: OLIVE, lineHeight: 1.95, maxWidth: 620, transitionDelay: "0.15s" }}>
+            <p>Healing isn't always obvious. Sometimes it looks like setting one boundary. Leaving one conversation. Sleeping peacefully for the first time in a while.</p>
+            <p>Recognizing a pattern you couldn't see before. Choosing yourself without explaining why.</p>
+            <p className="font-italic">Or simply realizing: "I don't feel the way I used to."</p>
+            <p>The Healing Journal gives you a place to notice those moments, because progress deserves to be seen.</p>
+          </div>
           <div className="reveal mt-16 font-body" style={{ color: MOSS, fontSize: 11, letterSpacing: "0.32em", textTransform: "uppercase", fontWeight: 500, transitionDelay: "0.2s" }}>
             — The Healing Journal
           </div>
@@ -479,10 +492,10 @@ function Index() {
           <div className="text-center mb-32 max-w-[640px] mx-auto">
             <Eyebrow>How it works</Eyebrow>
             <h2 className="reveal font-display mt-8" style={{ color: OLIVE, fontSize: "clamp(34px, 5vw, 60px)", lineHeight: 1.1, letterSpacing: "-0.015em", fontWeight: 400, transitionDelay: "0.1s" }}>
-              Start free. <span className="font-italic" style={{ color: SAGE }}>Upgrade when you're ready.</span>
+              Start small. <span className="font-italic" style={{ color: SAGE }}>You don't have to commit to your entire journey today.</span>
             </h2>
             <p className="reveal font-body font-light mt-6" style={{ fontSize: 16, color: SAGE, lineHeight: 1.9, transitionDelay: "0.2s" }}>
-              No card to begin, no pressure to upgrade. Feel the space first, decide later.
+              Just create a space for yourself.
             </p>
           </div>
 
@@ -525,16 +538,16 @@ function Index() {
           <ShieldCheck size={28} style={{ color: MOSS, margin: "0 auto 24px" }} />
           <Eyebrow color={MOSS}>Your privacy matters</Eyebrow>
           <h2 className="reveal font-display mt-8" style={{ color: IVORY, fontSize: "clamp(30px, 4.4vw, 52px)", lineHeight: 1.15, letterSpacing: "-0.015em", fontWeight: 400, transitionDelay: "0.1s" }}>
-            What you write here belongs to <span className="font-italic" style={{ color: MOSS }}>no one but you.</span>
+            Your journal should actually <span className="font-italic" style={{ color: MOSS }}>feel private.</span>
           </h2>
           <p className="reveal font-body font-light mt-8 mx-auto" style={{ fontSize: 16, color: "rgba(252,250,247,0.82)", lineHeight: 2, maxWidth: 620, transitionDelay: "0.2s" }}>
-            Every journal entry you write is stored in your private encrypted cloud account. No one — including the creator of this app — can read your words. Your healing history is not a data point. It is not sold, shared, or seen. It is yours. Completely and always.
+            What you write here belongs to you. Your journal is stored in your private encrypted account. Your words aren't content. They're not something to be shared, sold, or used to tell your story to someone else. They're yours. You can also permanently delete your account and your data whenever you choose.
           </p>
           <div className="reveal flex flex-col items-center gap-3 mt-12" style={{ transitionDelay: "0.3s" }}>
             {[
-              "Private encrypted cloud storage",
-              "Unique access code — one account, one person",
-              "Full data deletion available anytime from inside the app",
+              "Private encrypted storage",
+              "Individual account access",
+              "Full data deletion available",
             ].map((row, i) => (
               <div key={i} className="flex items-center gap-3">
                 <Check size={15} style={{ color: MOSS, flexShrink: 0 }} />
@@ -562,12 +575,12 @@ function Index() {
       <section id="pricing" className="relative px-6" style={{ padding: "180px 24px 200px", background: PALE }}>
         <div className="max-w-[1080px] mx-auto">
           <div className="text-center mb-20 max-w-[640px] mx-auto">
-            <Eyebrow>Pricing</Eyebrow>
+            <Eyebrow>Choose your space</Eyebrow>
             <h2 className="reveal font-display mt-8" style={{ color: OLIVE, fontSize: "clamp(34px, 5vw, 60px)", lineHeight: 1.1, letterSpacing: "-0.015em", fontWeight: 400, transitionDelay: "0.1s" }}>
-              A plan that <span className="font-italic" style={{ color: SAGE }}>grows with you.</span>
+              Start free. <span className="font-italic" style={{ color: SAGE }}>Upgrade when you're ready.</span>
             </h2>
             <p className="reveal font-body font-light mt-6" style={{ fontSize: 16, color: SAGE, lineHeight: 1.9, transitionDelay: "0.2s" }}>
-              Start free today. Upgrade once — never again — when the space feels like yours.
+              One payment. Yours forever. No subscription.
             </p>
           </div>
 
@@ -651,10 +664,13 @@ function Index() {
       <section className="relative px-6" style={{ padding: "180px 24px", background: IVORY }}>
         <div className="max-w-[820px] mx-auto text-center">
           <h2 className="reveal font-display" style={{ color: OLIVE, fontSize: "clamp(40px, 6.5vw, 84px)", lineHeight: 1.05, letterSpacing: "-0.02em", fontWeight: 400 }}>
-            Begin where <span className="font-italic" style={{ color: SAGE }}>you are.</span>
+            You don't have to figure everything out <span className="font-italic" style={{ color: SAGE }}>today.</span>
           </h2>
           <p className="reveal font-italic mt-8 mx-auto" style={{ fontSize: 18, color: SAGE, lineHeight: 1.9, maxWidth: 520, transitionDelay: "0.15s" }}>
-            One small, private decision. The space will be here when you're ready.
+            Maybe today you just need somewhere quiet to put your thoughts. Maybe tomorrow you'll understand something you couldn't understand today. Maybe six months from now, you'll look back and realize you were already changing.
+          </p>
+          <p className="reveal font-body font-light mt-6 mx-auto" style={{ fontSize: 16, color: SAGE, lineHeight: 1.95, maxWidth: 520, transitionDelay: "0.22s" }}>
+            Start wherever you are. The space will be here when you're ready.
           </p>
           <div className="reveal mt-12" style={{ transitionDelay: "0.3s" }}>
             <a
@@ -677,8 +693,13 @@ function Index() {
               onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 22px 60px rgba(53,51,55,0.28)"; e.currentTarget.style.background = SAGE; }}
               onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 14px 40px rgba(53,51,55,0.18)"; e.currentTarget.style.background = OLIVE; }}
             >
-              Get Instant Access — $15
+              Begin Your Journal
             </a>
+          </div>
+          <p className="reveal font-body mt-8" style={{ fontSize: 10, color: MOSS, letterSpacing: "0.24em", textTransform: "uppercase", transitionDelay: "0.4s" }}>
+            Private · Interactive · Self-guided
+          </p>
+          <div style={{ display: "none" }}>
           </div>
         </div>
       </section>
