@@ -24,11 +24,11 @@ export const Route = createFileRoute("/")({
 
 const BEACONS = "https://thehealingjournal.lovable.app/";
 
-const OLIVE  = "#39442B";
-const SAGE   = "#6F7F5C";
-const MOSS   = "#A4AD94";
-const PALE   = "#D9DCCF";
-const IVORY  = "#FDFDF1";
+const OLIVE  = "#5F4B58";
+const SAGE   = "#9B8494";
+const MOSS   = "#B98286";
+const PALE   = "#DDE5DC";
+const IVORY  = "#F7F3EE";
 
 const mirrorRows = [
   { icon: Brain,             text: "You overthink every interaction and do not know why." },
@@ -105,9 +105,9 @@ function Nav() {
       style={{
         paddingTop: condensed ? 14 : 22,
         paddingBottom: condensed ? 14 : 22,
-        background: condensed ? "rgba(253,253,241,0.82)" : "transparent",
+        background: condensed ? "rgba(252,250,247,0.82)" : "transparent",
         backdropFilter: condensed ? "blur(18px)" : "none",
-        borderBottom: condensed ? "1px solid rgba(57,68,43,0.08)" : "1px solid transparent",
+        borderBottom: condensed ? "1px solid rgba(53,51,55,0.08)" : "1px solid transparent",
         transition: "all 0.5s cubic-bezier(0.16,1,0.3,1)",
       }}
     >
@@ -157,7 +157,7 @@ function Faq() {
       {faqs.map((f, i) => {
         const isOpen = open === i;
         return (
-          <div key={i} className="reveal" style={{ borderTop: i === 0 ? "1px solid rgba(57,68,43,0.12)" : undefined, borderBottom: "1px solid rgba(57,68,43,0.12)", transitionDelay: `${i * 0.06}s` }}>
+          <div key={i} className="reveal" style={{ borderTop: i === 0 ? "1px solid rgba(53,51,55,0.12)" : undefined, borderBottom: "1px solid rgba(53,51,55,0.12)", transitionDelay: `${i * 0.06}s` }}>
             <button
               onClick={() => setOpen(isOpen ? null : i)}
               className="w-full flex items-center justify-between text-left"
@@ -209,7 +209,7 @@ function Index() {
         </div>
 
         <div className="reveal mb-10" style={{ transitionDelay: "0.05s" }}>
-          <span className="inline-flex items-center gap-2 font-body" style={{ padding: "8px 18px", borderRadius: 999, border: `1px solid ${PALE}`, color: SAGE, fontSize: 10, letterSpacing: "0.32em", textTransform: "uppercase", fontWeight: 500, background: "rgba(253,253,241,0.6)", backdropFilter: "blur(10px)" }}>
+          <span className="inline-flex items-center gap-2 font-body" style={{ padding: "8px 18px", borderRadius: 999, border: `1px solid ${PALE}`, color: SAGE, fontSize: 10, letterSpacing: "0.32em", textTransform: "uppercase", fontWeight: 500, background: "rgba(252,250,247,0.6)", backdropFilter: "blur(10px)" }}>
             <Sparkles size={11} /> A private space for your healing
           </span>
         </div>
@@ -260,11 +260,11 @@ function Index() {
               letterSpacing: "0.22em",
               textTransform: "uppercase",
               fontWeight: 500,
-              boxShadow: "0 14px 40px rgba(57,68,43,0.18)",
+              boxShadow: "0 14px 40px rgba(53,51,55,0.18)",
               transition: "transform 0.5s cubic-bezier(0.16,1,0.3,1), box-shadow 0.5s cubic-bezier(0.16,1,0.3,1), background 0.5s ease",
             }}
-            onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 22px 60px rgba(57,68,43,0.28)"; e.currentTarget.style.background = SAGE; }}
-            onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 14px 40px rgba(57,68,43,0.18)"; e.currentTarget.style.background = OLIVE; }}
+            onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 22px 60px rgba(53,51,55,0.28)"; e.currentTarget.style.background = SAGE; }}
+            onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 14px 40px rgba(53,51,55,0.18)"; e.currentTarget.style.background = OLIVE; }}
           >
             Create free account
           </a>
@@ -314,8 +314,8 @@ function Index() {
                   className="reveal flex items-baseline gap-8 md:gap-12"
                   style={{
                     padding: "32px 4px",
-                    borderTop: i === 0 ? "1px solid rgba(57,68,43,0.10)" : undefined,
-                    borderBottom: "1px solid rgba(57,68,43,0.10)",
+                    borderTop: i === 0 ? "1px solid rgba(53,51,55,0.10)" : undefined,
+                    borderBottom: "1px solid rgba(53,51,55,0.10)",
                     transitionDelay: `${i * 0.08}s`,
                   }}
                 >
@@ -349,13 +349,13 @@ function Index() {
           </h2>
 
           <div className="reveal mt-16 grid md:grid-cols-3 gap-12 text-left" style={{ transitionDelay: "0.25s" }}>
-            <p className="font-body font-light" style={{ fontSize: 15, lineHeight: 2, color: "rgba(253,253,241,0.82)" }}>
+            <p className="font-body font-light" style={{ fontSize: 15, lineHeight: 2, color: "rgba(252,250,247,0.82)" }}>
               The Healing Journal is not therapy. It is not a course. It is not another self-help book telling you to journal your way to happiness.
             </p>
-            <p className="font-body font-light" style={{ fontSize: 15, lineHeight: 2, color: "rgba(253,253,241,0.82)" }}>
+            <p className="font-body font-light" style={{ fontSize: 15, lineHeight: 2, color: "rgba(252,250,247,0.82)" }}>
               It is a private, interactive digital companion built specifically for women navigating CPTSD, narcissistic abuse recovery, trauma bonding, and nervous system dysregulation.
             </p>
-            <p className="font-body font-light" style={{ fontSize: 15, lineHeight: 2, color: "rgba(253,253,241,0.82)" }}>
+            <p className="font-body font-light" style={{ fontSize: 15, lineHeight: 2, color: "rgba(252,250,247,0.82)" }}>
               A place to understand what happened, to calm your body when it spirals, and to document your healing so you can one day look back and see how far you came.
             </p>
           </div>
@@ -372,19 +372,19 @@ function Index() {
               className="relative h-full flex flex-col gap-3 p-4"
               style={{
                 borderRadius: 40,
-                background: "rgba(253,253,241,0.08)",
-                border: "1px solid rgba(253,253,241,0.18)",
+                background: "rgba(252,250,247,0.08)",
+                border: "1px solid rgba(252,250,247,0.18)",
                 backdropFilter: "blur(20px)",
               }}
             >
-              <div style={{ borderRadius: 14, padding: 14, background: "rgba(253,253,241,0.10)", border: "1px solid rgba(253,253,241,0.12)" }}>
+              <div style={{ borderRadius: 14, padding: 14, background: "rgba(252,250,247,0.10)", border: "1px solid rgba(252,250,247,0.12)" }}>
                 <div className="flex items-center gap-2 mb-1.5">
                   <Sun size={13} style={{ color: MOSS }} />
                   <span className="font-body" style={{ color: IVORY, fontSize: 11 }}>Good evening</span>
                 </div>
-                <p className="font-italic" style={{ color: "rgba(253,253,241,0.7)", fontSize: 10 }}>You came back. That matters.</p>
+                <p className="font-italic" style={{ color: "rgba(252,250,247,0.7)", fontSize: 10 }}>You came back. That matters.</p>
               </div>
-              <div style={{ borderRadius: 14, padding: 14, background: "rgba(253,253,241,0.10)", border: "1px solid rgba(253,253,241,0.12)" }}>
+              <div style={{ borderRadius: 14, padding: 14, background: "rgba(252,250,247,0.10)", border: "1px solid rgba(252,250,247,0.12)" }}>
                 <div className="flex items-center gap-2 mb-3">
                   <Wind size={13} style={{ color: MOSS }} />
                   <span className="font-body" style={{ color: IVORY, fontSize: 11 }}>4-7-8 Breathing</span>
@@ -393,15 +393,15 @@ function Index() {
                   <div className="breath-pulse" style={{ width: 40, height: 40, borderRadius: "50%", background: `radial-gradient(circle, ${MOSS}, ${SAGE})` }} />
                 </div>
               </div>
-              <div className="flex-1" style={{ borderRadius: 14, padding: 14, background: "rgba(253,253,241,0.10)", border: "1px solid rgba(253,253,241,0.12)" }}>
+              <div className="flex-1" style={{ borderRadius: 14, padding: 14, background: "rgba(252,250,247,0.10)", border: "1px solid rgba(252,250,247,0.12)" }}>
                 <div className="flex items-center gap-2 mb-3">
                   <BookOpen size={13} style={{ color: MOSS }} />
                   <span className="font-body" style={{ color: IVORY, fontSize: 11 }}>Today's Entry</span>
                 </div>
                 <div className="space-y-2">
-                  <div style={{ height: 5, borderRadius: 4, background: "rgba(253,253,241,0.18)" }} />
-                  <div style={{ height: 5, borderRadius: 4, background: "rgba(253,253,241,0.18)", width: "78%" }} />
-                  <div style={{ height: 5, borderRadius: 4, background: "rgba(253,253,241,0.18)", width: "60%" }} />
+                  <div style={{ height: 5, borderRadius: 4, background: "rgba(252,250,247,0.18)" }} />
+                  <div style={{ height: 5, borderRadius: 4, background: "rgba(252,250,247,0.18)", width: "78%" }} />
+                  <div style={{ height: 5, borderRadius: 4, background: "rgba(252,250,247,0.18)", width: "60%" }} />
                 </div>
               </div>
             </div>
@@ -431,7 +431,7 @@ function Index() {
                   className="reveal group"
                   style={{
                     padding: "44px 4px",
-                    borderTop: "1px solid rgba(57,68,43,0.10)",
+                    borderTop: "1px solid rgba(53,51,55,0.10)",
                     transitionDelay: `${(i % 2) * 0.1 + Math.floor(i / 2) * 0.05}s`,
                   }}
                 >
@@ -527,7 +527,7 @@ function Index() {
           <h2 className="reveal font-display mt-8" style={{ color: IVORY, fontSize: "clamp(30px, 4.4vw, 52px)", lineHeight: 1.15, letterSpacing: "-0.015em", fontWeight: 400, transitionDelay: "0.1s" }}>
             What you write here belongs to <span className="font-italic" style={{ color: MOSS }}>no one but you.</span>
           </h2>
-          <p className="reveal font-body font-light mt-8 mx-auto" style={{ fontSize: 16, color: "rgba(253,253,241,0.82)", lineHeight: 2, maxWidth: 620, transitionDelay: "0.2s" }}>
+          <p className="reveal font-body font-light mt-8 mx-auto" style={{ fontSize: 16, color: "rgba(252,250,247,0.82)", lineHeight: 2, maxWidth: 620, transitionDelay: "0.2s" }}>
             Every journal entry you write is stored in your private encrypted cloud account. No one — including the creator of this app — can read your words. Your healing history is not a data point. It is not sold, shared, or seen. It is yours. Completely and always.
           </p>
           <div className="reveal flex flex-col items-center gap-3 mt-12" style={{ transitionDelay: "0.3s" }}>
@@ -581,8 +581,8 @@ function Index() {
                   borderRadius: 32,
                   background: t.featured ? OLIVE : IVORY,
                   color: t.featured ? IVORY : OLIVE,
-                  border: t.featured ? "1px solid rgba(253,253,241,0.12)" : `1px solid ${PALE}`,
-                  boxShadow: t.featured ? "0 30px 80px rgba(57,68,43,0.30)" : "0 10px 30px rgba(57,68,43,0.06)",
+                  border: t.featured ? "1px solid rgba(252,250,247,0.12)" : `1px solid ${PALE}`,
+                  boxShadow: t.featured ? "0 30px 80px rgba(53,51,55,0.30)" : "0 10px 30px rgba(53,51,55,0.06)",
                   transitionDelay: `${i * 0.12}s`,
                 }}
               >
@@ -600,13 +600,13 @@ function Index() {
                 <div className="flex items-baseline gap-2 mb-3">
                   <span className="font-display" style={{ fontSize: 64, lineHeight: 1, letterSpacing: "-0.02em", color: t.featured ? IVORY : OLIVE }}>{t.price}</span>
                 </div>
-                <p className="font-body mb-10" style={{ color: t.featured ? "rgba(253,253,241,0.65)" : MOSS, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase" }}>
+                <p className="font-body mb-10" style={{ color: t.featured ? "rgba(252,250,247,0.65)" : MOSS, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase" }}>
                   {t.sub}
                 </p>
 
                 <ul className="flex flex-col gap-3.5 mb-10 flex-1">
                   {t.features.map((f, j) => (
-                    <li key={j} className="flex items-start gap-3 font-body font-light" style={{ color: t.featured ? "rgba(253,253,241,0.88)" : SAGE, fontSize: 14, lineHeight: 1.55 }}>
+                    <li key={j} className="flex items-start gap-3 font-body font-light" style={{ color: t.featured ? "rgba(252,250,247,0.88)" : SAGE, fontSize: 14, lineHeight: 1.55 }}>
                       <Check size={14} style={{ color: t.featured ? MOSS : SAGE, flexShrink: 0, marginTop: 4 }} />
                       <span>{f}</span>
                     </li>
@@ -671,11 +671,11 @@ function Index() {
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
                 fontWeight: 500,
-                boxShadow: "0 14px 40px rgba(57,68,43,0.18)",
+                boxShadow: "0 14px 40px rgba(53,51,55,0.18)",
                 transition: "transform 0.5s cubic-bezier(0.16,1,0.3,1), box-shadow 0.5s cubic-bezier(0.16,1,0.3,1), background 0.5s ease",
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 22px 60px rgba(57,68,43,0.28)"; e.currentTarget.style.background = SAGE; }}
-              onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 14px 40px rgba(57,68,43,0.18)"; e.currentTarget.style.background = OLIVE; }}
+              onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 22px 60px rgba(53,51,55,0.28)"; e.currentTarget.style.background = SAGE; }}
+              onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 14px 40px rgba(53,51,55,0.18)"; e.currentTarget.style.background = OLIVE; }}
             >
               Get Instant Access — $15
             </a>
@@ -684,7 +684,7 @@ function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer className="px-6 py-16" style={{ borderTop: "1px solid rgba(57,68,43,0.10)", background: IVORY }}>
+      <footer className="px-6 py-16" style={{ borderTop: "1px solid rgba(53,51,55,0.10)", background: IVORY }}>
         <div className="max-w-[1080px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-2.5">
             <Leaf size={16} style={{ color: OLIVE }} />

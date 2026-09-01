@@ -12,9 +12,9 @@ export const Route = createFileRoute("/terms")({
 
 function TermsPage() {
   return (
-    <main className="min-h-screen px-6 py-20" style={{ background: '#FDFDF1', color: '#39442B' }}>
+    <main className="min-h-screen px-6 py-20" style={{ background: '#F7F3EE', color: '#5F4B58' }}>
       <div className="mx-auto max-w-2xl">
-        <Link to="/" className="font-body text-sm" style={{ color: '#6F7F5C' }}>← Back</Link>
+        <Link to="/" className="font-body text-sm" style={{ color: '#9B8494' }}>← Back</Link>
         <h1 className="font-display mt-6 mb-6" style={{ fontSize: 36 }}>Terms of Use</h1>
         <p className="font-body" style={{ fontSize: 16, lineHeight: 1.7 }}>
           By using The Healing Journal, you agree it is an educational tool, not a medical or
