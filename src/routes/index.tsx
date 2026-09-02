@@ -13,10 +13,10 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "The Healing Journal" },
-      { name: "description", content: "A private educational wellness app for women healing from CPTSD, narcissistic abuse, and nervous system dysregulation." },
-      { property: "og:title", content: "The Healing Journal" },
-      { property: "og:description", content: "A private educational wellness app for women healing from CPTSD, narcissistic abuse, and nervous system dysregulation." },
+      { title: "The Healing Journal — A Private Place to Come Back to Yourself" },
+      { name: "description", content: "A private, self-guided space for women to reflect, learn, and come back to themselves. Free to start, $15 for lifetime access." },
+      { property: "og:title", content: "The Healing Journal — A Private Place to Come Back to Yourself" },
+      { property: "og:description", content: "A private, self-guided space for women to reflect, learn, and come back to themselves. Free to start, $15 for lifetime access." },
       { property: "og:type", content: "website" },
     ],
   }),
