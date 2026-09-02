@@ -278,7 +278,7 @@ function Index() {
             Create Your Free Account
           </a>
           <a
-            href="#pricing"
+            href="#how-it-works"
             className="font-body story-link"
             style={{ color: OLIVE, fontSize: 12, letterSpacing: "0.22em", textTransform: "uppercase", fontWeight: 500, padding: "18px 12px" }}
           >
@@ -487,7 +487,7 @@ function Index() {
       </section>
 
       {/* HOW IT WORKS — 3 steps */}
-      <section className="relative px-6" style={{ padding: "200px 24px" }}>
+      <section id="how-it-works" className="relative px-6" style={{ padding: "200px 24px" }}>
         <div className="max-w-[860px] mx-auto">
           <div className="text-center mb-32 max-w-[640px] mx-auto">
             <Eyebrow>How it works</Eyebrow>
@@ -568,6 +568,37 @@ function Index() {
             </h2>
           </div>
           <Faq />
+        </div>
+      </section>
+
+      {/* WELCOME / REASSURANCE */}
+      <section className="relative px-6" style={{ padding: "160px 24px" }}>
+        <div className="max-w-[760px] mx-auto text-center">
+          <h2 className="reveal font-display" style={{ color: OLIVE, fontSize: "clamp(32px, 4.6vw, 56px)", lineHeight: 1.12, letterSpacing: "-0.015em", fontWeight: 400 }}>
+            You don't need a diagnosis <span className="font-italic" style={{ color: SAGE }}>to begin.</span>
+          </h2>
+          <div className="reveal font-body font-light mt-10 mx-auto flex flex-col gap-4" style={{ fontSize: 16, color: SAGE, lineHeight: 1.95, maxWidth: 580, transitionDelay: "0.15s" }}>
+            <p>You don't have to know exactly what happened. You don't have to have the right words. And you certainly don't have to prove your experience to anyone.</p>
+            <p>If you know something changed you. If you know you're still carrying something. If you simply want a quiet place to understand yourself better...</p>
+            <p className="font-italic" style={{ color: OLIVE, fontSize: 20 }}>You are welcome here.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* DISCLAIMER */}
+      <section className="relative px-6" style={{ padding: "0 24px 160px" }}>
+        <div className="max-w-[760px] mx-auto reveal" style={{ padding: "48px 40px", borderRadius: 28, background: "#FCFAF7", border: `1px solid ${PALE}` }}>
+          <div className="flex items-center gap-3 mb-5">
+            <ShieldCheck size={18} style={{ color: MOSS }} />
+            <span className="font-body" style={{ color: MOSS, fontSize: 10, letterSpacing: "0.3em", textTransform: "uppercase", fontWeight: 500 }}>Important</span>
+          </div>
+          <h3 className="font-display mb-5" style={{ color: OLIVE, fontSize: "clamp(24px, 3vw, 34px)", lineHeight: 1.25, fontWeight: 400 }}>
+            This isn't therapy.
+          </h3>
+          <p className="font-body font-light" style={{ fontSize: 15, color: SAGE, lineHeight: 1.95 }}>
+            The Healing Journal is an educational, self-guided wellness tool designed to support reflection, learning, and personal awareness. It isn't a replacement for professional mental health care or clinical treatment. Think of it as a private space to pause, reflect, learn, and keep track of your own journey.{" "}
+            <Link to="/disclaimer" className="story-link" style={{ color: MOSS }}>Read the full disclaimer</Link>.
+          </p>
         </div>
       </section>
 
