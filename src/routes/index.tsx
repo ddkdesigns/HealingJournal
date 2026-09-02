@@ -699,8 +699,6 @@ function Index() {
           <p className="reveal font-body mt-8" style={{ fontSize: 10, color: MOSS, letterSpacing: "0.24em", textTransform: "uppercase", transitionDelay: "0.4s" }}>
             Private · Interactive · Self-guided
           </p>
-          <div style={{ display: "none" }}>
-          </div>
         </div>
       </section>
 
