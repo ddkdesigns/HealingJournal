@@ -246,13 +246,7 @@ function Index() {
           You don't have to have all the answers. You just need a place to start.
         </p>
 
-        <div className="reveal font-body font-light mt-10 mx-auto flex flex-col gap-4" style={{ fontSize: 16, color: SAGE, lineHeight: 1.95, maxWidth: 620, transitionDelay: "0.4s" }}>
-          <p>Maybe you've spent years trying to understand what happened.</p>
-          <p>Maybe you've questioned your own memory, your reactions, your feelings, or whether what you experienced was really "that bad."</p>
-          <p>Maybe you're simply tired of carrying everything in your head.</p>
-          <p style={{ color: OLIVE }}>You're not alone. And you don't have to figure it all out at once.</p>
-          <p>The Healing Journal is a private, interactive space created for women who are ready to slow down, understand their experiences, reconnect with themselves, and make space for what comes next.</p>
-        </div>
+
 
         <div className="reveal flex flex-col sm:flex-row items-center gap-4 mt-14" style={{ transitionDelay: "0.5s" }}>
           <a
@@ -292,6 +286,18 @@ function Index() {
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 scroll-bounce">
           <ChevronDown size={18} style={{ color: MOSS }} />
+        </div>
+      </section>
+
+
+      {/* HERO BODY */}
+      <section className="relative px-6" style={{ padding: "0 24px 140px" }}>
+        <div className="reveal font-body font-light mx-auto flex flex-col gap-5 text-center" style={{ fontSize: 17, color: SAGE, lineHeight: 1.95, maxWidth: 640 }}>
+          <p>Maybe you've spent years trying to understand what happened.</p>
+          <p>Maybe you've questioned your own memory, your reactions, your feelings, or whether what you experienced was really "that bad."</p>
+          <p>Maybe you're simply tired of carrying everything in your head.</p>
+          <p className="font-italic" style={{ color: OLIVE, fontSize: 20 }}>You're not alone. And you don't have to figure it all out at once.</p>
+          <p>The Healing Journal is a private, interactive space created for women who are ready to slow down, understand their experiences, reconnect with themselves, and make space for what comes next.</p>
         </div>
       </section>
 
