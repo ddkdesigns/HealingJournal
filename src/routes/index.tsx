@@ -13,10 +13,10 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "The Healing Journal" },
-      { name: "description", content: "A private educational wellness app for women healing from CPTSD, narcissistic abuse, and nervous system dysregulation." },
-      { property: "og:title", content: "The Healing Journal" },
-      { property: "og:description", content: "A private educational wellness app for women healing from CPTSD, narcissistic abuse, and nervous system dysregulation." },
+      { title: "The Healing Journal — A Private Place to Come Back to Yourself" },
+      { name: "description", content: "A private, self-guided space for women to reflect, learn, and come back to themselves. Free to start, $15 for lifetime access." },
+      { property: "og:title", content: "The Healing Journal — A Private Place to Come Back to Yourself" },
+      { property: "og:description", content: "A private, self-guided space for women to reflect, learn, and come back to themselves. Free to start, $15 for lifetime access." },
       { property: "og:type", content: "website" },
     ],
   }),
@@ -246,13 +246,7 @@ function Index() {
           You don't have to have all the answers. You just need a place to start.
         </p>
 
-        <div className="reveal font-body font-light mt-10 mx-auto flex flex-col gap-4" style={{ fontSize: 16, color: SAGE, lineHeight: 1.95, maxWidth: 620, transitionDelay: "0.4s" }}>
-          <p>Maybe you've spent years trying to understand what happened.</p>
-          <p>Maybe you've questioned your own memory, your reactions, your feelings, or whether what you experienced was really "that bad."</p>
-          <p>Maybe you're simply tired of carrying everything in your head.</p>
-          <p style={{ color: OLIVE }}>You're not alone. And you don't have to figure it all out at once.</p>
-          <p>The Healing Journal is a private, interactive space created for women who are ready to slow down, understand their experiences, reconnect with themselves, and make space for what comes next.</p>
-        </div>
+
 
         <div className="reveal flex flex-col sm:flex-row items-center gap-4 mt-14" style={{ transitionDelay: "0.5s" }}>
           <a
@@ -278,7 +272,7 @@ function Index() {
             Create Your Free Account
           </a>
           <a
-            href="#pricing"
+            href="#how-it-works"
             className="font-body story-link"
             style={{ color: OLIVE, fontSize: 12, letterSpacing: "0.22em", textTransform: "uppercase", fontWeight: 500, padding: "18px 12px" }}
           >
@@ -292,6 +286,18 @@ function Index() {
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 scroll-bounce">
           <ChevronDown size={18} style={{ color: MOSS }} />
+        </div>
+      </section>
+
+
+      {/* HERO BODY */}
+      <section className="relative px-6" style={{ padding: "0 24px 140px" }}>
+        <div className="reveal font-body font-light mx-auto flex flex-col gap-5 text-center" style={{ fontSize: 17, color: SAGE, lineHeight: 1.95, maxWidth: 640 }}>
+          <p>Maybe you've spent years trying to understand what happened.</p>
+          <p>Maybe you've questioned your own memory, your reactions, your feelings, or whether what you experienced was really "that bad."</p>
+          <p>Maybe you're simply tired of carrying everything in your head.</p>
+          <p className="font-italic" style={{ color: OLIVE, fontSize: 20 }}>You're not alone. And you don't have to figure it all out at once.</p>
+          <p>The Healing Journal is a private, interactive space created for women who are ready to slow down, understand their experiences, reconnect with themselves, and make space for what comes next.</p>
         </div>
       </section>
 
@@ -487,7 +493,7 @@ function Index() {
       </section>
 
       {/* HOW IT WORKS — 3 steps */}
-      <section className="relative px-6" style={{ padding: "200px 24px" }}>
+      <section id="how-it-works" className="relative px-6" style={{ padding: "200px 24px" }}>
         <div className="max-w-[860px] mx-auto">
           <div className="text-center mb-32 max-w-[640px] mx-auto">
             <Eyebrow>How it works</Eyebrow>
@@ -568,6 +574,37 @@ function Index() {
             </h2>
           </div>
           <Faq />
+        </div>
+      </section>
+
+      {/* WELCOME / REASSURANCE */}
+      <section className="relative px-6" style={{ padding: "160px 24px" }}>
+        <div className="max-w-[760px] mx-auto text-center">
+          <h2 className="reveal font-display" style={{ color: OLIVE, fontSize: "clamp(32px, 4.6vw, 56px)", lineHeight: 1.12, letterSpacing: "-0.015em", fontWeight: 400 }}>
+            You don't need a diagnosis <span className="font-italic" style={{ color: SAGE }}>to begin.</span>
+          </h2>
+          <div className="reveal font-body font-light mt-10 mx-auto flex flex-col gap-4" style={{ fontSize: 16, color: SAGE, lineHeight: 1.95, maxWidth: 580, transitionDelay: "0.15s" }}>
+            <p>You don't have to know exactly what happened. You don't have to have the right words. And you certainly don't have to prove your experience to anyone.</p>
+            <p>If you know something changed you. If you know you're still carrying something. If you simply want a quiet place to understand yourself better...</p>
+            <p className="font-italic" style={{ color: OLIVE, fontSize: 20 }}>You are welcome here.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* DISCLAIMER */}
+      <section className="relative px-6" style={{ padding: "0 24px 160px" }}>
+        <div className="max-w-[760px] mx-auto reveal" style={{ padding: "48px 40px", borderRadius: 28, background: "#FCFAF7", border: `1px solid ${PALE}` }}>
+          <div className="flex items-center gap-3 mb-5">
+            <ShieldCheck size={18} style={{ color: MOSS }} />
+            <span className="font-body" style={{ color: MOSS, fontSize: 10, letterSpacing: "0.3em", textTransform: "uppercase", fontWeight: 500 }}>Important</span>
+          </div>
+          <h3 className="font-display mb-5" style={{ color: OLIVE, fontSize: "clamp(24px, 3vw, 34px)", lineHeight: 1.25, fontWeight: 400 }}>
+            This isn't therapy.
+          </h3>
+          <p className="font-body font-light" style={{ fontSize: 15, color: SAGE, lineHeight: 1.95 }}>
+            The Healing Journal is an educational, self-guided wellness tool designed to support reflection, learning, and personal awareness. It isn't a replacement for professional mental health care or clinical treatment. Think of it as a private space to pause, reflect, learn, and keep track of your own journey.{" "}
+            <Link to="/disclaimer" className="story-link" style={{ color: MOSS }}>Read the full disclaimer</Link>.
+          </p>
         </div>
       </section>
 
@@ -699,8 +736,6 @@ function Index() {
           <p className="reveal font-body mt-8" style={{ fontSize: 10, color: MOSS, letterSpacing: "0.24em", textTransform: "uppercase", transitionDelay: "0.4s" }}>
             Private · Interactive · Self-guided
           </p>
-          <div style={{ display: "none" }}>
-          </div>
         </div>
       </section>
 
