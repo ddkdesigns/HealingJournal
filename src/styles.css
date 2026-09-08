@@ -59,7 +59,7 @@
   --ring: oklch(0.60 0.035 330);
 
   --bg-primary: #F7F3EE;
-  --bg-secondary: #DDE5DC;
+  --bg-secondary: #EADFD8;
   --text-primary: #5F4B58;
   --text-soft: #9B8494;
   --accent-violet: #9B8494;
@@ -79,7 +79,7 @@
   }
 
   body {
-    background: linear-gradient(180deg, #F7F3EE 0%, #E8EDE5 100%);
+    background: linear-gradient(180deg, #F7F3EE 0%, #EADFD8 100%);
     background-attachment: fixed;
     color: #353337;
     font-family: var(--font-body);
