@@ -27,7 +27,7 @@ const BEACONS = "https://thehealingjournal.lovable.app/";
 const OLIVE  = "#5F4B58";
 const SAGE   = "#9B8494";
 const MOSS   = "#B98286";
-const PALE   = "#DDE5DC";
+const PALE   = "#EADFD8";
 const IVORY  = "#F7F3EE";
 
 const mirrorRows = [
