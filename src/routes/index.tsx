@@ -75,7 +75,7 @@ const tiers = [
       "Personal goals + daily wins",
       "Healing journey timeline",
       "Letter to Future Me",
-      "Any device",
+      "Works in any browser",
       "No subscription",
       "Lifetime access",
     ],
@@ -85,8 +85,8 @@ const tiers = [
 const faqs = [
   { q: "Is this the same as therapy?",        a: "No. The Healing Journal is an educational, self-guided wellness tool for reflection, learning, and personal awareness. It isn't a replacement for professional mental health care or clinical treatment." },
   { q: "Do I need a diagnosis to use it?",    a: "No. You don't need a diagnosis, the right words, or a clear explanation of what happened. If you simply want a quiet place to understand yourself better, you are welcome here." },
-  { q: "Is my journal actually private?",     a: "Yes. Your journal is stored in your private encrypted account. Your words aren't content to be shared or sold. You can permanently delete your account and your data whenever you choose." },
-  { q: "What happens when I upgrade?",        a: "One payment of $15 unlocks the full experience for life. No monthly subscription and no recurring charges. It works in any web browser, on any device." },
+  { q: "Is my journal actually private?",     a: "Yes. Your journal entries are saved locally on your own device, not on our servers. Your words aren't content to be shared or sold. You can delete them whenever you choose." },
+  { q: "What happens when I upgrade?",        a: "One payment of $15 unlocks the full experience for life. No monthly subscription and no recurring charges. It works in any web browser, and your entries stay saved on the device you write them on." },
 ];
 
 function useScrollY() {
@@ -547,13 +547,13 @@ function Index() {
             Your journal should actually <span className="font-italic" style={{ color: MOSS }}>feel private.</span>
           </h2>
           <p className="reveal font-body font-light mt-8 mx-auto" style={{ fontSize: 16, color: "rgba(252,250,247,0.82)", lineHeight: 2, maxWidth: 620, transitionDelay: "0.2s" }}>
-            What you write here belongs to you. Your journal is stored in your private encrypted account. Your words aren't content. They're not something to be shared, sold, or used to tell your story to someone else. They're yours. You can also permanently delete your account and your data whenever you choose.
+            What you write here belongs to you. Your journal entries are saved locally on your own device, not on our servers. Your words aren't content. They're not something to be shared, sold, or used to tell your story to someone else. They're yours. You can delete them from your device whenever you choose.
           </p>
           <div className="reveal flex flex-col items-center gap-3 mt-12" style={{ transitionDelay: "0.3s" }}>
             {[
-              "Private encrypted storage",
-              "Individual account access",
-              "Full data deletion available",
+              "Saved locally on your device",
+              "Never stored on our servers",
+              "Delete your entries anytime",
             ].map((row, i) => (
               <div key={i} className="flex items-center gap-3">
                 <Check size={15} style={{ color: MOSS, flexShrink: 0 }} />
@@ -689,9 +689,9 @@ function Index() {
           </div>
 
           <div className="mt-16 flex flex-wrap justify-center gap-x-8 gap-y-3 font-body" style={{ color: SAGE, fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase" }}>
-            <span className="flex items-center gap-2"><Lock size={12} /> Encrypted & private</span>
+            <span className="flex items-center gap-2"><Lock size={12} /> Saved on your device</span>
             <span className="flex items-center gap-2"><InfinityIcon size={12} /> Lifetime access</span>
-            <span className="flex items-center gap-2"><Smartphone size={12} /> Any device</span>
+            <span className="flex items-center gap-2"><Smartphone size={12} /> Works in any browser</span>
             <span className="flex items-center gap-2"><ShieldCheck size={12} /> One-time purchase</span>
           </div>
         </div>
