@@ -4,8 +4,14 @@ export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
       { title: "Privacy Policy — The Healing Journal" },
-      { name: "description", content: "How The Healing Journal protects your data." },
+      { name: "description", content: "How The Healing Journal keeps your journal entries private and stored on your own device." },
+      { property: "og:title", content: "Privacy Policy — The Healing Journal" },
+      { property: "og:description", content: "How The Healing Journal keeps your journal entries private and stored on your own device." },
+      { property: "og:url", content: "https://healingjournal.lovable.app/privacy" },
+      { name: "twitter:title", content: "Privacy Policy — The Healing Journal" },
+      { name: "twitter:description", content: "How The Healing Journal keeps your journal entries private and stored on your own device." },
     ],
+    links: [{ rel: "canonical", href: "https://healingjournal.lovable.app/privacy" }],
   }),
   component: PrivacyPage,
 });

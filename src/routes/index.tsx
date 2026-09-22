@@ -18,6 +18,22 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "The Healing Journal — A Private Place to Come Back to Yourself" },
       { property: "og:description", content: "A private, self-guided space for women to reflect, learn, and come back to themselves. Free to start, $15 for lifetime access." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://healingjournal.lovable.app/" },
+    ],
+    links: [{ rel: "canonical", href: "https://healingjournal.lovable.app/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
     ],
   }),
 });

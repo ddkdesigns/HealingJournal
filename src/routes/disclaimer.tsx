@@ -5,7 +5,13 @@ export const Route = createFileRoute("/disclaimer")({
     meta: [
       { title: "Disclaimer — The Healing Journal" },
       { name: "description", content: "Educational use disclaimer and crisis support information for The Healing Journal." },
+      { property: "og:title", content: "Disclaimer — The Healing Journal" },
+      { property: "og:description", content: "Educational use disclaimer and crisis support information for The Healing Journal." },
+      { property: "og:url", content: "https://healingjournal.lovable.app/disclaimer" },
+      { name: "twitter:title", content: "Disclaimer — The Healing Journal" },
+      { name: "twitter:description", content: "Educational use disclaimer and crisis support information for The Healing Journal." },
     ],
+    links: [{ rel: "canonical", href: "https://healingjournal.lovable.app/disclaimer" }],
   }),
   component: DisclaimerPage,
 });
