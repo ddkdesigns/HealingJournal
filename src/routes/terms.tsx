@@ -4,8 +4,14 @@ export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
       { title: "Terms of Use — The Healing Journal" },
-      { name: "description", content: "Terms of use for The Healing Journal." },
+      { name: "description", content: "The terms that apply when you use The Healing Journal, an educational self-guided wellness tool." },
+      { property: "og:title", content: "Terms of Use — The Healing Journal" },
+      { property: "og:description", content: "The terms that apply when you use The Healing Journal, an educational self-guided wellness tool." },
+      { property: "og:url", content: "https://healingjournal.lovable.app/terms" },
+      { name: "twitter:title", content: "Terms of Use — The Healing Journal" },
+      { name: "twitter:description", content: "The terms that apply when you use The Healing Journal, an educational self-guided wellness tool." },
     ],
+    links: [{ rel: "canonical", href: "https://healingjournal.lovable.app/terms" }],
   }),
   component: TermsPage,
 });
