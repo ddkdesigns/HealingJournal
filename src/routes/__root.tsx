@@ -39,8 +39,6 @@ export const Route = createRootRoute({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "The Healing Journal" },
       { name: "twitter:description", content: "The Healing Journal is a private, self-guided space for women to reflect, learn, and come back to themselves." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1c135615-8c40-4d24-a465-2b6c1540641d/id-preview-d34526a4--99dfc4b0-baa3-4aa3-b277-c37784701c2a.lovable.app-1778115270443.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1c135615-8c40-4d24-a465-2b6c1540641d/id-preview-d34526a4--99dfc4b0-baa3-4aa3-b277-c37784701c2a.lovable.app-1778115270443.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },

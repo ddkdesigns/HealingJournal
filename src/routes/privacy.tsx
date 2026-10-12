@@ -4,6 +4,8 @@ export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
       { title: "Privacy Policy — The Healing Journal" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "description", content: "How The Healing Journal keeps your journal entries private and stored on your own device." },
       { property: "og:title", content: "Privacy Policy — The Healing Journal" },
       { property: "og:description", content: "How The Healing Journal keeps your journal entries private and stored on your own device." },

@@ -4,6 +4,8 @@ export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
       { title: "Terms of Use — The Healing Journal" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "description", content: "The terms that apply when you use The Healing Journal, an educational self-guided wellness tool." },
       { property: "og:title", content: "Terms of Use — The Healing Journal" },
       { property: "og:description", content: "The terms that apply when you use The Healing Journal, an educational self-guided wellness tool." },
