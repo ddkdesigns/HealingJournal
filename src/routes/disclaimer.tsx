@@ -4,6 +4,8 @@ export const Route = createFileRoute("/disclaimer")({
   head: () => ({
     meta: [
       { title: "Disclaimer — The Healing Journal" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "description", content: "Educational use disclaimer and crisis support information for The Healing Journal." },
       { property: "og:title", content: "Disclaimer — The Healing Journal" },
       { property: "og:description", content: "Educational use disclaimer and crisis support information for The Healing Journal." },
