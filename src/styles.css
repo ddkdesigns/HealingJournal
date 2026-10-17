@@ -326,7 +326,7 @@
 .journal-site .footer-top { display: flex; align-items: start; justify-content: space-between; gap: 35px; }
 .journal-site .footer-top p { font-size: 12px; margin-top: 12px; }
 .journal-site .footer-top nav { display: flex; flex-wrap: wrap; justify-content: end; gap: 18px; max-width: 540px; font-size: 11px; padding-top: 7px; }
-.journal-site .footer-bottom { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--journal-border); margin-top: 30px; padding-top: 20px; font-size: 10px; }
+.journal-site .footer-bottom { display: flex; justify-content: space-between; gap: 20px; margin-top: 26px; padding-top: 0; font-size: 10px; }
 @media(max-width: 1000px) {
  .journal-site .nav-links { gap: 14px; } .journal-site .hero-layout { gap: 30px; } .journal-site h1 { font-size: 44px; } .journal-site .product-caption { display: none; } .journal-site .benefits-grid { grid-template-columns: repeat(2,1fr); } .journal-site .feature-layout,.journal-site .founder-layout,.journal-site .privacy-layout,.journal-site .faq-layout { gap: 45px; }
 }
