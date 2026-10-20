@@ -1,8 +1,4 @@
 # Redesign roadmap
-- [x] Implement uploaded premium white-background redesign, full founder letter, product previews, privacy, pricing, and FAQ.
-- [x] Verify desktop/mobile presentation and preserved signup/legal destinations; identify any unverifiable app access rules.
-- [x] Replace the landing page with the newly uploaded single-column design and copy, preserving colors and fonts.
-- [x] Verify the new landing page, pricing links, image fallback, and mobile layout.
-- [x] Inspect reference and preserve existing content and destinations.
-- [x] Restyle the landing page with editorial layouts and photo placeholders using current colors.
-- [x] Verify pricing, links, FAQ, and desktop/mobile presentation.
+- [x] Earlier redesigns (white premium page, founder letter, pricing, FAQ) shipped and verified.
+- [ ] Restyle landing page after popcorn.space: centered hero, tilted phone mockups, clouds, soft cards, dark closing price card — using the app's palette.
+- [ ] Verify desktop/mobile, links, pricing, founder photo, no console errors.
