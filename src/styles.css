@@ -288,7 +288,7 @@
 .journal-site .phone-back { left: calc(50% + 0px); top: 70px; transform: rotate(7deg); z-index: 1; animation: float-b 10s ease-in-out infinite; }
 
 /* Clouds */
-.journal-site .cloud { position: absolute; pointer-events: none; user-select: none; height: auto; }
+.journal-site .cloud { position: absolute; pointer-events: none; user-select: none; height: auto; max-width: none; }
 .journal-site .cloud-hero-left { width: 330px; left: calc(50% - 470px); top: 120px; z-index: 3; animation: drift 14s ease-in-out infinite alternate; }
 .journal-site .cloud-hero-right { width: 380px; left: calc(50% + 120px); top: 440px; z-index: 3; transform: scaleX(-1); animation: drift-r 16s ease-in-out infinite alternate; }
 
