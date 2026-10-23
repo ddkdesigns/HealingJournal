@@ -169,7 +169,7 @@ function Index() {
     <footer className="journal-footer"><div className="journal-container"><div className="footer-cols">
       <div><h4>Explore</h4><a href="#features">Features</a><a href="#story">Story</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></div>
       <div><h4>Legal</h4><Link to="/privacy">Privacy Policy</Link><Link to="/terms">Terms of Use</Link><Link to="/disclaimer">Disclaimer</Link></div>
-      <div><h4>Contact</h4><a href="mailto:hello@thehealingjournal.app">hello@thehealingjournal.app</a><a href={APP_URL} target="_blank" rel="noopener noreferrer">Open the journal</a></div>
+      <div><h4>Contact</h4><span>Message me on <a href="https://www.threads.com/@silentlyshifting" target="_blank" rel="noopener noreferrer" className="underline">Threads</a>. 🖤</span><a href={APP_URL} target="_blank" rel="noopener noreferrer">Open the journal</a></div>
     </div><div className="footer-bottom"><span>© {new Date().getFullYear()} The Healing Journal</span><span>Made with care. At your own pace.</span></div></div></footer>
   </main>;
 }
