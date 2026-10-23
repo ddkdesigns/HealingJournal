@@ -16,7 +16,7 @@ export const Route = createFileRoute('/')({
 });
 
 const founderParagraphs = [
-  "I'm Pam. There was a time when I knew something wasn't right, but I couldn't explain what I was feeling or why. I felt unlike myself, and I was searching for answers I didn't yet have the words for.",
+  "Hi, I'm Pam. There was a time when I knew something wasn't right, but I couldn't explain what I was feeling or why. I felt unlike myself, and I was searching for answers I didn't yet have the words for.",
   'Then I came across a TikTok video about rose-colored glasses. Something about it made me stop and question things. I started looking more closely at my experiences, my relationships, and the things I’d been struggling to understand.',
   "But the terminology was confusing. I knew I needed to understand what had happened to me, but I didn't always know where to begin.",
   'So I started writing. I poured my thoughts into a paper journal, trying to make sense of my feelings, my experiences, and everything I was learning along the way.',
@@ -118,7 +118,7 @@ function Index() {
       <div className="journal-container">
         <div className="heading"><span className="kicker">Why I created The Healing Journal</span><h2>I built the journal<br />I wish I'd had.</h2></div>
         <article className="founder-card">
-          <div className="founder-side"><FounderPhoto /><span className="founder-signature">With care, Pam</span></div>
+          <div className="founder-side"><FounderPhoto /></div>
           <div className="founder-letter">{founderParagraphs.map(p => <p key={p}>{p}</p>)}<blockquote>“One day, you'll look back and see the progress you can't see today.”</blockquote><p className="founder-closing">You don't have to figure it all out today.</p><AccessLink>Start your free journey</AccessLink></div>
         </article>
       </div>
