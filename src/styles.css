@@ -517,3 +517,6 @@
 .journal-site .orbit { grid-template-columns: 1fr 1fr; }
 .journal-site .orbit-col:first-child { text-align: left; justify-items: start; }
 @media (max-width: 1000px) { .journal-site .orbit { grid-template-columns: 1fr; } }
+.journal-site .orbit { max-width: 640px; margin-inline: auto; justify-items: center; }
+.journal-site .orbit-col, .journal-site .orbit-col:first-child { text-align: center; justify-items: center; }
+.journal-site .orbit-item { justify-items: center; }
