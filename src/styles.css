@@ -513,3 +513,7 @@
 @media (prefers-reduced-motion: reduce) {
   .journal-site *, .journal-site *::before, .journal-site *::after { animation: none !important; transition: none !important; }
 }
+.journal-site .duo-grid { grid-template-columns: minmax(0, 560px); justify-content: center; }
+.journal-site .orbit { grid-template-columns: 1fr 1fr; }
+.journal-site .orbit-col:first-child { text-align: left; justify-items: start; }
+@media (max-width: 1000px) { .journal-site .orbit { grid-template-columns: 1fr; } }
