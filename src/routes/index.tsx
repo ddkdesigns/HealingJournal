@@ -106,7 +106,7 @@ function Index() {
           
         </div>
         <div className="orbit">
-          <div className="orbit-col">{[[Home, 'Home', 'A daily affirmation, a mood check-in, and a moment to pause.'], [BookOpen, 'Learn', 'Trauma and relationship patterns explained in plain language.']].map(([Icon, t, d]) => { const I = Icon as typeof Leaf; return <div key={t as string} className="orbit-item"><span className="icon-circle"><I size={17} strokeWidth={1.4} /></span><h4>{t as string}</h4><p>{d as string}</p></div>; })}</div>
+          <div className="orbit-col">{[[Home, 'Home', 'A daily affirmation, a mood check-in, and a moment to pause.'], [BookOpen, 'Learn', 'Trauma and relationship patterns explained in plain language.'], [Wind, 'Regulate', 'Guided breathing and grounding tools for when you need to slow down.']].map(([Icon, t, d]) => { const I = Icon as typeof Leaf; return <div key={t as string} className="orbit-item"><span className="icon-circle"><I size={17} strokeWidth={1.4} /></span><h4>{t as string}</h4><p>{d as string}</p></div>; })}</div>
           
           <div className="orbit-col">{[[Target, 'Goals', 'Personal goals and small daily wins, at your pace.'], [Compass, 'Journey', 'Your healing timeline, moods, and a letter to your future self.']].map(([Icon, t, d]) => { const I = Icon as typeof Leaf; return <div key={t as string} className="orbit-item"><span className="icon-circle"><I size={17} strokeWidth={1.4} /></span><h4>{t as string}</h4><p>{d as string}</p></div>; })}</div>
         </div>
