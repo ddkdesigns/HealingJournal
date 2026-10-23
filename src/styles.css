@@ -280,7 +280,7 @@
 .journal-site .breath span:nth-child(2) { inset: 22px; background: color-mix(in srgb, var(--j-accent) 32%, transparent); animation-delay: .3s; }
 .journal-site .breath span:nth-child(3) { inset: 34px; background: var(--j-dark); animation-delay: .6s; }
 .journal-site .breath p { position: relative; font-size: 9px; color: var(--j-bg); font-weight: 500; }
-.journal-site .screen-body.sky { flex: 1; margin: -34px 0 0; padding: 90px 22px 24px; align-items: center; text-align: center; justify-content: flex-start; gap: 20px; color: var(--j-primary); background: linear-gradient(180deg, var(--j-tint), color-mix(in srgb, var(--j-accent) 35%, var(--j-surface))); }
+.journal-site .screen-body.sky { flex: 1; margin: -34px 0 0; padding: 76px 22px 24px; align-items: center; text-align: center; justify-content: flex-start; gap: 20px; color: var(--j-primary); background: linear-gradient(180deg, var(--j-tint), color-mix(in srgb, var(--j-accent) 35%, var(--j-surface))); }
 .journal-site .sky-quote { font: italic 20px/1.4 var(--font-display); color: var(--j-ink); }
 .journal-site .sky-button { font-size: 12px; font-weight: 500; color: var(--j-bg); background: var(--j-dark); border-radius: 999px; padding: 9px 26px; }
 
@@ -380,7 +380,7 @@
 .journal-site .cloud-rise .heading { margin-bottom: 40px; }
 .journal-site .rise-stage { position: relative; height: 540px; overflow: hidden; }
 .journal-site .phone-rise { --pw: 240px; left: 50%; top: 30px; transform: translateX(-50%); }
-.journal-site .cloud-bank { width: max(1920px, 140%); left: 50%; bottom: -250px; transform: translateX(-50%); z-index: 2; }
+.journal-site .cloud-bank { width: max(1920px, 140%); left: 50%; bottom: -150px; transform: translateX(-50%); z-index: 2; }
 .journal-site .cloud-rise::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 60px; z-index: 3; background: linear-gradient(180deg, transparent, var(--j-bg)); }
 
 /* FAQ */
@@ -494,7 +494,7 @@
   .journal-site .cloud-rise { padding-top: 80px; }
   .journal-site .rise-stage { height: 400px; }
   .journal-site .phone-rise { --pw: 200px; }
-  .journal-site .cloud-bank { width: 1100px; bottom: -120px; }
+  .journal-site .cloud-bank { width: 1100px; bottom: -80px; }
   .journal-site .screen-body.sky { padding-top: 70px; gap: 14px; }
   .journal-site .sky-quote { font-size: 16px; }
   .journal-site .founder-photo { aspect-ratio: 4 / 3; }
