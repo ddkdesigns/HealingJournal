@@ -103,11 +103,11 @@ function Index() {
         <div className="heading"><h2>Six spaces.<br />One place to feel like you.</h2></div>
         <div className="duo-grid">
           <article className="showcase"><h3>Journal</h3><p>Your words. Your space.</p><a className="soft-link" href={APP_URL} target="_blank" rel="noopener noreferrer">Start writing <ArrowRight size={14} /></a><Phone className="phone-crop" label="Journal screen preview" active={3}><JournalScreen /></Phone></article>
-          <article className="showcase"><h3>Regulate</h3><p>Breathing and grounding tools.</p><a className="soft-link" href={APP_URL} target="_blank" rel="noopener noreferrer">Take a breath <ArrowRight size={14} /></a><Phone className="phone-crop" label="Breathing tool preview" active={2}><RegulateScreen /></Phone></article>
+          
         </div>
         <div className="orbit">
           <div className="orbit-col">{[[Home, 'Home', 'A daily affirmation, a mood check-in, and a moment to pause.'], [BookOpen, 'Learn', 'Trauma and relationship patterns explained in plain language.']].map(([Icon, t, d]) => { const I = Icon as typeof Leaf; return <div key={t as string} className="orbit-item"><span className="icon-circle"><I size={17} strokeWidth={1.4} /></span><h4>{t as string}</h4><p>{d as string}</p></div>; })}</div>
-          <div className="orbit-sphere" aria-hidden="true"><span /><span /><span /><Leaf size={44} strokeWidth={1} /></div>
+          
           <div className="orbit-col">{[[Target, 'Goals', 'Personal goals and small daily wins, at your pace.'], [Compass, 'Journey', 'Your healing timeline, moods, and a letter to your future self.']].map(([Icon, t, d]) => { const I = Icon as typeof Leaf; return <div key={t as string} className="orbit-item"><span className="icon-circle"><I size={17} strokeWidth={1.4} /></span><h4>{t as string}</h4><p>{d as string}</p></div>; })}</div>
         </div>
       </div>
