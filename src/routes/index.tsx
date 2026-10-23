@@ -70,7 +70,7 @@ function Index() {
     <section className="hero">
       <div className="journal-container hero-copy">
         <span className="hero-pill">Free to start · $15 once for lifetime</span>
-        <h1>A private place to<br />come back to yourself.</h1>
+        <h1>A private place to <br />come back to yourself.</h1>
         <p>You don't have to have all the answers.<br />You just need a place to start.</p>
         <div className="hero-actions"><AccessLink>Start free</AccessLink><a className="soft-link" href="#features">Explore the journal <ArrowRight size={14} /></a></div>
       </div>

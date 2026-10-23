@@ -278,9 +278,9 @@
 .journal-site .breath { position: relative; width: 150px; height: 150px; display: grid; place-items: center; margin: 10px 0; }
 .journal-site .breath span { position: absolute; inset: 0; border-radius: 50%; background: color-mix(in srgb, var(--j-accent) 22%, transparent); animation: breathe 6s ease-in-out infinite; }
 .journal-site .breath span:nth-child(2) { inset: 22px; background: color-mix(in srgb, var(--j-accent) 32%, transparent); animation-delay: .3s; }
-.journal-site .breath span:nth-child(3) { inset: 44px; background: var(--j-dark); animation-delay: .6s; }
-.journal-site .breath p { position: relative; font-size: 10px; color: var(--j-bg); font-weight: 500; }
-.journal-site .screen-body.sky { flex: 1; margin: -34px 0 0; padding: 70px 22px 24px; align-items: center; text-align: center; justify-content: center; gap: 20px; color: var(--j-primary); background: linear-gradient(180deg, var(--j-tint), color-mix(in srgb, var(--j-accent) 35%, var(--j-surface))); }
+.journal-site .breath span:nth-child(3) { inset: 34px; background: var(--j-dark); animation-delay: .6s; }
+.journal-site .breath p { position: relative; font-size: 9px; color: var(--j-bg); font-weight: 500; }
+.journal-site .screen-body.sky { flex: 1; margin: -34px 0 0; padding: 76px 22px 24px; align-items: center; text-align: center; justify-content: flex-start; gap: 20px; color: var(--j-primary); background: linear-gradient(180deg, var(--j-tint), color-mix(in srgb, var(--j-accent) 35%, var(--j-surface))); }
 .journal-site .sky-quote { font: italic 20px/1.4 var(--font-display); color: var(--j-ink); }
 .journal-site .sky-button { font-size: 12px; font-weight: 500; color: var(--j-bg); background: var(--j-dark); border-radius: 999px; padding: 9px 26px; }
 
@@ -288,7 +288,7 @@
 .journal-site .phone-back { left: calc(50% + 0px); top: 70px; transform: rotate(7deg); z-index: 1; animation: float-b 10s ease-in-out infinite; }
 
 /* Clouds */
-.journal-site .cloud { position: absolute; pointer-events: none; user-select: none; height: auto; }
+.journal-site .cloud { position: absolute; pointer-events: none; user-select: none; height: auto; max-width: none; }
 .journal-site .cloud-hero-left { width: 330px; left: calc(50% - 470px); top: 120px; z-index: 3; animation: drift 14s ease-in-out infinite alternate; }
 .journal-site .cloud-hero-right { width: 380px; left: calc(50% + 120px); top: 440px; z-index: 3; transform: scaleX(-1); animation: drift-r 16s ease-in-out infinite alternate; }
 
@@ -378,9 +378,9 @@
 /* Cloud rise */
 .journal-site .cloud-rise { position: relative; padding-top: 110px; background: linear-gradient(180deg, var(--j-bg) 0%, var(--j-tint) 55%, color-mix(in srgb, var(--j-accent) 30%, var(--j-tint)) 100%); overflow: hidden; }
 .journal-site .cloud-rise .heading { margin-bottom: 40px; }
-.journal-site .rise-stage { position: relative; height: 470px; }
-.journal-site .phone-rise { --pw: 240px; left: 50%; top: 10px; transform: translateX(-50%); }
-.journal-site .cloud-bank { width: max(1920px, 140%); left: 50%; bottom: -40px; transform: translateX(-50%); z-index: 2; }
+.journal-site .rise-stage { position: relative; height: 540px; overflow: hidden; }
+.journal-site .phone-rise { --pw: 240px; left: 50%; top: 30px; transform: translateX(-50%); }
+.journal-site .cloud-bank { width: max(1920px, 140%); left: 50%; bottom: -150px; transform: translateX(-50%); z-index: 2; }
 .journal-site .cloud-rise::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 60px; z-index: 3; background: linear-gradient(180deg, transparent, var(--j-bg)); }
 
 /* FAQ */
@@ -456,11 +456,11 @@
   .journal-site .nav-actions .pill-button { height: 38px; padding: 0 14px; font-size: 13px; }
   .journal-site .hero { padding-top: 36px; }
   .journal-site .hero-copy > p { font-size: 15px; }
-  .journal-site .hero-stage { height: 460px; }
-  .journal-site .phone { --pw: 196px; border-radius: 34px; padding: 7px; }
+  .journal-site .hero-stage { height: 430px; }
+  .journal-site .phone { --pw: 180px; border-radius: 32px; padding: 7px; }
   .journal-site .phone-screen { border-radius: 28px; }
-  .journal-site .phone-front { left: calc(50% - 180px); top: 20px; }
-  .journal-site .phone-back { left: calc(50% - 10px); top: 46px; }
+  .journal-site .phone-front { left: calc(50% - 172px); top: 20px; }
+  .journal-site .phone-back { left: calc(50% - 6px); top: 46px; }
   .journal-site .phone .screen-body { padding: 10px 11px 6px; gap: 7px; }
   .journal-site .phone .screen-title { font-size: 19px; }
   .journal-site .phone .screen-card.affirmation p { font-size: 12px; }
@@ -492,9 +492,12 @@
   .journal-site .bubble-icon { width: 40px; height: 40px; }
   .journal-site .price-card { padding: 30px 24px; }
   .journal-site .cloud-rise { padding-top: 80px; }
-  .journal-site .rise-stage { height: 380px; }
+  .journal-site .rise-stage { height: 400px; }
   .journal-site .phone-rise { --pw: 200px; }
-  .journal-site .cloud-bank { width: 1100px; bottom: -20px; }
+  .journal-site .cloud-bank { width: 1100px; bottom: -115px; }
+  .journal-site .screen-body.sky { padding-top: 70px; gap: 14px; }
+  .journal-site .sky-quote { font-size: 16px; }
+  .journal-site .founder-photo { aspect-ratio: 4 / 3; }
   .journal-site .closing { padding-bottom: 90px; }
   .journal-site .journal-footer { border-radius: 28px 28px 0 0; padding-top: 50px; }
   .journal-site .footer-cols { grid-template-columns: 1fr 1fr; justify-content: stretch; gap: 34px; }
