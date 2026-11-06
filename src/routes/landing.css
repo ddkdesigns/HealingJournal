@@ -100,6 +100,12 @@
 .hj-faq details[open] summary span { transform: rotate(45deg); }
 .hj-faq details p { max-width: 40em; margin: 12px 0 0; color: var(--hj-accent); }
 .hj-page a:focus-visible, .hj-page button:focus-visible, .hj-page summary:focus-visible { outline: 2px solid var(--hj-accent); outline-offset: 3px; }
+.hj-footer { padding: 56px 0 44px; border-top: 1px solid var(--hj-ink); }
+.hj-footer-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 14px 34px; }
+.hj-footer-links a { color: var(--hj-ink); font-size: .92rem; font-weight: 700; letter-spacing: .04em; text-decoration: none; }
+.hj-footer-links a:hover { color: var(--hj-accent); }
+.hj-footer-links b { font-weight: 800; }
+.hj-footer-copy { margin: 26px 0 0; color: var(--hj-accent); font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; }
 @media (max-width: 860px) {
   .hj-section { padding: 68px 0; }
   .hj-hero-row, .hj-intro, .hj-feature-layout, .hj-story-layout, .hj-faq-layout, .hj-price-grid, .hj-privacy-grid { grid-template-columns: 1fr; }

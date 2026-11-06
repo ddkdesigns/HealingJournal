@@ -130,6 +130,16 @@ function Index() {
         <div><p className="hj-label">FAQ</p><h2>Got questions? <em>Here are gentle answers.</em></h2></div>
         <div>{faqs.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div>
       </div></section>
+
+      <footer className="hj-footer"><div className="hj-wrap">
+        <nav className="hj-footer-links" aria-label="Legal and contact">
+          <Link to="/privacy">Privacy</Link>
+          <Link to="/terms">Terms</Link>
+          <Link to="/disclaimer">Disclaimer</Link>
+          <a href="https://www.threads.com/@silentlyshifting" target="_blank" rel="noopener noreferrer">Message me on <b>Threads</b>. 🖤</a>
+        </nav>
+        <p className="hj-footer-copy">© {new Date().getFullYear()} The Healing Journal</p>
+      </div></footer>
     </main>
   );
 }
