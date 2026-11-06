@@ -1,6 +1,10 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { Button } from '@/components/ui/button';
 import { PhotoPlaceholder } from '@/components/PhotoPlaceholder';
+import { useState } from 'react';
+import pocketPhoto from '@/assets/healing_journal_pocket.jpg.asset.json';
+import phonePhoto from '@/assets/healing_journal_regulate_phone.jpg.asset.json';
+import founderPhoto from '@/assets/healing_journal_founder.jpg.asset.json';
 import { BookOpen, Wind, PenLine, Home, Target, Compass, Smartphone, Heart, ArrowRight } from 'lucide-react';
 import './landing.css';
 
@@ -16,6 +20,8 @@ export const Route = createFileRoute('/')({
       { name: 'description', content: description },
       { property: 'og:title', content: title },
       { property: 'og:description', content: description },
+      { property: 'og:type', content: 'website' },
+      { name: 'twitter:card', content: 'summary_large_image' },
     ],
   }),
 });
@@ -45,6 +51,18 @@ function AccessLink({ children, variant = 'default' }: { children: React.ReactNo
   );
 }
 
+function LandingPhoto({ src, alt, label }: { src: string; alt: string; label: string }) {
+  const [failed, setFailed] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  if (failed) return <PhotoPlaceholder label={label} />;
+  return (
+    <div className="hj-photo-content">
+      {!loaded && <PhotoPlaceholder label={label} />}
+      <img src={src} alt={alt} ref={(image) => { if (image?.complete && image.naturalWidth > 0) setLoaded(true); }} onLoad={() => setLoaded(true)} onError={() => setFailed(true)} />
+    </div>
+  );
+}
+
 function Index() {
   return (
     <main className="hj-page" id="top">
@@ -66,7 +84,7 @@ function Index() {
             <p>You don’t have to have all the answers. You just need a place to start.</p>
             <div className="hj-actions"><AccessLink>Start free</AccessLink><a className="hj-button hj-button-outline" href="#features">Explore the journal</a></div>
           </div>
-          <div className="hj-photo hj-hero-photo"><PhotoPlaceholder label="A quiet, welcoming place to reflect" /></div>
+          <div className="hj-photo hj-hero-photo"><LandingPhoto src={pocketPhoto.url} alt="A phone displaying Healing Journal tucked into a denim pocket" label="The Healing Journal in your pocket" /></div>
         </div>
       </section>
 
@@ -86,7 +104,7 @@ function Index() {
       </div></section>
 
       <section className="hj-section hj-features" id="features"><div className="hj-wrap hj-feature-layout">
-        <div className="hj-photo hj-feature-photo"><PhotoPlaceholder label="A peaceful moment for journaling" /></div>
+        <div className="hj-photo hj-feature-photo"><LandingPhoto src={phonePhoto.url} alt="The Healing Journal regulation tools displayed on a phone" label="The Healing Journal phone preview" /></div>
         <div><p className="hj-label">The app</p><h2>Six spaces. One place to <em>feel like you.</em></h2>
           <div className="hj-list">{features.map(([name, copy], i) => <div className="hj-list-row hj-feature-row" key={name}><span className="hj-label">{String(i + 1).padStart(2, '0')}</span><b>{name}</b><p>{copy}</p></div>)}</div>
           <p className="hj-cta-line"><AccessLink>Start writing</AccessLink></p>
@@ -94,7 +112,7 @@ function Index() {
       </div></section>
 
       <section className="hj-section hj-story" id="story"><div className="hj-wrap hj-story-layout">
-        <div className="hj-photo hj-story-photo"><PhotoPlaceholder label="A quiet moment with Pam" /></div>
+        <div className="hj-photo hj-story-photo"><LandingPhoto src={founderPhoto.url} alt="A woman writing in a journal in an armchair beside a sunlit window" label="A quiet moment with Pam" /></div>
         <div><p className="hj-label">Why I created The Healing Journal</p><h2>I built the journal <em>I wish I’d had.</em></h2>
           <p>Hi, I’m Pam. There was a time when I knew something wasn’t right, but I couldn’t explain what I was feeling or why. I felt unlike myself, and I was searching for answers I didn’t yet have the words for.</p>
           <p>Then I came across a TikTok video about rose-colored glasses. Something about it made me stop and question things. I started looking more closely at my experiences, my relationships, and the things I’d been struggling to understand.</p>
