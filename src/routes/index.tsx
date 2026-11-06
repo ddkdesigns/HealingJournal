@@ -58,7 +58,7 @@ function LandingPhoto({ src, alt, label }: { src: string; alt: string; label: st
   return (
     <div className="hj-photo-content">
       {!loaded && <PhotoPlaceholder label={label} />}
-      <img src={src} alt={alt} onLoad={() => setLoaded(true)} onError={() => setFailed(true)} />
+      <img src={src} alt={alt} ref={(image) => { if (image?.complete && image.naturalWidth > 0) setLoaded(true); }} onLoad={() => setLoaded(true)} onError={() => setFailed(true)} />
     </div>
   );
 }
