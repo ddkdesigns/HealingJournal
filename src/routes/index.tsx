@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from ' @tanstack/react-router';
+import { createFileRoute, Link } from '@tanstack/react-router';
 import { Button } from '@/components/ui/button';
 import { PhotoPlaceholder } from '@/components/PhotoPlaceholder';
 import { BookOpen, Wind, PenLine, Home, Target, Compass, Smartphone, Heart, ArrowRight } from 'lucide-react';
