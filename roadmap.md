@@ -4,3 +4,4 @@
 - [x] GitHub connections visible (3) → applied uploaded replacement page (src/routes/index.tsx + src/routes/landing.css), fonts via <link> in __root.tsx; verified desktop/mobile, /privacy, CTA link.
 - [x] Slim footer added back: Privacy, Terms, Disclaimer, "Message me on Threads. 🖤", copyright; verified desktop/mobile.
 - [x] Place uploaded pocket, phone, and journaling photos into the three existing photo spaces and verify desktop/mobile.
+- [ ] Match website branding/icons to the real app logo and set a logo-based shared-link preview; verify rendered metadata and images.
