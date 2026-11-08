@@ -5,6 +5,7 @@ import { useState } from 'react';
 import pocketPhoto from '@/assets/healing_journal_pocket.jpg.asset.json';
 import phonePhoto from '@/assets/healing_journal_phone_updated.jpg.asset.json';
 import founderPhoto from '@/assets/healing_journal_founder.jpg.asset.json';
+import appLogo from '@/assets/healing_journal_logo.png.asset.json';
 import { BookOpen, Wind, PenLine, Home, Target, Compass, Smartphone, Heart, ArrowRight } from 'lucide-react';
 import './landing.css';
 
@@ -22,7 +23,17 @@ export const Route = createFileRoute('/')({
       { property: 'og:description', content: description },
       { property: 'og:type', content: 'website' },
       { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: title },
+      { name: 'twitter:description', content: description },
+      { property: 'og:url', content: 'https://healingjournal.lovable.app/' },
+      { property: 'og:image', content: 'https://healingjournal.lovable.app/healing-journal-share.jpg' },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
+      { property: 'og:image:alt', content: 'The Healing Journal leaf logo' },
+      { name: 'twitter:image', content: 'https://healingjournal.lovable.app/healing-journal-share.jpg' },
+      { name: 'twitter:image:alt', content: 'The Healing Journal leaf logo' },
     ],
+    links: [{ rel: 'canonical', href: 'https://healingjournal.lovable.app/' }],
   }),
 });
 
@@ -68,7 +79,7 @@ function Index() {
     <main className="hj-page" id="top">
       <header className="hj-nav">
         <div className="hj-wrap hj-nav-inner">
-          <a className="hj-logo" href="#top">Healing <em>Journal</em></a>
+          <a className="hj-logo" href="#top" aria-label="The Healing Journal home"><img src={appLogo.url} alt="The Healing Journal leaf logo" width="36" height="36" /><span>Healing <em>Journal</em></span></a>
           <nav aria-label="Main navigation">
             <ul><li><a href="#features">Features</a></li><li><a href="#story">Story</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li></ul>
           </nav>
