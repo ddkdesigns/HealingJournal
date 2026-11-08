@@ -1,0 +1,12 @@
+{
+  "name": "The Healing Journal",
+  "short_name": "Healing Journal",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF7F4",
+  "theme_color": "#35312D",
+  "icons": [
+    { "src": "/healing-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/healing-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

@@ -24,7 +24,8 @@
 .hj-label { color: var(--hj-accent); font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .hj-page .hj-nav { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--hj-line); background: color-mix(in srgb, var(--hj-bg) 92%, transparent); backdrop-filter: blur(6px); }
 .hj-nav-inner { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.hj-logo { font-size: 1.2rem; font-weight: 800; letter-spacing: -.04em; text-decoration: none; }
+.hj-logo { display: inline-flex; align-items: center; gap: 10px; font-size: 1.2rem; font-weight: 800; letter-spacing: -.04em; text-decoration: none; }
+.hj-logo img { display: block; width: 36px; height: 36px; flex-shrink: 0; border-radius: 6px; }
 .hj-logo em { font-size: 1.25rem; }
 .hj-nav nav ul { display: flex; gap: 30px; margin: 0; padding: 0; list-style: none; font-size: .82rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .hj-nav nav a { text-decoration: none; }
