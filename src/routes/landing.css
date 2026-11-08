@@ -43,7 +43,7 @@
 .hj-photo-content { position: relative; }
 .hj-photo-content > .photo-placeholder { position: absolute; inset: 0; }
 .hj-photo-content img { position: relative; display: block; width: 100%; height: 100%; object-fit: cover; }
-.hj-feature-photo .hj-photo-content img { object-fit: contain; }
+.hj-feature-photo .hj-photo-content img { object-fit: cover; }
 .hj-story-photo .hj-photo-content img { object-position: 48% center; }
 .hj-hero-photo { aspect-ratio: 16 / 8; margin-top: 48px; }
 .hj-strip { padding-top: 96px; }
