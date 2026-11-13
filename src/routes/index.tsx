@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { PhotoPlaceholder } from '@/components/PhotoPlaceholder';
 import { useState } from 'react';
 import pocketPhoto from '@/assets/healing_journal_pocket.jpg.asset.json';
-import phonePhoto from '@/assets/healing_journal_phone_updated.jpg.asset.json';
+import phonePhoto from '@/assets/healing_journal_regulate_lifestyle.jpg.asset.json';
 import founderPhoto from '@/assets/healing_journal_founder.jpg.asset.json';
 import appLogo from '@/assets/healing_journal_logo.png.asset.json';
 import { BookOpen, Wind, PenLine, Home, Target, Compass, Smartphone, Heart, ArrowRight } from 'lucide-react';
