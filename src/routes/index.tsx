@@ -4,7 +4,7 @@ import { PhotoPlaceholder } from '@/components/PhotoPlaceholder';
 import { useState } from 'react';
 import pocketPhoto from '@/assets/healing_journal_hero_desk.jpg.asset.json';
 import phonePhoto from '@/assets/healing_journal_regulate_lifestyle.jpg.asset.json';
-import founderPhoto from '@/assets/healing_journal_founder.jpg.asset.json';
+import founderPhoto from '@/assets/healing_journal_hero_desk.jpg.asset.json';
 import appLogo from '@/assets/healing_journal_logo.png.asset.json';
 import { BookOpen, Wind, PenLine, Home, Target, Compass, Smartphone, Heart, ArrowRight } from 'lucide-react';
 import './landing.css';
@@ -123,7 +123,7 @@ function Index() {
       </div></section>
 
       <section className="hj-section hj-story" id="story"><div className="hj-wrap hj-story-layout">
-        <div className="hj-photo hj-story-photo"><LandingPhoto src={founderPhoto.url} alt="A woman writing in a journal in an armchair beside a sunlit window" label="A quiet moment with Pam" /></div>
+        <div className="hj-photo hj-story-photo"><LandingPhoto src={founderPhoto.url} alt="A woman sitting at a marble desk with a laptop in warm window light" label="A quiet moment with Pam" /></div>
         <div><p className="hj-label">Why I created The Healing Journal</p><h2>I built the journal <em>I wish I’d had.</em></h2>
           <p>Hi, I’m Pam. There was a time when I knew something wasn’t right, but I couldn’t explain what I was feeling or why. I felt unlike myself, and I was searching for answers I didn’t yet have the words for.</p>
           <p>Then I came across a TikTok video about rose-colored glasses. Something about it made me stop and question things. I started looking more closely at my experiences, my relationships, and the things I’d been struggling to understand.</p>
