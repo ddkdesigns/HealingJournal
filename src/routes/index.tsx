@@ -2,7 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import { Button } from '@/components/ui/button';
 import { PhotoPlaceholder } from '@/components/PhotoPlaceholder';
 import { useState } from 'react';
-import pocketPhoto from '@/assets/healing_journal_pocket.jpg.asset.json';
+import pocketPhoto from '@/assets/healing_journal_hero_desk.jpg.asset.json';
 import phonePhoto from '@/assets/healing_journal_regulate_lifestyle.jpg.asset.json';
 import founderPhoto from '@/assets/healing_journal_founder.jpg.asset.json';
 import appLogo from '@/assets/healing_journal_logo.png.asset.json';
@@ -95,7 +95,7 @@ function Index() {
             <p>You don’t have to have all the answers. You just need a place to start.</p>
             <div className="hj-actions"><AccessLink>Start free</AccessLink><a className="hj-button hj-button-outline" href="#features">Explore the journal</a></div>
           </div>
-          <div className="hj-photo hj-hero-photo"><LandingPhoto src={pocketPhoto.url} alt="A phone displaying Healing Journal tucked into a denim pocket" label="The Healing Journal in your pocket" /></div>
+          <div className="hj-photo hj-hero-photo"><LandingPhoto src={pocketPhoto.url} alt="A woman sitting at a marble desk with a laptop in warm window light" label="A quiet moment at your desk" /></div>
         </div>
       </section>
 
